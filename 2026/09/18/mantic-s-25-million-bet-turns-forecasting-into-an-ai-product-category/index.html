@@ -1,0 +1,232 @@
+<!DOCTYPE html><html lang="en"><head><script>
+      (() => {
+        const root = document.documentElement;
+        const media = window.matchMedia('(prefers-color-scheme: dark)');
+        let preference = 'system';
+
+        try {
+          const stored = window.localStorage.getItem('vizo-theme');
+          if (stored === 'light' || stored === 'dark' || stored === 'system') preference = stored;
+        } catch {
+          // Storage can be unavailable in privacy-restricted contexts.
+        }
+
+        const resolved = preference === 'system' ? (media.matches ? 'dark' : 'light') : preference;
+        root.dataset.theme = resolved;
+        root.dataset.themePreference = preference;
+        root.style.colorScheme = resolved;
+      })();
+    </script><meta charset="UTF-8"><meta name="viewport" content="width=device-width"><meta name="generator" content="Astro v7.2.0"><meta name="description" content="A London startup is trying to make probabilistic judgment about messy real-world events something companies can buy at software speed."><meta id="theme-color" name="theme-color" content="#0e0f11"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="canonical" href="https://ai-blog.ixo8.com/2026/09/18/mantic-s-25-million-bet-turns-forecasting-into-an-ai-product-category/"><link rel="alternate" type="application/rss+xml" title="Vizo AI" href="/rss.xml"><style>@font-face{font-family:"Source Serif 4-77ba8a10457dfacb";src:url("/_astro/fonts/24d457dd795739ed.woff2") format("woff2");font-display:swap;unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-weight:200 900;font-style:normal;}@font-face{font-family:"Source Serif 4-77ba8a10457dfacb";src:url("/_astro/fonts/e0254323ea68b855.woff2") format("woff2");font-display:swap;unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-weight:200 900;font-style:italic;}@font-face{font-family:"Source Serif 4-77ba8a10457dfacb fallback: Times New Roman";src:local("Times New Roman");font-display:swap;font-weight:200 900;font-style:normal;size-adjust:117.9077%;ascent-override:87.8653%;descent-override:28.4121%;line-gap-override:0%;}@font-face{font-family:"Source Serif 4-77ba8a10457dfacb fallback: Times New Roman";src:local("Times New Roman");font-display:swap;font-weight:200 900;font-style:italic;size-adjust:117.9077%;ascent-override:87.8653%;descent-override:28.4121%;line-gap-override:0%;}:root{--font-serif:"Source Serif 4-77ba8a10457dfacb","Source Serif 4-77ba8a10457dfacb fallback: Times New Roman",Georgia,serif;}</style><link rel="preload" href="/_astro/fonts/24d457dd795739ed.woff2" as="font" type="font/woff2" crossorigin><style>@font-face{font-family:Inter-912952f8a2e65f75;src:url("/_astro/fonts/5288773a5a229461.woff2") format("woff2");font-display:swap;unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-weight:100 900;font-style:normal;}@font-face{font-family:"Inter-912952f8a2e65f75 fallback: Arial";src:local("Arial");font-display:swap;font-weight:100 900;font-style:normal;size-adjust:107.1194%;ascent-override:90.4365%;descent-override:22.518%;line-gap-override:0%;}:root{--font-sans:Inter-912952f8a2e65f75,"Inter-912952f8a2e65f75 fallback: Arial",ui-sans-serif,system-ui,sans-serif;}</style><link rel="preload" href="/_astro/fonts/5288773a5a229461.woff2" as="font" type="font/woff2" crossorigin><meta property="og:site_name" content="Vizo AI"><meta property="og:type" content="article"><meta property="og:title" content="Mantic’s $25 Million Bet Turns Forecasting Into an AI Product Category, Vizo AI"><meta property="og:description" content="A London startup is trying to make probabilistic judgment about messy real-world events something companies can buy at software speed."><meta property="og:url" content="https://ai-blog.ixo8.com/2026/09/18/mantic-s-25-million-bet-turns-forecasting-into-an-ai-product-category/"><meta name="twitter:card" content="summary_large_image"><title>Mantic’s $25 Million Bet Turns Forecasting Into an AI Product Category, Vizo AI</title><link rel="stylesheet" href="/_astro/BaseLayout.BtRPW27g.css"></head><body><a class="skip-link" href="#content">Skip to content</a><header class="site-header"><div class="shell nav"><a class="brand" href="/" aria-label="Vizo AI home"><span class="brand-mark" aria-hidden="true"></span><span>Vizo AI</span></a><div class="nav-actions"><nav class="nav-links" aria-label="Primary navigation"><a href="/topics/">Topics</a><a href="/explore/">Archive</a><a href="/about/">About</a><a class="search-link" href="/explore/?focus=search"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5"></circle><path d="m16 16 4.25 4.25"></path></svg><span>Search</span><kbd aria-hidden="true">⌘K</kbd></a></nav><details class="mobile-nav" data-mobile-nav><summary class="icon-button" aria-label="Open navigation"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"></path></svg></summary><nav class="popover mobile-nav-menu" aria-label="Mobile navigation"><a href="/topics/">Topics</a><a href="/explore/">Archive</a><a href="/about/">About</a><a href="/explore/?focus=search">Search archive</a></nav></details><div class="theme-picker" data-theme-picker><button class="icon-button theme-trigger" type="button" aria-label="Choose color theme" aria-haspopup="true" aria-expanded="false" data-theme-trigger><svg class="theme-icon theme-icon--sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="3.25"></circle><path d="M12 2.75v2M12 19.25v2M21.25 12h-2M4.75 12h-2M18.54 5.46l-1.42 1.42M6.88 17.12l-1.42 1.42M18.54 18.54l-1.42-1.42M6.88 6.88 5.46 5.46"></path></svg><svg class="theme-icon theme-icon--moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M19.4 15.3A8 8 0 0 1 8.7 4.6 8 8 0 1 0 19.4 15.3Z"></path></svg></button><div class="popover theme-menu" data-theme-menu hidden role="group" aria-label="Color theme"><button type="button" data-theme-value="light" aria-pressed="false"><span>Light</span><span class="theme-check" aria-hidden="true">✓</span></button><button type="button" data-theme-value="dark" aria-pressed="false"><span>Dark</span><span class="theme-check" aria-hidden="true">✓</span></button><button type="button" data-theme-value="system" aria-pressed="false"><span>System</span><span class="theme-check" aria-hidden="true">✓</span></button></div></div></div></div></header><main id="content"><div class="page-back shell"><a class="back-link" href="/explore/" data-back-link aria-label="Go back to the previous page"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m14 6-6 6 6 6"></path><path d="M8 12h11"></path></svg><span>Back</span></a></div><article class="article"><header class="article-header"><span class="kicker">Analysis</span><h1 class="article-title">Mantic’s $25 Million Bet Turns Forecasting Into an AI Product Category</h1><p class="article-deck">A London startup is trying to make probabilistic judgment about messy real-world events something companies can buy at software speed.</p><p class="article-byline"><span>By Vizo AI</span><time datetime="2026-09-18">September 18, 2026</time><span>7 min read</span><a href="#sources">5 sources</a></p></header><div class="article-layout"><aside class="article-rail"><nav class="toc" aria-labelledby="toc-title" data-toc><details class="toc-details" data-toc-details open><summary id="toc-title">On this page</summary><ol><li><a href="#a-benchmark-with-unusually-clear-consequences" data-toc-link="a-benchmark-with-unusually-clear-consequences">A benchmark with unusually clear consequences</a></li><li><a href="#the-product-is-the-scaffold-not-a-secret-oracle" data-toc-link="the-product-is-the-scaffold-not-a-secret-oracle">The product is the scaffold, not a secret oracle</a></li><li><a href="#where-forecasting-could-earn-its-keep" data-toc-link="where-forecasting-could-earn-its-keep">Where forecasting could earn its keep</a></li><li><a href="#why-this-category-is-appearing-now" data-toc-link="why-this-category-is-appearing-now">Why this category is appearing now</a></li><li><a href="#the-test-mantic-now-has-to-pass" data-toc-link="the-test-mantic-now-has-to-pass">The test Mantic now has to pass</a></li></ol></details></nav><script>
+  // The rail precedes the article body in the DOM, so wait for the headings.
+  document.addEventListener('DOMContentLoaded', () => {
+    const toc = document.querySelector('[data-toc]');
+    if (!(toc instanceof HTMLElement)) return;
+
+    const details = toc.querySelector('[data-toc-details]');
+    const wide = window.matchMedia('(min-width: 1180px)');
+    const syncOpen = () => {
+      if (details instanceof HTMLDetailsElement) details.open = wide.matches;
+    };
+    syncOpen();
+    wide.addEventListener('change', syncOpen);
+
+    toc.addEventListener('click', (event) => {
+      if (!wide.matches && event.target instanceof HTMLAnchorElement && details instanceof HTMLDetailsElement) details.open = false;
+    });
+
+    const links = new Map([...toc.querySelectorAll('[data-toc-link]')].map((link) => [link.getAttribute('data-toc-link'), link]));
+    const targets = [...links.keys()].map((id) => document.getElementById(id ?? '')).filter(Boolean);
+    if (targets.length === 0) return;
+
+    // The active section is the last heading scrolled past the top third of
+    // the viewport, so jumps and fast scrolls still land on the right entry.
+    let frame = 0;
+    const update = () => {
+      frame = 0;
+      const threshold = window.innerHeight * 0.3;
+      let activeId = null;
+      for (const target of targets) {
+        if (target.getBoundingClientRect().top <= threshold) activeId = target.id;
+        else break;
+      }
+      links.forEach((link, key) => {
+        if (key === activeId) link.setAttribute('aria-current', 'location');
+        else link.removeAttribute('aria-current');
+      });
+    };
+    const schedule = () => {
+      if (!frame) frame = window.requestAnimationFrame(update);
+    };
+    window.addEventListener('scroll', schedule, { passive: true });
+    window.addEventListener('resize', schedule);
+    update();
+  }, { once: true });
+</script></aside><div class="article-main"><div class="prose" data-pagefind-body><p>A London startup is trying to make probabilistic judgment about messy real-world events something companies can buy at software speed.</p>
+<p>Mantic raised $25 million in seed funding on Friday after a strong showing in the 2026 Metaculus Cup, where its forecasting system outperformed the human field, according to Reuters. Radical Ventures led the round, with Microsoft’s M12, Thinking Machines Lab and Balderton Capital among the investors. The valuation was not disclosed.</p>
+<p>The financing is modest beside the multibillion-dollar rounds surrounding frontier-model labs. The more interesting part is what investors are funding: an attempt to turn forecasting, long a specialized discipline built around trained human judgment, into a scalable AI service.</p>
+<p>Mantic is not training a general-purpose foundation model from scratch. Its own research describes a system built around frontier language models, forecasting-specific context gathering, scaffolding and ensembles. That makes the company a useful test of a broader question for enterprise AI: how much economic value can be created by engineering a narrow decision system on top of models that other companies build?</p>
+<h2 id="a-benchmark-with-unusually-clear-consequences">A benchmark with unusually clear consequences</h2>
+<p>Most enterprise AI products are difficult to evaluate from the outside. A sales assistant can generate plausible emails without increasing revenue. A research agent can produce polished reports whose mistakes are expensive to find. Productivity claims often depend on internal studies, vendor-selected examples or metrics that are several steps removed from business outcomes.</p>
+<p>Forecasting is different because the output is a probability and the world eventually supplies an answer.</p>
+<p>Metaculus, a forecasting platform, runs tournaments in which participants estimate the likelihood of future events. Its 2026 AI Forecasting Benchmark explicitly compares automated systems with human forecasters on real-world questions and requires prize-eligible bots to operate without a human in the loop. Mantic says its system has repeatedly climbed those leaderboards. Its website reports that it placed fourth among 539 humans in a Metaculus Cup, and Reuters reported that the summer 2026 competition marked the first time AI systems dominated the event.</p>
+<p>That does not establish universal “superhuman forecasting.” Tournament performance depends on the question set, scoring rules, time horizon, information available and competitors. A system that is strong on resolvable political, economic and cultural questions may not transfer cleanly to a company deciding whether to build a factory, acquire a rival or enter a regulated market.</p>
+<p>Still, forecasting tournaments offer something rare in commercial AI: repeated, externally scored tests where confident errors are punished. That creates a more disciplined feedback loop than demonstrations built around outputs that merely look intelligent.</p>
+<h2 id="the-product-is-the-scaffold-not-a-secret-oracle">The product is the scaffold, not a secret oracle</h2>
+<p>Mantic’s technical work also complicates the idea that the best forecaster will simply be whichever company has the strongest base model.</p>
+<p>In a July 2026 paper presented at an ICML workshop, Mantic researchers studied ensembles of frontier models on binary questions from the Metaculus AI Benchmark. Their result was counterintuitive in a useful way: adding more forecasts did not help much when the models made highly correlated predictions. Better ensembles combined forecasters that were individually capable but made different mistakes.</p>
+<p>The paper highlighted Grok 4 as particularly useful alongside Gemini 3 Pro and GPT-5 because its predictions were less correlated with theirs. The point was not that one model was universally superior. It was that diversity of error could be an asset.</p>
+<p>That finding matters commercially. If forecasting quality depends on model selection, retrieval, question decomposition, calibration, aggregation and continuous evaluation, then an application company can build proprietary value even when its underlying models are available to competitors.</p>
+<p>This resembles what happened in earlier layers of enterprise software. Owning the database engine was not necessary to build a valuable financial system on top of databases. Owning the cloud was not necessary to build a valuable SaaS company. In AI, the open question is whether application-layer differentiation survives as foundation models improve and absorb more workflow capabilities.</p>
+<p>Forecasting may be a favorable test because the objective is unusually measurable. Mantic can replay historical questions, score predictions, identify systematic errors and adjust its system. CEO Toby Shevlane told Reuters that the company tests on historical data, evaluates performance and improves the system. That is a tighter optimization loop than many knowledge-work applications possess.</p>
+<h2 id="where-forecasting-could-earn-its-keep">Where forecasting could earn its keep</h2>
+<p>The obvious customers are organizations that already pay heavily for probabilistic judgment: hedge funds, insurers, governments, strategic-planning teams and companies exposed to geopolitical or regulatory shocks. Reuters reported interest from global companies and government agencies and said some are already deploying Mantic’s technology.</p>
+<p>The economic case will depend on whether forecasts alter decisions rather than merely decorate them.</p>
+<p>Consider a manufacturer deciding how much inventory to hold against the probability of a tariff change. A calibrated forecast that moves from 30% to 55% can affect procurement, hedging or pricing. An insurer can translate probabilities into premiums and reserves. An investor can translate them into position sizes. These environments already have machinery for acting on uncertain estimates.</p>
+<p>Other organizations may struggle. Many executive decisions are not clean forecasting questions. “Should we enter India?” bundles demand, regulation, execution, competition and capital allocation into one decision. Turning that into resolvable questions requires judgment about what should be measured, when the answer will be known and how the probabilities connect to action.</p>
+<p>That means the valuable product may include substantial workflow design: converting ambiguous strategic problems into forecastable components, integrating proprietary data, tracking calibration and showing decision-makers how probabilities should update their plans.</p>
+<p>If that layer is labor-intensive, the software economics become less attractive. If it can be standardized, forecasting could become a new category of decision infrastructure.</p>
+<p>A useful warning about “superhuman”</p>
+<p>The phrase attached to Mantic’s funding round is “superhuman forecasting,” but it deserves narrower treatment than a funding headline permits.</p>
+<p>Human forecasting itself has a long tail. Average participants, domain experts and elite superforecasters do not perform equally. Rankings can also change across tournaments. Mantic’s own website emphasizes strong placements against human fields, while its research says top AI forecasting systems perform similarly to skilled humans. Those are compatible claims, but they are not the same as demonstrating that an automated system dominates the best humans across domains.</p>
+<p>There is another limitation: forecasts can change the systems they describe.</p>
+<p>Predicting a Billboard ranking or an election result is largely observational. Forecasting a company’s bankruptcy, a bank run, military escalation or a policy response can become reflexive once the prediction is widely used. Institutions may act on the forecast and alter the outcome. A model trained on historical relationships may also encounter regime changes where the past becomes a poor guide.</p>
+<p>The strongest commercial implementation will therefore need more than a leaderboard score. Buyers will want calibration by domain, performance through changing regimes, audit trails for information used, security around proprietary inputs and clear procedures for situations where the system should defer.</p>
+<p>Those requirements create costs, but they can also create defensibility. Enterprise buyers do not purchase probabilities in isolation; they purchase confidence that the process producing them can survive scrutiny.</p>
+<h2 id="why-this-category-is-appearing-now">Why this category is appearing now</h2>
+<p>Forecasting systems benefit from several capabilities that have improved simultaneously. Frontier models can search and synthesize large amounts of text, reason across heterogeneous evidence and generate explicit rationales. Tool use lets systems gather current information rather than rely only on training data. Cheap parallel inference makes it practical to ask multiple models or multiple instances of a model for independent estimates. Evaluation platforms provide a stream of questions with eventual ground truth.</p>
+<p>Mantic’s research suggests that the last ingredient, diversity among forecasters, may matter as much as raw model strength. That creates an interesting inversion of the usual frontier-model narrative. An application can benefit from competition among model providers rather than needing one provider to win.</p>
+<p>There is also a business reason for the timing. Companies have spent several years experimenting with generative AI for content creation and workflow automation. As those capabilities become common, budgets are likely to move toward systems tied more directly to decisions, risk and measurable outcomes. Forecasting offers a clean pitch: do not judge the system by how convincing its prose sounds; judge it by whether its probabilities are calibrated and useful.</p>
+<p>That standard is demanding. It is also commercially attractive because it gives buyers a way to test the product before trusting it.</p>
+<h2 id="the-test-mantic-now-has-to-pass">The test Mantic now has to pass</h2>
+<p>The $25 million round gives Mantic capital to move from tournament performance toward institutional deployment. The next evidence should be less theatrical than beating a leaderboard.</p>
+<p>The company needs to show that accuracy persists on customer-specific questions, that its edge survives new model releases, and that organizations make better decisions when its forecasts enter real workflows. It also needs to demonstrate that proprietary data improves results without making evaluation opaque.</p>
+<p>If those tests go well, forecasting could become one of the clearest examples of an AI application layer developing durable value on top of commoditizing foundation models. The defensible asset would be a combination of evaluation data, calibration methods, orchestration, domain integration and accumulated evidence about when the system is trustworthy.</p>
+<p>If they do not, Mantic may still prove something useful: tournament excellence is easier to measure than enterprise value, but it is not the same thing.</p>
+<p>The near-term signal to watch is therefore not another fundraising announcement or a higher benchmark rank. It is whether customers begin attaching consequential decisions, and measurable economic outcomes, to the probabilities these systems produce.</p>
+<p>Sources<br>
+Reuters, Sept. 18, 2026, AI startup Mantic raises $25 million for superhuman forecasting. <a href="https://www.reuters.com/technology/ai-startup-mantic-raises-25-million-superhuman-forecasting-2026-09-18/">https://www.reuters.com/technology/ai-startup-mantic-raises-25-million-superhuman-forecasting-2026-09-18/</a><br>
+Mantic, The world’s most accurate AI predictions. <a href="https://www.mantic.com/">https://www.mantic.com/</a><br>
+Mantic, July 2026, Diversity is the strength of the AI crowd. <a href="https://www.mantic.com/publications/986329">https://www.mantic.com/publications/986329</a><br>
+Metaculus, AI Forecasting Benchmark Series Spring 2026. <a href="https://www.metaculus.com/aib/2026/spring/">https://www.metaculus.com/aib/2026/spring/</a><br>
+Metaculus, Metaculus Cup Summer 2026. <a href="https://www.metaculus.com/cup/">https://www.metaculus.com/cup/</a></p>
+</div><footer class="article-record"><section id="sources" class="sources" aria-labelledby="sources-title"><h2 id="sources-title">Sources</h2><ol><li><a href="https://www.reuters.com/technology/ai-startup-mantic-raises-25-million-superhuman-forecasting-2026-09-18/" rel="noreferrer"><span class="source-domain">reuters.com</span><span class="source-path">/technology/ai-startup-mantic-raises-25-million-superhuman-forecasting-2026-09-18</span></a></li><li><a href="https://www.mantic.com/" rel="noreferrer"><span class="source-domain">mantic.com</span></a></li><li><a href="https://www.mantic.com/publications/986329" rel="noreferrer"><span class="source-domain">mantic.com</span><span class="source-path">/publications/986329</span></a></li><li><a href="https://www.metaculus.com/aib/2026/spring/" rel="noreferrer"><span class="source-domain">metaculus.com</span><span class="source-path">/aib/2026/spring</span></a></li><li><a href="https://www.metaculus.com/cup/" rel="noreferrer"><span class="source-domain">metaculus.com</span><span class="source-path">/cup</span></a></li></ol></section><dl class="record-list"><div><dt>Published</dt><dd><time datetime="2026-09-18">September 18, 2026</time></dd></div><div><dt>Sources recorded</dt><dd>5</dd></div></dl></footer></div></div></article><section class="section shell related" aria-labelledby="related-title"><div class="section-head"><h2 id="related-title" class="section-title">Related analysis</h2></div><div class="related-grid"><article class="story story--compact"><a class="kicker" href="/topics/ai-drug-discovery/">AI Drug Discovery</a><h3 class="story-title"><a href="/2026/09/16/bytedance-s-290-million-anew-labs-spinout-tests-a-different-model-for-ai-drug-discovery/">ByteDance’s $290 Million Anew Labs Spinout Tests a Different Model for AI Drug Discovery</a></h3><p class="story-meta"><time datetime="2026-09-16">Sep 16, 2026</time><span aria-hidden="true">·</span><span>2 min read</span></p></article><article class="story story--compact"><a class="kicker" href="/topics/ai-chips/">AI Chips</a><h3 class="story-title"><a href="/2026/09/14/high-na-euv-is-becoming-a-strategic-choke-point-in-the-ai-chip-race/">High-NA EUV Is Becoming a Strategic Choke Point in the AI Chip Race</a></h3><p class="story-meta"><time datetime="2026-09-14">Sep 14, 2026</time><span aria-hidden="true">·</span><span>8 min read</span></p></article><article class="story story--compact"><a class="kicker" href="/topics/ai-models/">AI Models</a><h3 class="story-title"><a href="/2026/09/11/deepseek-v4-1-flash-makes-memory-economics-the-new-model-battleground/">DeepSeek V4.1-Flash Makes Memory Economics the New Model Battleground</a></h3><p class="story-meta"><time datetime="2026-09-11">Sep 11, 2026</time><span aria-hidden="true">·</span><span>7 min read</span></p></article></div></section></main><footer class="site-footer"><div class="shell footer-inner"><a class="brand" href="/"><span class="brand-mark" aria-hidden="true"></span><span>Vizo AI</span></a><nav class="footer-links" aria-label="Footer"><a href="/topics/">Topics</a><a href="/explore/">Archive</a><a href="/about/">About</a><a href="/rss.xml">RSS</a></nav><p class="footer-note">Source-aware analysis, published with its sources.</p></div></footer><script>
+      const root = document.documentElement;
+      const themePicker = document.querySelector('[data-theme-picker]');
+      const themeTrigger = document.querySelector('[data-theme-trigger]');
+      const themeMenu = document.querySelector('[data-theme-menu]');
+      const themeOptions = [...document.querySelectorAll('[data-theme-value]')];
+      const systemTheme = window.matchMedia('(prefers-color-scheme: dark)');
+      const themeColor = document.querySelector('#theme-color');
+
+      function setTheme(preference, persist = true) {
+        const allowed = ['light', 'dark', 'system'];
+        const nextPreference = allowed.includes(preference) ? preference : 'system';
+        const resolved = nextPreference === 'system' ? (systemTheme.matches ? 'dark' : 'light') : nextPreference;
+
+        root.dataset.theme = resolved;
+        root.dataset.themePreference = nextPreference;
+        root.style.colorScheme = resolved;
+        themeColor?.setAttribute('content', resolved === 'dark' ? '#0e0f11' : '#faf8f4');
+        themeOptions.forEach((option) => {
+          option.setAttribute('aria-pressed', String(option.dataset.themeValue === nextPreference));
+        });
+
+        if (persist) {
+          try {
+            window.localStorage.setItem('vizo-theme', nextPreference);
+          } catch {
+            // Keep the in-memory choice when storage is unavailable.
+          }
+        }
+      }
+
+      function closeThemeMenu({ restoreFocus = false } = {}) {
+        if (!(themeMenu instanceof HTMLElement) || !(themeTrigger instanceof HTMLButtonElement)) return;
+        themeMenu.hidden = true;
+        themeTrigger.setAttribute('aria-expanded', 'false');
+        if (restoreFocus) themeTrigger.focus();
+      }
+
+      function openThemeMenu() {
+        if (!(themeMenu instanceof HTMLElement) || !(themeTrigger instanceof HTMLButtonElement)) return;
+        themeMenu.hidden = false;
+        themeTrigger.setAttribute('aria-expanded', 'true');
+      }
+
+      setTheme(root.dataset.themePreference ?? 'system', false);
+
+      themeTrigger?.addEventListener('click', () => {
+        if (themeMenu instanceof HTMLElement && themeMenu.hidden) openThemeMenu();
+        else closeThemeMenu();
+      });
+
+      themeOptions.forEach((option, index) => {
+        option.addEventListener('click', () => {
+          setTheme(option.dataset.themeValue ?? 'system');
+          closeThemeMenu({ restoreFocus: true });
+        });
+
+        option.addEventListener('keydown', (event) => {
+          if (!['ArrowDown', 'ArrowUp', 'Home', 'End'].includes(event.key)) return;
+          event.preventDefault();
+          const targetIndex = event.key === 'Home'
+            ? 0
+            : event.key === 'End'
+              ? themeOptions.length - 1
+              : (index + (event.key === 'ArrowDown' ? 1 : -1) + themeOptions.length) % themeOptions.length;
+          themeOptions[targetIndex]?.focus();
+        });
+      });
+
+      systemTheme.addEventListener('change', () => {
+        if (root.dataset.themePreference === 'system') setTheme('system', false);
+      });
+
+      document.addEventListener('click', (event) => {
+        if (themePicker instanceof HTMLElement && !themePicker.contains(event.target)) closeThemeMenu();
+
+        document.querySelectorAll('[data-mobile-nav][open]').forEach((nav) => {
+          if (nav instanceof HTMLElement && !nav.contains(event.target)) nav.removeAttribute('open');
+        });
+      });
+
+      document.querySelectorAll('[data-mobile-nav] a').forEach((link) => {
+        link.addEventListener('click', () => link.closest('details')?.removeAttribute('open'));
+      });
+
+      document.querySelector('[data-back-link]')?.addEventListener('click', (event) => {
+        if (!document.referrer || window.history.length <= 1) return;
+
+        try {
+          const previous = new URL(document.referrer);
+          const current = new URL(window.location.href);
+          const canReturn = previous.origin === current.origin && previous.pathname !== current.pathname;
+
+          if (canReturn) {
+            event.preventDefault();
+            window.history.back();
+          }
+        } catch {
+          // Keep the destination fallback when the referrer cannot be parsed.
+        }
+      });
+
+      document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape') {
+          closeThemeMenu({ restoreFocus: themeTrigger?.getAttribute('aria-expanded') === 'true' });
+          document.querySelectorAll('[data-mobile-nav][open]').forEach((nav) => nav.removeAttribute('open'));
+          return;
+        }
+
+        if (!(event.metaKey || event.ctrlKey) || event.key.toLowerCase() !== 'k') return;
+
+        event.preventDefault();
+        const searchInput = document.querySelector('#research-search');
+
+        if (searchInput instanceof HTMLInputElement) {
+          searchInput.focus();
+        } else {
+          window.location.assign('/explore/?focus=search');
+        }
+      });
+    </script></body></html>

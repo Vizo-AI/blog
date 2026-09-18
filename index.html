@@ -1,0 +1,139 @@
+<!DOCTYPE html><html lang="en"><head><script>
+      (() => {
+        const root = document.documentElement;
+        const media = window.matchMedia('(prefers-color-scheme: dark)');
+        let preference = 'system';
+
+        try {
+          const stored = window.localStorage.getItem('vizo-theme');
+          if (stored === 'light' || stored === 'dark' || stored === 'system') preference = stored;
+        } catch {
+          // Storage can be unavailable in privacy-restricted contexts.
+        }
+
+        const resolved = preference === 'system' ? (media.matches ? 'dark' : 'light') : preference;
+        root.dataset.theme = resolved;
+        root.dataset.themePreference = preference;
+        root.style.colorScheme = resolved;
+      })();
+    </script><meta charset="UTF-8"><meta name="viewport" content="width=device-width"><meta name="generator" content="Astro v7.2.0"><meta name="description" content="Source-aware analysis of AI systems, infrastructure, policy, and emerging technology from Vizo AI."><meta id="theme-color" name="theme-color" content="#0e0f11"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="canonical" href="https://ai-blog.ixo8.com/"><link rel="alternate" type="application/rss+xml" title="Vizo AI" href="/rss.xml"><style>@font-face{font-family:"Source Serif 4-77ba8a10457dfacb";src:url("/_astro/fonts/24d457dd795739ed.woff2") format("woff2");font-display:swap;unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-weight:200 900;font-style:normal;}@font-face{font-family:"Source Serif 4-77ba8a10457dfacb";src:url("/_astro/fonts/e0254323ea68b855.woff2") format("woff2");font-display:swap;unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-weight:200 900;font-style:italic;}@font-face{font-family:"Source Serif 4-77ba8a10457dfacb fallback: Times New Roman";src:local("Times New Roman");font-display:swap;font-weight:200 900;font-style:normal;size-adjust:117.9077%;ascent-override:87.8653%;descent-override:28.4121%;line-gap-override:0%;}@font-face{font-family:"Source Serif 4-77ba8a10457dfacb fallback: Times New Roman";src:local("Times New Roman");font-display:swap;font-weight:200 900;font-style:italic;size-adjust:117.9077%;ascent-override:87.8653%;descent-override:28.4121%;line-gap-override:0%;}:root{--font-serif:"Source Serif 4-77ba8a10457dfacb","Source Serif 4-77ba8a10457dfacb fallback: Times New Roman",Georgia,serif;}</style><link rel="preload" href="/_astro/fonts/24d457dd795739ed.woff2" as="font" type="font/woff2" crossorigin><style>@font-face{font-family:Inter-912952f8a2e65f75;src:url("/_astro/fonts/5288773a5a229461.woff2") format("woff2");font-display:swap;unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-weight:100 900;font-style:normal;}@font-face{font-family:"Inter-912952f8a2e65f75 fallback: Arial";src:local("Arial");font-display:swap;font-weight:100 900;font-style:normal;size-adjust:107.1194%;ascent-override:90.4365%;descent-override:22.518%;line-gap-override:0%;}:root{--font-sans:Inter-912952f8a2e65f75,"Inter-912952f8a2e65f75 fallback: Arial",ui-sans-serif,system-ui,sans-serif;}</style><link rel="preload" href="/_astro/fonts/5288773a5a229461.woff2" as="font" type="font/woff2" crossorigin><meta property="og:site_name" content="Vizo AI"><meta property="og:type" content="website"><meta property="og:title" content="Vizo AI, Source-aware AI analysis"><meta property="og:description" content="Source-aware analysis of AI systems, infrastructure, policy, and emerging technology from Vizo AI."><meta property="og:url" content="https://ai-blog.ixo8.com/"><meta name="twitter:card" content="summary_large_image"><title>Vizo AI, Source-aware AI analysis</title><link rel="stylesheet" href="/_astro/BaseLayout.BtRPW27g.css"></head><body><a class="skip-link" href="#content">Skip to content</a><header class="site-header"><div class="shell nav"><a class="brand" href="/" aria-label="Vizo AI home"><span class="brand-mark" aria-hidden="true"></span><span>Vizo AI</span></a><div class="nav-actions"><nav class="nav-links" aria-label="Primary navigation"><a href="/topics/">Topics</a><a href="/explore/">Archive</a><a href="/about/">About</a><a class="search-link" href="/explore/?focus=search"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5"></circle><path d="m16 16 4.25 4.25"></path></svg><span>Search</span><kbd aria-hidden="true">⌘K</kbd></a></nav><details class="mobile-nav" data-mobile-nav><summary class="icon-button" aria-label="Open navigation"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"></path></svg></summary><nav class="popover mobile-nav-menu" aria-label="Mobile navigation"><a href="/topics/">Topics</a><a href="/explore/">Archive</a><a href="/about/">About</a><a href="/explore/?focus=search">Search archive</a></nav></details><div class="theme-picker" data-theme-picker><button class="icon-button theme-trigger" type="button" aria-label="Choose color theme" aria-haspopup="true" aria-expanded="false" data-theme-trigger><svg class="theme-icon theme-icon--sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="3.25"></circle><path d="M12 2.75v2M12 19.25v2M21.25 12h-2M4.75 12h-2M18.54 5.46l-1.42 1.42M6.88 17.12l-1.42 1.42M18.54 18.54l-1.42-1.42M6.88 6.88 5.46 5.46"></path></svg><svg class="theme-icon theme-icon--moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M19.4 15.3A8 8 0 0 1 8.7 4.6 8 8 0 1 0 19.4 15.3Z"></path></svg></button><div class="popover theme-menu" data-theme-menu hidden role="group" aria-label="Color theme"><button type="button" data-theme-value="light" aria-pressed="false"><span>Light</span><span class="theme-check" aria-hidden="true">✓</span></button><button type="button" data-theme-value="dark" aria-pressed="false"><span>Dark</span><span class="theme-check" aria-hidden="true">✓</span></button><button type="button" data-theme-value="system" aria-pressed="false"><span>System</span><span class="theme-check" aria-hidden="true">✓</span></button></div></div></div></div></header><div class="tagline"><p class="shell">Source-aware analysis of AI systems, infrastructure, and emerging technology.</p></div><main id="content"><h1 class="visually-hidden">Vizo AI</h1><section class="front shell" aria-label="Top stories"><div class="front-lead"><article class="story story--lead"><span class="kicker">Analysis</span><h2 class="story-title"><a href="/2026/09/18/mantic-s-25-million-bet-turns-forecasting-into-an-ai-product-category/">Mantic’s $25 Million Bet Turns Forecasting Into an AI Product Category</a></h2><p class="story-summary">A London startup is trying to make probabilistic judgment about messy real-world events something companies can buy at software speed.</p><p class="story-meta"><time datetime="2026-09-18">Sep 18, 2026</time><span aria-hidden="true">·</span><span>7 min read</span></p></article></div><div class="front-secondary"><article class="story story--compact"><a class="kicker" href="/topics/ai-drug-discovery/">AI Drug Discovery</a><h2 class="story-title"><a href="/2026/09/16/bytedance-s-290-million-anew-labs-spinout-tests-a-different-model-for-ai-drug-discovery/">ByteDance’s $290 Million Anew Labs Spinout Tests a Different Model for AI Drug Discovery</a></h2><p class="story-meta"><time datetime="2026-09-16">Sep 16, 2026</time><span aria-hidden="true">·</span><span>2 min read</span></p></article><article class="story story--compact"><a class="kicker" href="/topics/ai-chips/">AI Chips</a><h2 class="story-title"><a href="/2026/09/14/high-na-euv-is-becoming-a-strategic-choke-point-in-the-ai-chip-race/">High-NA EUV Is Becoming a Strategic Choke Point in the AI Chip Race</a></h2><p class="story-meta"><time datetime="2026-09-14">Sep 14, 2026</time><span aria-hidden="true">·</span><span>8 min read</span></p></article><article class="story story--compact"><a class="kicker" href="/topics/ai-models/">AI Models</a><h2 class="story-title"><a href="/2026/09/11/deepseek-v4-1-flash-makes-memory-economics-the-new-model-battleground/">DeepSeek V4.1-Flash Makes Memory Economics the New Model Battleground</a></h2><p class="story-meta"><time datetime="2026-09-11">Sep 11, 2026</time><span aria-hidden="true">·</span><span>7 min read</span></p></article></div></section><section class="section shell" aria-labelledby="latest-title"><div class="section-head"><h2 id="latest-title" class="section-title">Latest</h2><a class="section-link" href="/explore/">Full archive <span aria-hidden="true">→</span></a></div><div class="story-list"><article class="story story--row"><a class="kicker" href="/topics/ai-agents/">AI Agents</a><h3 class="story-title"><a href="/2026/09/09/meta-s-muse-shows-the-personal-ai-agent-race-is-becoming-a-security-architecture-race/">Meta’s Muse Shows the Personal AI Agent Race Is Becoming a Security-Architecture Race</a></h3><p class="story-summary">Meta’s Muse puts secure delegation at the center of the personal AI agent race, where model quality alone is no longer enough.</p><p class="story-meta"><time datetime="2026-09-09">Sep 9, 2026</time><span aria-hidden="true">·</span><span>8 min read</span></p></article><article class="story story--row"><a class="kicker" href="/topics/ai-safety/">AI Safety</a><h3 class="story-title"><a href="/2026/09/07/ai-agent-failures-need-incident-reporting-not-just-system-cards/">AI Agent Failures Need Incident Reporting, Not Just System Cards</a></h3><p class="story-summary">Autonomous-agent failures that affect real systems need operational incident reporting alongside system cards and research disclosures.</p><p class="story-meta"><time datetime="2026-09-07">Sep 7, 2026</time><span aria-hidden="true">·</span><span>8 min read</span></p></article><article class="story story--row"><a class="kicker" href="/topics/frontier-ai/">Frontier AI</a><h3 class="story-title"><a href="/2026/09/04/gpt-6-astra-changes-the-frontier-ai-question/">GPT-6 Astra Changes the Frontier AI Question From ‘Can It?’ to ‘Can We Delegate It?’</a></h3><p class="story-summary">GPT-6 Astra shifts the frontier AI debate from raw capability toward safe delegation, computer use, cybersecurity, and operational control.</p><p class="story-meta"><time datetime="2026-09-04">Sep 4, 2026</time><span aria-hidden="true">·</span><span>8 min read</span></p></article><article class="story story--row"><a class="kicker" href="/topics/ai-agents/">AI Agents</a><h3 class="story-title"><a href="/2026/08/07/hkudsnanobot/">HKUDS/nanobot</a></h3><p class="story-meta"><time datetime="2026-08-07">Aug 7, 2026</time><span aria-hidden="true">·</span><span>3 min read</span></p></article><article class="story story--row"><a class="kicker" href="/topics/ai-agents/">AI Agents</a><h3 class="story-title"><a href="/2026/08/07/the-rise-of-autonomous-ai-agents-in-prod/">The Rise of Autonomous AI Agents in Prod</a></h3><p class="story-meta"><time datetime="2026-08-07">Aug 7, 2026</time><span aria-hidden="true">·</span><span>3 min read</span></p></article></div></section><section class="section shell" aria-labelledby="topics-title"><div class="section-head"><h2 id="topics-title" class="section-title">By topic</h2><a class="section-link" href="/topics/">All topics <span aria-hidden="true">→</span></a></div><div class="topic-sections"><section class="topic-section" aria-labelledby="topic-ai-agents"><div class="topic-section-head"><h3 id="topic-ai-agents"><a href="/topics/ai-agents/">AI Agents</a></h3><a class="section-link" href="/topics/ai-agents/">See all 6 <span aria-hidden="true">→</span></a></div><div class="topic-section-grid"><article class="story story--compact"><h3 class="story-title"><a href="/2026/09/11/deepseek-v4-1-flash-makes-memory-economics-the-new-model-battleground/">DeepSeek V4.1-Flash Makes Memory Economics the New Model Battleground</a></h3><p class="story-meta"><time datetime="2026-09-11">Sep 11, 2026</time><span aria-hidden="true">·</span><span>7 min read</span></p></article><article class="story story--compact"><h3 class="story-title"><a href="/2026/09/09/meta-s-muse-shows-the-personal-ai-agent-race-is-becoming-a-security-architecture-race/">Meta’s Muse Shows the Personal AI Agent Race Is Becoming a Security-Architecture Race</a></h3><p class="story-meta"><time datetime="2026-09-09">Sep 9, 2026</time><span aria-hidden="true">·</span><span>8 min read</span></p></article><article class="story story--compact"><h3 class="story-title"><a href="/2026/09/07/ai-agent-failures-need-incident-reporting-not-just-system-cards/">AI Agent Failures Need Incident Reporting, Not Just System Cards</a></h3><p class="story-meta"><time datetime="2026-09-07">Sep 7, 2026</time><span aria-hidden="true">·</span><span>8 min read</span></p></article></div></section><section class="topic-section" aria-labelledby="topic-ai-safety"><div class="topic-section-head"><h3 id="topic-ai-safety"><a href="/topics/ai-safety/">AI Safety</a></h3><a class="section-link" href="/topics/ai-safety/">See all 2 <span aria-hidden="true">→</span></a></div><div class="topic-section-grid"><article class="story story--compact"><h3 class="story-title"><a href="/2026/09/07/ai-agent-failures-need-incident-reporting-not-just-system-cards/">AI Agent Failures Need Incident Reporting, Not Just System Cards</a></h3><p class="story-meta"><time datetime="2026-09-07">Sep 7, 2026</time><span aria-hidden="true">·</span><span>8 min read</span></p></article><article class="story story--compact"><h3 class="story-title"><a href="/2026/09/04/gpt-6-astra-changes-the-frontier-ai-question/">GPT-6 Astra Changes the Frontier AI Question From ‘Can It?’ to ‘Can We Delegate It?’</a></h3><p class="story-meta"><time datetime="2026-09-04">Sep 4, 2026</time><span aria-hidden="true">·</span><span>8 min read</span></p></article></div></section><section class="topic-section" aria-labelledby="topic-ai-chips"><div class="topic-section-head"><h3 id="topic-ai-chips"><a href="/topics/ai-chips/">AI Chips</a></h3><a class="section-link" href="/topics/ai-chips/">See all 1 <span aria-hidden="true">→</span></a></div><div class="topic-section-grid"><article class="story story--compact"><h3 class="story-title"><a href="/2026/09/14/high-na-euv-is-becoming-a-strategic-choke-point-in-the-ai-chip-race/">High-NA EUV Is Becoming a Strategic Choke Point in the AI Chip Race</a></h3><p class="story-meta"><time datetime="2026-09-14">Sep 14, 2026</time><span aria-hidden="true">·</span><span>8 min read</span></p></article></div></section><section class="topic-section" aria-labelledby="topic-ai-drug-discovery"><div class="topic-section-head"><h3 id="topic-ai-drug-discovery"><a href="/topics/ai-drug-discovery/">AI Drug Discovery</a></h3><a class="section-link" href="/topics/ai-drug-discovery/">See all 1 <span aria-hidden="true">→</span></a></div><div class="topic-section-grid"><article class="story story--compact"><h3 class="story-title"><a href="/2026/09/16/bytedance-s-290-million-anew-labs-spinout-tests-a-different-model-for-ai-drug-discovery/">ByteDance’s $290 Million Anew Labs Spinout Tests a Different Model for AI Drug Discovery</a></h3><p class="story-meta"><time datetime="2026-09-16">Sep 16, 2026</time><span aria-hidden="true">·</span><span>2 min read</span></p></article></div></section></div></section></main><footer class="site-footer"><div class="shell footer-inner"><a class="brand" href="/"><span class="brand-mark" aria-hidden="true"></span><span>Vizo AI</span></a><nav class="footer-links" aria-label="Footer"><a href="/topics/">Topics</a><a href="/explore/">Archive</a><a href="/about/">About</a><a href="/rss.xml">RSS</a></nav><p class="footer-note">Source-aware analysis, published with its sources.</p></div></footer><script>
+      const root = document.documentElement;
+      const themePicker = document.querySelector('[data-theme-picker]');
+      const themeTrigger = document.querySelector('[data-theme-trigger]');
+      const themeMenu = document.querySelector('[data-theme-menu]');
+      const themeOptions = [...document.querySelectorAll('[data-theme-value]')];
+      const systemTheme = window.matchMedia('(prefers-color-scheme: dark)');
+      const themeColor = document.querySelector('#theme-color');
+
+      function setTheme(preference, persist = true) {
+        const allowed = ['light', 'dark', 'system'];
+        const nextPreference = allowed.includes(preference) ? preference : 'system';
+        const resolved = nextPreference === 'system' ? (systemTheme.matches ? 'dark' : 'light') : nextPreference;
+
+        root.dataset.theme = resolved;
+        root.dataset.themePreference = nextPreference;
+        root.style.colorScheme = resolved;
+        themeColor?.setAttribute('content', resolved === 'dark' ? '#0e0f11' : '#faf8f4');
+        themeOptions.forEach((option) => {
+          option.setAttribute('aria-pressed', String(option.dataset.themeValue === nextPreference));
+        });
+
+        if (persist) {
+          try {
+            window.localStorage.setItem('vizo-theme', nextPreference);
+          } catch {
+            // Keep the in-memory choice when storage is unavailable.
+          }
+        }
+      }
+
+      function closeThemeMenu({ restoreFocus = false } = {}) {
+        if (!(themeMenu instanceof HTMLElement) || !(themeTrigger instanceof HTMLButtonElement)) return;
+        themeMenu.hidden = true;
+        themeTrigger.setAttribute('aria-expanded', 'false');
+        if (restoreFocus) themeTrigger.focus();
+      }
+
+      function openThemeMenu() {
+        if (!(themeMenu instanceof HTMLElement) || !(themeTrigger instanceof HTMLButtonElement)) return;
+        themeMenu.hidden = false;
+        themeTrigger.setAttribute('aria-expanded', 'true');
+      }
+
+      setTheme(root.dataset.themePreference ?? 'system', false);
+
+      themeTrigger?.addEventListener('click', () => {
+        if (themeMenu instanceof HTMLElement && themeMenu.hidden) openThemeMenu();
+        else closeThemeMenu();
+      });
+
+      themeOptions.forEach((option, index) => {
+        option.addEventListener('click', () => {
+          setTheme(option.dataset.themeValue ?? 'system');
+          closeThemeMenu({ restoreFocus: true });
+        });
+
+        option.addEventListener('keydown', (event) => {
+          if (!['ArrowDown', 'ArrowUp', 'Home', 'End'].includes(event.key)) return;
+          event.preventDefault();
+          const targetIndex = event.key === 'Home'
+            ? 0
+            : event.key === 'End'
+              ? themeOptions.length - 1
+              : (index + (event.key === 'ArrowDown' ? 1 : -1) + themeOptions.length) % themeOptions.length;
+          themeOptions[targetIndex]?.focus();
+        });
+      });
+
+      systemTheme.addEventListener('change', () => {
+        if (root.dataset.themePreference === 'system') setTheme('system', false);
+      });
+
+      document.addEventListener('click', (event) => {
+        if (themePicker instanceof HTMLElement && !themePicker.contains(event.target)) closeThemeMenu();
+
+        document.querySelectorAll('[data-mobile-nav][open]').forEach((nav) => {
+          if (nav instanceof HTMLElement && !nav.contains(event.target)) nav.removeAttribute('open');
+        });
+      });
+
+      document.querySelectorAll('[data-mobile-nav] a').forEach((link) => {
+        link.addEventListener('click', () => link.closest('details')?.removeAttribute('open'));
+      });
+
+      document.querySelector('[data-back-link]')?.addEventListener('click', (event) => {
+        if (!document.referrer || window.history.length <= 1) return;
+
+        try {
+          const previous = new URL(document.referrer);
+          const current = new URL(window.location.href);
+          const canReturn = previous.origin === current.origin && previous.pathname !== current.pathname;
+
+          if (canReturn) {
+            event.preventDefault();
+            window.history.back();
+          }
+        } catch {
+          // Keep the destination fallback when the referrer cannot be parsed.
+        }
+      });
+
+      document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape') {
+          closeThemeMenu({ restoreFocus: themeTrigger?.getAttribute('aria-expanded') === 'true' });
+          document.querySelectorAll('[data-mobile-nav][open]').forEach((nav) => nav.removeAttribute('open'));
+          return;
+        }
+
+        if (!(event.metaKey || event.ctrlKey) || event.key.toLowerCase() !== 'k') return;
+
+        event.preventDefault();
+        const searchInput = document.querySelector('#research-search');
+
+        if (searchInput instanceof HTMLInputElement) {
+          searchInput.focus();
+        } else {
+          window.location.assign('/explore/?focus=search');
+        }
+      });
+    </script></body></html>

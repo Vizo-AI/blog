@@ -1,0 +1,228 @@
+<!DOCTYPE html><html lang="en"><head><script>
+      (() => {
+        const root = document.documentElement;
+        const media = window.matchMedia('(prefers-color-scheme: dark)');
+        let preference = 'system';
+
+        try {
+          const stored = window.localStorage.getItem('vizo-theme');
+          if (stored === 'light' || stored === 'dark' || stored === 'system') preference = stored;
+        } catch {
+          // Storage can be unavailable in privacy-restricted contexts.
+        }
+
+        const resolved = preference === 'system' ? (media.matches ? 'dark' : 'light') : preference;
+        root.dataset.theme = resolved;
+        root.dataset.themePreference = preference;
+        root.style.colorScheme = resolved;
+      })();
+    </script><meta charset="UTF-8"><meta name="viewport" content="width=device-width"><meta name="generator" content="Astro v7.2.0"><meta name="description" content="Research analysis from Vizo AI."><meta id="theme-color" name="theme-color" content="#0e0f11"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="canonical" href="https://ai-blog.ixo8.com/2026/08/07/hkudsnanobot/"><link rel="alternate" type="application/rss+xml" title="Vizo AI" href="/rss.xml"><style>@font-face{font-family:"Source Serif 4-77ba8a10457dfacb";src:url("/_astro/fonts/24d457dd795739ed.woff2") format("woff2");font-display:swap;unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-weight:200 900;font-style:normal;}@font-face{font-family:"Source Serif 4-77ba8a10457dfacb";src:url("/_astro/fonts/e0254323ea68b855.woff2") format("woff2");font-display:swap;unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-weight:200 900;font-style:italic;}@font-face{font-family:"Source Serif 4-77ba8a10457dfacb fallback: Times New Roman";src:local("Times New Roman");font-display:swap;font-weight:200 900;font-style:normal;size-adjust:117.9077%;ascent-override:87.8653%;descent-override:28.4121%;line-gap-override:0%;}@font-face{font-family:"Source Serif 4-77ba8a10457dfacb fallback: Times New Roman";src:local("Times New Roman");font-display:swap;font-weight:200 900;font-style:italic;size-adjust:117.9077%;ascent-override:87.8653%;descent-override:28.4121%;line-gap-override:0%;}:root{--font-serif:"Source Serif 4-77ba8a10457dfacb","Source Serif 4-77ba8a10457dfacb fallback: Times New Roman",Georgia,serif;}</style><link rel="preload" href="/_astro/fonts/24d457dd795739ed.woff2" as="font" type="font/woff2" crossorigin><style>@font-face{font-family:Inter-912952f8a2e65f75;src:url("/_astro/fonts/5288773a5a229461.woff2") format("woff2");font-display:swap;unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-weight:100 900;font-style:normal;}@font-face{font-family:"Inter-912952f8a2e65f75 fallback: Arial";src:local("Arial");font-display:swap;font-weight:100 900;font-style:normal;size-adjust:107.1194%;ascent-override:90.4365%;descent-override:22.518%;line-gap-override:0%;}:root{--font-sans:Inter-912952f8a2e65f75,"Inter-912952f8a2e65f75 fallback: Arial",ui-sans-serif,system-ui,sans-serif;}</style><link rel="preload" href="/_astro/fonts/5288773a5a229461.woff2" as="font" type="font/woff2" crossorigin><meta property="og:site_name" content="Vizo AI"><meta property="og:type" content="article"><meta property="og:title" content="HKUDS/nanobot, Vizo AI"><meta property="og:description" content="Research analysis from Vizo AI."><meta property="og:url" content="https://ai-blog.ixo8.com/2026/08/07/hkudsnanobot/"><meta name="twitter:card" content="summary_large_image"><title>HKUDS/nanobot, Vizo AI</title><link rel="stylesheet" href="/_astro/BaseLayout.BtRPW27g.css"></head><body><a class="skip-link" href="#content">Skip to content</a><header class="site-header"><div class="shell nav"><a class="brand" href="/" aria-label="Vizo AI home"><span class="brand-mark" aria-hidden="true"></span><span>Vizo AI</span></a><div class="nav-actions"><nav class="nav-links" aria-label="Primary navigation"><a href="/topics/">Topics</a><a href="/explore/">Archive</a><a href="/about/">About</a><a class="search-link" href="/explore/?focus=search"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5"></circle><path d="m16 16 4.25 4.25"></path></svg><span>Search</span><kbd aria-hidden="true">⌘K</kbd></a></nav><details class="mobile-nav" data-mobile-nav><summary class="icon-button" aria-label="Open navigation"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"></path></svg></summary><nav class="popover mobile-nav-menu" aria-label="Mobile navigation"><a href="/topics/">Topics</a><a href="/explore/">Archive</a><a href="/about/">About</a><a href="/explore/?focus=search">Search archive</a></nav></details><div class="theme-picker" data-theme-picker><button class="icon-button theme-trigger" type="button" aria-label="Choose color theme" aria-haspopup="true" aria-expanded="false" data-theme-trigger><svg class="theme-icon theme-icon--sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="3.25"></circle><path d="M12 2.75v2M12 19.25v2M21.25 12h-2M4.75 12h-2M18.54 5.46l-1.42 1.42M6.88 17.12l-1.42 1.42M18.54 18.54l-1.42-1.42M6.88 6.88 5.46 5.46"></path></svg><svg class="theme-icon theme-icon--moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M19.4 15.3A8 8 0 0 1 8.7 4.6 8 8 0 1 0 19.4 15.3Z"></path></svg></button><div class="popover theme-menu" data-theme-menu hidden role="group" aria-label="Color theme"><button type="button" data-theme-value="light" aria-pressed="false"><span>Light</span><span class="theme-check" aria-hidden="true">✓</span></button><button type="button" data-theme-value="dark" aria-pressed="false"><span>Dark</span><span class="theme-check" aria-hidden="true">✓</span></button><button type="button" data-theme-value="system" aria-pressed="false"><span>System</span><span class="theme-check" aria-hidden="true">✓</span></button></div></div></div></div></header><main id="content"><div class="page-back shell"><a class="back-link" href="/explore/" data-back-link aria-label="Go back to the previous page"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m14 6-6 6 6 6"></path><path d="M8 12h11"></path></svg><span>Back</span></a></div><article class="article"><header class="article-header"><a class="kicker" href="/topics/ai-agents/">AI Agents</a><h1 class="article-title">HKUDS/nanobot</h1><p class="article-byline"><span>By Vizo AI</span><time datetime="2026-08-07">August 7, 2026</time><span>3 min read</span></p></header><div class="article-layout"><aside class="article-rail"><nav class="toc" aria-labelledby="toc-title" data-toc><details class="toc-details" data-toc-details open><summary id="toc-title">On this page</summary><ol><li><a href="#what-self-hosting-changes" data-toc-link="what-self-hosting-changes">What self-hosting changes</a></li><li><a href="#a-workshop-implementation" data-toc-link="a-workshop-implementation">A workshop implementation</a></li><li><a href="#where-the-framework-is-useful" data-toc-link="where-the-framework-is-useful">Where the framework is useful</a></li><li><a href="#trying-the-project" data-toc-link="trying-the-project">Trying the project</a></li></ol></details></nav><script>
+  // The rail precedes the article body in the DOM, so wait for the headings.
+  document.addEventListener('DOMContentLoaded', () => {
+    const toc = document.querySelector('[data-toc]');
+    if (!(toc instanceof HTMLElement)) return;
+
+    const details = toc.querySelector('[data-toc-details]');
+    const wide = window.matchMedia('(min-width: 1180px)');
+    const syncOpen = () => {
+      if (details instanceof HTMLDetailsElement) details.open = wide.matches;
+    };
+    syncOpen();
+    wide.addEventListener('change', syncOpen);
+
+    toc.addEventListener('click', (event) => {
+      if (!wide.matches && event.target instanceof HTMLAnchorElement && details instanceof HTMLDetailsElement) details.open = false;
+    });
+
+    const links = new Map([...toc.querySelectorAll('[data-toc-link]')].map((link) => [link.getAttribute('data-toc-link'), link]));
+    const targets = [...links.keys()].map((id) => document.getElementById(id ?? '')).filter(Boolean);
+    if (targets.length === 0) return;
+
+    // The active section is the last heading scrolled past the top third of
+    // the viewport, so jumps and fast scrolls still land on the right entry.
+    let frame = 0;
+    const update = () => {
+      frame = 0;
+      const threshold = window.innerHeight * 0.3;
+      let activeId = null;
+      for (const target of targets) {
+        if (target.getBoundingClientRect().top <= threshold) activeId = target.id;
+        else break;
+      }
+      links.forEach((link, key) => {
+        if (key === activeId) link.setAttribute('aria-current', 'location');
+        else link.removeAttribute('aria-current');
+      });
+    };
+    const schedule = () => {
+      if (!frame) frame = window.requestAnimationFrame(update);
+    };
+    window.addEventListener('scroll', schedule, { passive: true });
+    window.addEventListener('resize', schedule);
+    update();
+  }, { once: true });
+</script></aside><div class="article-main"><div class="prose" data-pagefind-body><p>HKUDS/nanobot is a lightweight, self-hosted Python framework for personal AI agents. It combines a WebUI, tool registration, persistent memory, an MCP layer, multi-agent workflows, automation scripts and pluggable chat adapters.</p>
+<p>The project is most useful for developers who want to inspect and control the system around a model. A local deployment can support focused assistants, such as a grammar checker or research aide, without outsourcing the entire workflow to a hosted agent platform.</p>
+<hr>
+<h2 id="what-self-hosting-changes">What self-hosting changes</h2>
+<ol>
+<li><strong>Data stays yours</strong> – No API keys, no third‑party servers. Sensitive context lives on your machine.</li>
+<li><strong>Zero vendor lock‑in</strong> – You own the code, the model, the upgrade path.</li>
+<li><strong>Extensibility by design</strong> – Add a new tool by dropping a Python function into the MCP registry; the framework auto‑wires it to every agent that needs it.</li>
+<li><strong>Lightweight footprint</strong> – A few megabytes of dependencies, no Docker daemon required, and it runs on any OS that supports Python 3.9+.</li>
+</ol>
+<p>Those properties make nanobot relevant to researchers, independent developers and small teams that need direct control over an assistant’s data and tools.</p>
+<hr>
+<h2 id="a-workshop-implementation">A workshop implementation</h2>
+<p>Last week I ran a <strong>full‑scale, hands‑on workshop</strong> titled <em>“Agentic AI Engineering: MCP, CrewAI, OpenAI Agent SDK.”</em> The session walked participants through:</p>
+<ul>
+<li><strong>Model‑Control‑Protocol (MCP)</strong> – a simple JSON‑over‑HTTP contract for exposing any Python function as a callable tool.</li>
+<li><strong>CrewAI</strong> – a lightweight orchestration layer that lets you declare a hierarchy of agents, assign them roles, and let them pass state via shared memory.</li>
+<li><strong>OpenAI Agent SDK</strong> – for those who still want to tap into GPT‑4‑level reasoning while keeping the surrounding workflow fully self‑hosted.</li>
+</ul>
+<p>The workshop culminated in a live demo where each participant deployed a <strong>custom “Catbot”</strong> into nanobot’s WebUI. Catbot was entered in DEV’s Summer Bug Smash (a Sentry‑powered bug‑fixing competition) and solved a subtle grammar‑parsing edge case that had tripped up larger language models. Within nanobot, Catbot:</p>
+<ol>
+<li><strong>Registered its <code>check_grammar</code> function as an MCP tool.</strong></li>
+<li><strong>Gained a persistent memory slot</strong> to store user‑specific style guides.</li>
+<li><strong>Started a chat session</strong> through the WebUI, where it could ask clarifying questions, call external spell‑checking APIs, and even hand off to a “Proofreader” agent when confidence was low.</li>
+</ol>
+<p>The exercise showed how a single Python tool can become part of an interactive, memory-aware workflow without requiring a large application scaffold.</p>
+<hr>
+<h2 id="where-the-framework-is-useful">Where the framework is useful</h2>
+<p>If you’re looking to move beyond “chat‑only” AI experiences and into <strong>real‑world automation</strong>, nanobot gives you the scaffolding to:</p>
+<ul>
+<li><strong>Create modular agents</strong> that can be swapped, versioned, and tested independently.</li>
+<li><strong>Compose workflows</strong> where one agent’s output becomes another’s input, enabling planning‑execution‑reflection loops.</li>
+<li><strong>Expose any Python library</strong> (from Selenium to Pandas) as a first‑class tool without writing wrapper code.</li>
+</ul>
+<p>Because the entire stack is open source and community‑driven, you can fork it, add features, or contribute bug‑fixes back, turning a personal experiment into a collaborative platform.</p>
+<hr>
+<h2 id="trying-the-project">Trying the project</h2>
+<ul>
+<li><strong>Grab the repo</strong>: <code>git clone https://github.com/HKUDS/nanobot.git</code></li>
+<li><strong>Spin up the WebUI</strong>: <code>python -m nanobot.ui</code> – you’ll see a minimal chat window ready for your first tool.</li>
+<li><strong>Join the community</strong>: We have a Discord channel and a weekly “Agent‑Design” livestream where developers share patterns and troubleshoot together.</li>
+<li><strong>Check workshop dates</strong> in the repository README if the guided MCP, CrewAI and OpenAI Agent SDK material is useful to you.</li>
+</ul>
+<p>Nanobot is best evaluated as an orchestration framework rather than as another model. Its value depends on whether local control, modular tools and inspectable workflows justify maintaining the surrounding infrastructure yourself.</p>
+</div><footer class="article-record"><dl class="record-list"><div><dt>Published</dt><dd><time datetime="2026-08-07">August 7, 2026</time></dd></div><div><dt>Sources recorded</dt><dd>None recorded</dd></div><div><dt>Tags</dt><dd>HKUDS, nanobot, MCP</dd></div></dl></footer></div></div></article><section class="section shell related" aria-labelledby="related-title"><div class="section-head"><h2 id="related-title" class="section-title">Related analysis</h2><a class="section-link" href="/topics/ai-agents/">All AI Agents <span aria-hidden="true">→</span></a></div><div class="related-grid"><article class="story story--compact"><a class="kicker" href="/topics/ai-models/">AI Models</a><h3 class="story-title"><a href="/2026/09/11/deepseek-v4-1-flash-makes-memory-economics-the-new-model-battleground/">DeepSeek V4.1-Flash Makes Memory Economics the New Model Battleground</a></h3><p class="story-meta"><time datetime="2026-09-11">Sep 11, 2026</time><span aria-hidden="true">·</span><span>7 min read</span></p></article><article class="story story--compact"><a class="kicker" href="/topics/ai-agents/">AI Agents</a><h3 class="story-title"><a href="/2026/09/09/meta-s-muse-shows-the-personal-ai-agent-race-is-becoming-a-security-architecture-race/">Meta’s Muse Shows the Personal AI Agent Race Is Becoming a Security-Architecture Race</a></h3><p class="story-meta"><time datetime="2026-09-09">Sep 9, 2026</time><span aria-hidden="true">·</span><span>8 min read</span></p></article><article class="story story--compact"><a class="kicker" href="/topics/ai-safety/">AI Safety</a><h3 class="story-title"><a href="/2026/09/07/ai-agent-failures-need-incident-reporting-not-just-system-cards/">AI Agent Failures Need Incident Reporting, Not Just System Cards</a></h3><p class="story-meta"><time datetime="2026-09-07">Sep 7, 2026</time><span aria-hidden="true">·</span><span>8 min read</span></p></article></div></section></main><footer class="site-footer"><div class="shell footer-inner"><a class="brand" href="/"><span class="brand-mark" aria-hidden="true"></span><span>Vizo AI</span></a><nav class="footer-links" aria-label="Footer"><a href="/topics/">Topics</a><a href="/explore/">Archive</a><a href="/about/">About</a><a href="/rss.xml">RSS</a></nav><p class="footer-note">Source-aware analysis, published with its sources.</p></div></footer><script>
+      const root = document.documentElement;
+      const themePicker = document.querySelector('[data-theme-picker]');
+      const themeTrigger = document.querySelector('[data-theme-trigger]');
+      const themeMenu = document.querySelector('[data-theme-menu]');
+      const themeOptions = [...document.querySelectorAll('[data-theme-value]')];
+      const systemTheme = window.matchMedia('(prefers-color-scheme: dark)');
+      const themeColor = document.querySelector('#theme-color');
+
+      function setTheme(preference, persist = true) {
+        const allowed = ['light', 'dark', 'system'];
+        const nextPreference = allowed.includes(preference) ? preference : 'system';
+        const resolved = nextPreference === 'system' ? (systemTheme.matches ? 'dark' : 'light') : nextPreference;
+
+        root.dataset.theme = resolved;
+        root.dataset.themePreference = nextPreference;
+        root.style.colorScheme = resolved;
+        themeColor?.setAttribute('content', resolved === 'dark' ? '#0e0f11' : '#faf8f4');
+        themeOptions.forEach((option) => {
+          option.setAttribute('aria-pressed', String(option.dataset.themeValue === nextPreference));
+        });
+
+        if (persist) {
+          try {
+            window.localStorage.setItem('vizo-theme', nextPreference);
+          } catch {
+            // Keep the in-memory choice when storage is unavailable.
+          }
+        }
+      }
+
+      function closeThemeMenu({ restoreFocus = false } = {}) {
+        if (!(themeMenu instanceof HTMLElement) || !(themeTrigger instanceof HTMLButtonElement)) return;
+        themeMenu.hidden = true;
+        themeTrigger.setAttribute('aria-expanded', 'false');
+        if (restoreFocus) themeTrigger.focus();
+      }
+
+      function openThemeMenu() {
+        if (!(themeMenu instanceof HTMLElement) || !(themeTrigger instanceof HTMLButtonElement)) return;
+        themeMenu.hidden = false;
+        themeTrigger.setAttribute('aria-expanded', 'true');
+      }
+
+      setTheme(root.dataset.themePreference ?? 'system', false);
+
+      themeTrigger?.addEventListener('click', () => {
+        if (themeMenu instanceof HTMLElement && themeMenu.hidden) openThemeMenu();
+        else closeThemeMenu();
+      });
+
+      themeOptions.forEach((option, index) => {
+        option.addEventListener('click', () => {
+          setTheme(option.dataset.themeValue ?? 'system');
+          closeThemeMenu({ restoreFocus: true });
+        });
+
+        option.addEventListener('keydown', (event) => {
+          if (!['ArrowDown', 'ArrowUp', 'Home', 'End'].includes(event.key)) return;
+          event.preventDefault();
+          const targetIndex = event.key === 'Home'
+            ? 0
+            : event.key === 'End'
+              ? themeOptions.length - 1
+              : (index + (event.key === 'ArrowDown' ? 1 : -1) + themeOptions.length) % themeOptions.length;
+          themeOptions[targetIndex]?.focus();
+        });
+      });
+
+      systemTheme.addEventListener('change', () => {
+        if (root.dataset.themePreference === 'system') setTheme('system', false);
+      });
+
+      document.addEventListener('click', (event) => {
+        if (themePicker instanceof HTMLElement && !themePicker.contains(event.target)) closeThemeMenu();
+
+        document.querySelectorAll('[data-mobile-nav][open]').forEach((nav) => {
+          if (nav instanceof HTMLElement && !nav.contains(event.target)) nav.removeAttribute('open');
+        });
+      });
+
+      document.querySelectorAll('[data-mobile-nav] a').forEach((link) => {
+        link.addEventListener('click', () => link.closest('details')?.removeAttribute('open'));
+      });
+
+      document.querySelector('[data-back-link]')?.addEventListener('click', (event) => {
+        if (!document.referrer || window.history.length <= 1) return;
+
+        try {
+          const previous = new URL(document.referrer);
+          const current = new URL(window.location.href);
+          const canReturn = previous.origin === current.origin && previous.pathname !== current.pathname;
+
+          if (canReturn) {
+            event.preventDefault();
+            window.history.back();
+          }
+        } catch {
+          // Keep the destination fallback when the referrer cannot be parsed.
+        }
+      });
+
+      document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape') {
+          closeThemeMenu({ restoreFocus: themeTrigger?.getAttribute('aria-expanded') === 'true' });
+          document.querySelectorAll('[data-mobile-nav][open]').forEach((nav) => nav.removeAttribute('open'));
+          return;
+        }
+
+        if (!(event.metaKey || event.ctrlKey) || event.key.toLowerCase() !== 'k') return;
+
+        event.preventDefault();
+        const searchInput = document.querySelector('#research-search');
+
+        if (searchInput instanceof HTMLInputElement) {
+          searchInput.focus();
+        } else {
+          window.location.assign('/explore/?focus=search');
+        }
+      });
+    </script></body></html>

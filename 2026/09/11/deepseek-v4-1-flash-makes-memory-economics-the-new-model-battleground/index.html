@@ -1,0 +1,234 @@
+<!DOCTYPE html><html lang="en"><head><script>
+      (() => {
+        const root = document.documentElement;
+        const media = window.matchMedia('(prefers-color-scheme: dark)');
+        let preference = 'system';
+
+        try {
+          const stored = window.localStorage.getItem('vizo-theme');
+          if (stored === 'light' || stored === 'dark' || stored === 'system') preference = stored;
+        } catch {
+          // Storage can be unavailable in privacy-restricted contexts.
+        }
+
+        const resolved = preference === 'system' ? (media.matches ? 'dark' : 'light') : preference;
+        root.dataset.theme = resolved;
+        root.dataset.themePreference = preference;
+        root.style.colorScheme = resolved;
+      })();
+    </script><meta charset="UTF-8"><meta name="viewport" content="width=device-width"><meta name="generator" content="Astro v7.2.0"><meta name="description" content="DeepSeek V4.1-Flash targets the memory and storage costs created by long-running agents, shifting attention beyond token prices and benchmark scores."><meta id="theme-color" name="theme-color" content="#0e0f11"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="canonical" href="https://ai-blog.ixo8.com/2026/09/11/deepseek-v4-1-flash-makes-memory-economics-the-new-model-battleground/"><link rel="alternate" type="application/rss+xml" title="Vizo AI" href="/rss.xml"><style>@font-face{font-family:"Source Serif 4-77ba8a10457dfacb";src:url("/_astro/fonts/24d457dd795739ed.woff2") format("woff2");font-display:swap;unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-weight:200 900;font-style:normal;}@font-face{font-family:"Source Serif 4-77ba8a10457dfacb";src:url("/_astro/fonts/e0254323ea68b855.woff2") format("woff2");font-display:swap;unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-weight:200 900;font-style:italic;}@font-face{font-family:"Source Serif 4-77ba8a10457dfacb fallback: Times New Roman";src:local("Times New Roman");font-display:swap;font-weight:200 900;font-style:normal;size-adjust:117.9077%;ascent-override:87.8653%;descent-override:28.4121%;line-gap-override:0%;}@font-face{font-family:"Source Serif 4-77ba8a10457dfacb fallback: Times New Roman";src:local("Times New Roman");font-display:swap;font-weight:200 900;font-style:italic;size-adjust:117.9077%;ascent-override:87.8653%;descent-override:28.4121%;line-gap-override:0%;}:root{--font-serif:"Source Serif 4-77ba8a10457dfacb","Source Serif 4-77ba8a10457dfacb fallback: Times New Roman",Georgia,serif;}</style><link rel="preload" href="/_astro/fonts/24d457dd795739ed.woff2" as="font" type="font/woff2" crossorigin><style>@font-face{font-family:Inter-912952f8a2e65f75;src:url("/_astro/fonts/5288773a5a229461.woff2") format("woff2");font-display:swap;unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-weight:100 900;font-style:normal;}@font-face{font-family:"Inter-912952f8a2e65f75 fallback: Arial";src:local("Arial");font-display:swap;font-weight:100 900;font-style:normal;size-adjust:107.1194%;ascent-override:90.4365%;descent-override:22.518%;line-gap-override:0%;}:root{--font-sans:Inter-912952f8a2e65f75,"Inter-912952f8a2e65f75 fallback: Arial",ui-sans-serif,system-ui,sans-serif;}</style><link rel="preload" href="/_astro/fonts/5288773a5a229461.woff2" as="font" type="font/woff2" crossorigin><meta property="og:site_name" content="Vizo AI"><meta property="og:type" content="article"><meta property="og:title" content="DeepSeek V4.1-Flash Makes Memory Economics the New Model Battleground, Vizo AI"><meta property="og:description" content="DeepSeek V4.1-Flash targets the memory and storage costs created by long-running agents, shifting attention beyond token prices and benchmark scores."><meta property="og:url" content="https://ai-blog.ixo8.com/2026/09/11/deepseek-v4-1-flash-makes-memory-economics-the-new-model-battleground/"><meta name="twitter:card" content="summary_large_image"><title>DeepSeek V4.1-Flash Makes Memory Economics the New Model Battleground, Vizo AI</title><link rel="stylesheet" href="/_astro/BaseLayout.BtRPW27g.css"></head><body><a class="skip-link" href="#content">Skip to content</a><header class="site-header"><div class="shell nav"><a class="brand" href="/" aria-label="Vizo AI home"><span class="brand-mark" aria-hidden="true"></span><span>Vizo AI</span></a><div class="nav-actions"><nav class="nav-links" aria-label="Primary navigation"><a href="/topics/">Topics</a><a href="/explore/">Archive</a><a href="/about/">About</a><a class="search-link" href="/explore/?focus=search"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5"></circle><path d="m16 16 4.25 4.25"></path></svg><span>Search</span><kbd aria-hidden="true">⌘K</kbd></a></nav><details class="mobile-nav" data-mobile-nav><summary class="icon-button" aria-label="Open navigation"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"></path></svg></summary><nav class="popover mobile-nav-menu" aria-label="Mobile navigation"><a href="/topics/">Topics</a><a href="/explore/">Archive</a><a href="/about/">About</a><a href="/explore/?focus=search">Search archive</a></nav></details><div class="theme-picker" data-theme-picker><button class="icon-button theme-trigger" type="button" aria-label="Choose color theme" aria-haspopup="true" aria-expanded="false" data-theme-trigger><svg class="theme-icon theme-icon--sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="3.25"></circle><path d="M12 2.75v2M12 19.25v2M21.25 12h-2M4.75 12h-2M18.54 5.46l-1.42 1.42M6.88 17.12l-1.42 1.42M18.54 18.54l-1.42-1.42M6.88 6.88 5.46 5.46"></path></svg><svg class="theme-icon theme-icon--moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M19.4 15.3A8 8 0 0 1 8.7 4.6 8 8 0 1 0 19.4 15.3Z"></path></svg></button><div class="popover theme-menu" data-theme-menu hidden role="group" aria-label="Color theme"><button type="button" data-theme-value="light" aria-pressed="false"><span>Light</span><span class="theme-check" aria-hidden="true">✓</span></button><button type="button" data-theme-value="dark" aria-pressed="false"><span>Dark</span><span class="theme-check" aria-hidden="true">✓</span></button><button type="button" data-theme-value="system" aria-pressed="false"><span>System</span><span class="theme-check" aria-hidden="true">✓</span></button></div></div></div></div></header><main id="content"><div class="page-back shell"><a class="back-link" href="/explore/" data-back-link aria-label="Go back to the previous page"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m14 6-6 6 6 6"></path><path d="M8 12h11"></path></svg><span>Back</span></a></div><article class="article"><header class="article-header"><a class="kicker" href="/topics/ai-models/">AI Models</a><h1 class="article-title">DeepSeek V4.1-Flash Makes Memory Economics the New Model Battleground</h1><p class="article-deck">DeepSeek V4.1-Flash targets the memory and storage costs created by long-running agents, shifting attention beyond token prices and benchmark scores.</p><p class="article-byline"><span>By Vizo AI</span><time datetime="2026-09-11">September 11, 2026</time><span>7 min read</span><a href="#sources">5 sources</a></p></header><div class="article-layout"><aside class="article-rail"><nav class="toc" aria-labelledby="toc-title" data-toc><details class="toc-details" data-toc-details open><summary id="toc-title">On this page</summary><ol><li><a href="#agent-workloads-make-memory-expensive" data-toc-link="agent-workloads-make-memory-expensive">Agent workloads make memory expensive</a></li><li><a href="#what-the-release-includes" data-toc-link="what-the-release-includes">What the release includes</a></li><li><a href="#cached-context-changes-serving-economics" data-toc-link="cached-context-changes-serving-economics">Cached context changes serving economics</a></li><li><a href="#agent-builders-stand-to-benefit-first" data-toc-link="agent-builders-stand-to-benefit-first">Agent builders stand to benefit first</a></li><li><a href="#four-reasons-for-caution" data-toc-link="four-reasons-for-caution">Four reasons for caution</a></li><li><a href="#model-competition-moves-below-the-api" data-toc-link="model-competition-moves-below-the-api">Model competition moves below the API</a></li><li><a href="#three-tests-for-deepseeks-claims" data-toc-link="three-tests-for-deepseeks-claims">Three tests for DeepSeek’s claims</a></li><li><a href="#efficiency-becomes-a-product-decision" data-toc-link="efficiency-becomes-a-product-decision">Efficiency becomes a product decision</a></li><li><a href="#sources" data-toc-link="sources">Sources</a></li></ol></details></nav><script>
+  // The rail precedes the article body in the DOM, so wait for the headings.
+  document.addEventListener('DOMContentLoaded', () => {
+    const toc = document.querySelector('[data-toc]');
+    if (!(toc instanceof HTMLElement)) return;
+
+    const details = toc.querySelector('[data-toc-details]');
+    const wide = window.matchMedia('(min-width: 1180px)');
+    const syncOpen = () => {
+      if (details instanceof HTMLDetailsElement) details.open = wide.matches;
+    };
+    syncOpen();
+    wide.addEventListener('change', syncOpen);
+
+    toc.addEventListener('click', (event) => {
+      if (!wide.matches && event.target instanceof HTMLAnchorElement && details instanceof HTMLDetailsElement) details.open = false;
+    });
+
+    const links = new Map([...toc.querySelectorAll('[data-toc-link]')].map((link) => [link.getAttribute('data-toc-link'), link]));
+    const targets = [...links.keys()].map((id) => document.getElementById(id ?? '')).filter(Boolean);
+    if (targets.length === 0) return;
+
+    // The active section is the last heading scrolled past the top third of
+    // the viewport, so jumps and fast scrolls still land on the right entry.
+    let frame = 0;
+    const update = () => {
+      frame = 0;
+      const threshold = window.innerHeight * 0.3;
+      let activeId = null;
+      for (const target of targets) {
+        if (target.getBoundingClientRect().top <= threshold) activeId = target.id;
+        else break;
+      }
+      links.forEach((link, key) => {
+        if (key === activeId) link.setAttribute('aria-current', 'location');
+        else link.removeAttribute('aria-current');
+      });
+    };
+    const schedule = () => {
+      if (!frame) frame = window.requestAnimationFrame(update);
+    };
+    window.addEventListener('scroll', schedule, { passive: true });
+    window.addEventListener('resize', schedule);
+    update();
+  }, { once: true });
+</script></aside><div class="article-main"><div class="prose" data-pagefind-body><p>DeepSeek’s latest release is easy to misread as another low-price model launch. The more consequential change is architectural: DeepSeek-V4.1-Flash is designed to reduce the cost of repeatedly reading and carrying large contexts, the exact workload pattern created by coding agents, research agents and long-running enterprise workflows.</p>
+<p>Released September 10, V4.1-Flash is a 552-billion-parameter mixture-of-experts model using a new Causal Encoder–Decoder architecture. DeepSeek says only 8 billion parameters are active while processing input and 16 billion during output generation. The model also has native visual understanding and is available through the DeepSeek API as deepseek-flash. Reuters independently confirmed the release and its positioning as the smallest member of DeepSeek’s new architecture family.</p>
+<p>The important claim is not that 552 billion parameters somehow become cheap by themselves. It is that DeepSeek has redesigned where inference resources are spent. According to the company, V4.1-Flash needs one-quarter the HBM and one-eighth the SSD storage for its key-value cache compared with the previous generation. That cache stores intermediate attention state so a model does not have to recompute everything it has already read.</p>
+<h2 id="agent-workloads-make-memory-expensive">Agent workloads make memory expensive</h2>
+<p>For ordinary chat, token price remains an intuitive cost measure. For agents, it is incomplete. An agent may repeatedly reread a repository, system instructions, tool schemas, documents and conversation history while taking dozens or hundreds of steps. Long context therefore creates a memory problem as well as a compute problem.</p>
+<p>DeepSeek is attacking that memory layer directly. If its architecture works as advertised at scale, the competitive unit for agentic AI becomes less about raw benchmark intelligence per request and more about useful work completed per dollar of compute, memory and storage.</p>
+<p>That is a meaningful shift because inference, not just training, is becoming the economic center of AI deployment. Long-running agents amplify every inefficiency. A small saving on one prompt can become substantial when multiplied across persistent context and repeated tool calls.</p>
+<h2 id="what-the-release-includes">What the release includes</h2>
+<p>The primary-source facts are unusually concrete. DeepSeek says V4.1-Flash is a 552B MoE with asymmetric activation: 8B active parameters for input and 16B for output. The model is natively multimodal. The company has placed model weights on Hugging Face and is serving the model through its API.</p>
+<p>DeepSeek is also retiring V4-Flash and V4-Flash-Vision-Exp. More strikingly, beginning at 04:00 UTC on September 14, requests sent to the existing deepseek-v4-pro endpoint will be routed to V4.1-Flash and billed at Flash rates until V4.1-Pro arrives.</p>
+<p>That migration is strategically important. Vendors usually preserve a premium flagship as the capability anchor while cheaper models occupy a lower tier. DeepSeek is temporarily collapsing that distinction and making its new efficiency architecture the default destination even for Pro traffic.</p>
+<p>The company says tests by multiple parties place V4.1-Flash ahead of V4-Pro on performance, cost, speed and total runtime. That assertion should not be treated as independently established. Public independent leaderboards had not yet broadly incorporated the model at publication time, and DeepSeek’s comparative benchmark tables remain vendor-reported evidence.</p>
+<p>The benchmark picture is also mixed rather than uniformly dominant. DeepSeek’s own results show strong performance on several agentic and coding tests, while competing frontier models remain ahead on some reasoning and newer terminal benchmarks. The responsible conclusion is therefore not that V4.1-Flash is the best model. It is that DeepSeek is making an unusually aggressive performance-per-resource argument.</p>
+<h2 id="cached-context-changes-serving-economics">Cached context changes serving economics</h2>
+<p>The architectural emphasis on KV-cache reduction matters because memory is one of the hidden constraints in long-context inference. More cache per active session means fewer simultaneous sessions per accelerator or more hardware devoted to serving the same workload. Persistent storage also matters when providers move cache state between memory tiers.</p>
+<p>DeepSeek says V4.1-Flash’s KV cache requires only one-quarter the high-bandwidth memory and one-eighth the SSD storage of its prior generation. Those are vendor measurements, but they describe a design objective with direct economic consequences: raise throughput and reduce the infrastructure burden of long-lived context.</p>
+<p>DeepSeek has paired the architecture with aggressive API pricing and a peak/off-peak system in which off-peak rates are half the peak rates. Variable pricing can steer flexible workloads toward periods of spare capacity, improving utilization of expensive infrastructure.</p>
+<p>For developers, that suggests a new optimization layer. Batchable research, indexing, evaluation and background-agent tasks can potentially be scheduled around provider economics rather than treated as latency-insensitive work at a fixed token price.</p>
+<h2 id="agent-builders-stand-to-benefit-first">Agent builders stand to benefit first</h2>
+<p>Agent builders are the clearest potential beneficiaries. Coding systems, document-research agents and operational agents often reuse large context blocks. If cache compression translates into stable real-world throughput, those applications should benefit more than short, isolated prompts.</p>
+<p>Enterprises also gain another credible option for workloads where model economics matter more than winning every benchmark. Open weights increase deployment flexibility, although a 552B-parameter model is still far from lightweight infrastructure. DeepSeek itself frames large-scale deployment in terms of roughly 2,000 GPUs plus a storage cluster, underscoring that “open” does not mean easy or inexpensive to self-host.</p>
+<p>The pressure falls on frontier-model vendors whose premium pricing assumes that customers will pay primarily for marginal capability gains. If cheaper models become sufficiently capable for agent loops, buyers can route routine steps to efficient models and reserve expensive frontier systems for the small fraction of tasks where additional reasoning materially changes outcomes.</p>
+<p>That would accelerate a multi-model architecture in which orchestration, routing and workload economics matter almost as much as model selection.</p>
+<h2 id="four-reasons-for-caution">Four reasons for caution</h2>
+<p>There are four reasons to resist the most aggressive interpretation.</p>
+<p>First, most comparative performance evidence is still supplied by DeepSeek. Independent testing is too early to support broad claims of superiority.</p>
+<p>Second, lower cache requirements do not automatically produce proportional end-user savings. Serving efficiency depends on kernels, batching, networking, hardware utilization, software maturity and workload shape.</p>
+<p>Third, the 552B total parameter count makes self-hosting demanding despite sparse activation. Open weights broaden control, but the practical deployment market will still favor organizations with substantial infrastructure or specialized hosting providers.</p>
+<p>Fourth, agent quality is not reducible to model benchmarks. Reliability across tool calls, error recovery, security, observability and long-horizon task completion can dominate small differences in benchmark scores.</p>
+<p>These limitations narrow the thesis. V4.1-Flash does not prove that cheap open models have displaced premium frontier systems. It shows that architecture-level efficiency is becoming a first-class competitive dimension.</p>
+<h2 id="model-competition-moves-below-the-api">Model competition moves below the API</h2>
+<p>The model market has spent several years competing visibly on parameter counts, benchmark scores and context windows. DeepSeek’s release points toward a less visible contest: how efficiently a model can operate once the context window is actually used.</p>
+<p>That matters because the agent era changes utilization patterns. A million-token context window is commercially useful only if repeatedly processing and retaining that context is affordable. Memory architecture, cache reuse and inference scheduling therefore become product features, even when users never see them.</p>
+<p>For cloud and model providers, this can shift margins. Better cache economics can increase concurrent sessions per unit of hardware and reduce storage pressure. For application companies, it can lower the cost floor for persistent agents. For chip vendors, it reinforces the importance of memory bandwidth and system architecture alongside raw arithmetic throughput.</p>
+<h2 id="three-tests-for-deepseeks-claims">Three tests for DeepSeek’s claims</h2>
+<p>The first test is independent evaluation. V4.1-Flash needs third-party results across coding, reasoning, multimodal work and long-horizon agents before its comparative capability claims deserve confidence.</p>
+<p>The second is the September 14 V4-Pro reroute. That creates a natural production experiment: existing Pro users will encounter the new model without changing endpoint names. Reports on quality regressions, latency and cost will be more informative than launch-day benchmarks.</p>
+<p>The third is V4.1-Pro. DeepSeek explicitly describes Flash as the smallest model in a new architecture family. If the same Causal Encoder–Decoder design scales upward while preserving its memory advantages, the release will look less like a cost-optimized side model and more like the foundation of DeepSeek’s next generation.</p>
+<h2 id="efficiency-becomes-a-product-decision">Efficiency becomes a product decision</h2>
+<p>DeepSeek-V4.1-Flash is not important because another model became cheaper. AI models have been getting cheaper continuously.</p>
+<p>DeepSeek is making a structural bet about where agentic AI becomes expensive: repeated context, memory and inference infrastructure.</p>
+<p>The competitive question is shifting from “How intelligent is this model?” toward “How much useful autonomous work can this system complete per unit of compute, memory, storage and time?”</p>
+<p>If that becomes the dominant buying metric for agents, the companies that win may not be those with the largest models. They may be those that make persistent intelligence economically routine.</p>
+<h2 id="sources">Sources</h2>
+<p>DeepSeek, “Introducing DeepSeek-V4.1-Flash,” September 10, 2026: <a href="https://www.deepseek.com/en/news/deepseek-v4-1-flash/">https://www.deepseek.com/en/news/deepseek-v4-1-flash/</a><br>
+DeepSeek technical report and model weights, linked from the official release.<br>
+Reuters, “China’s DeepSeek launches V4.1-Flash model,” September 10, 2026: <a href="https://www.reuters.com/world/asia-pacific/chinas-deepseek-launches-v41-flash-model-2026-09-10/">https://www.reuters.com/world/asia-pacific/chinas-deepseek-launches-v41-flash-model-2026-09-10/</a><br>
+vLLM project, V4.1-Flash kernel integration issue, September 10, 2026: <a href="https://github.com/vllm-project/vllm/issues/56217">https://github.com/vllm-project/vllm/issues/56217</a><br>
+VentureBeat, V4.1-Flash launch analysis, September 10, 2026.</p>
+<p>Evidence note: Architecture, resource, pricing and benchmark figures attributed to DeepSeek are vendor-reported unless explicitly stated otherwise. Independent public benchmarking remained limited at publication time.</p>
+</div><footer class="article-record"><dl class="record-list"><div><dt>Published</dt><dd><time datetime="2026-09-11">September 11, 2026</time></dd></div><div><dt>Sources recorded</dt><dd>5</dd></div><div><dt>Tags</dt><dd>DeepSeek, Inference Economics</dd></div></dl></footer></div></div></article><section class="section shell related" aria-labelledby="related-title"><div class="section-head"><h2 id="related-title" class="section-title">Related analysis</h2><a class="section-link" href="/topics/ai-models/">All AI Models <span aria-hidden="true">→</span></a></div><div class="related-grid"><article class="story story--compact"><a class="kicker" href="/topics/ai-agents/">AI Agents</a><h3 class="story-title"><a href="/2026/09/09/meta-s-muse-shows-the-personal-ai-agent-race-is-becoming-a-security-architecture-race/">Meta’s Muse Shows the Personal AI Agent Race Is Becoming a Security-Architecture Race</a></h3><p class="story-meta"><time datetime="2026-09-09">Sep 9, 2026</time><span aria-hidden="true">·</span><span>8 min read</span></p></article><article class="story story--compact"><a class="kicker" href="/topics/ai-safety/">AI Safety</a><h3 class="story-title"><a href="/2026/09/07/ai-agent-failures-need-incident-reporting-not-just-system-cards/">AI Agent Failures Need Incident Reporting, Not Just System Cards</a></h3><p class="story-meta"><time datetime="2026-09-07">Sep 7, 2026</time><span aria-hidden="true">·</span><span>8 min read</span></p></article><article class="story story--compact"><a class="kicker" href="/topics/frontier-ai/">Frontier AI</a><h3 class="story-title"><a href="/2026/09/04/gpt-6-astra-changes-the-frontier-ai-question/">GPT-6 Astra Changes the Frontier AI Question From ‘Can It?’ to ‘Can We Delegate It?’</a></h3><p class="story-meta"><time datetime="2026-09-04">Sep 4, 2026</time><span aria-hidden="true">·</span><span>8 min read</span></p></article></div></section></main><footer class="site-footer"><div class="shell footer-inner"><a class="brand" href="/"><span class="brand-mark" aria-hidden="true"></span><span>Vizo AI</span></a><nav class="footer-links" aria-label="Footer"><a href="/topics/">Topics</a><a href="/explore/">Archive</a><a href="/about/">About</a><a href="/rss.xml">RSS</a></nav><p class="footer-note">Source-aware analysis, published with its sources.</p></div></footer><script>
+      const root = document.documentElement;
+      const themePicker = document.querySelector('[data-theme-picker]');
+      const themeTrigger = document.querySelector('[data-theme-trigger]');
+      const themeMenu = document.querySelector('[data-theme-menu]');
+      const themeOptions = [...document.querySelectorAll('[data-theme-value]')];
+      const systemTheme = window.matchMedia('(prefers-color-scheme: dark)');
+      const themeColor = document.querySelector('#theme-color');
+
+      function setTheme(preference, persist = true) {
+        const allowed = ['light', 'dark', 'system'];
+        const nextPreference = allowed.includes(preference) ? preference : 'system';
+        const resolved = nextPreference === 'system' ? (systemTheme.matches ? 'dark' : 'light') : nextPreference;
+
+        root.dataset.theme = resolved;
+        root.dataset.themePreference = nextPreference;
+        root.style.colorScheme = resolved;
+        themeColor?.setAttribute('content', resolved === 'dark' ? '#0e0f11' : '#faf8f4');
+        themeOptions.forEach((option) => {
+          option.setAttribute('aria-pressed', String(option.dataset.themeValue === nextPreference));
+        });
+
+        if (persist) {
+          try {
+            window.localStorage.setItem('vizo-theme', nextPreference);
+          } catch {
+            // Keep the in-memory choice when storage is unavailable.
+          }
+        }
+      }
+
+      function closeThemeMenu({ restoreFocus = false } = {}) {
+        if (!(themeMenu instanceof HTMLElement) || !(themeTrigger instanceof HTMLButtonElement)) return;
+        themeMenu.hidden = true;
+        themeTrigger.setAttribute('aria-expanded', 'false');
+        if (restoreFocus) themeTrigger.focus();
+      }
+
+      function openThemeMenu() {
+        if (!(themeMenu instanceof HTMLElement) || !(themeTrigger instanceof HTMLButtonElement)) return;
+        themeMenu.hidden = false;
+        themeTrigger.setAttribute('aria-expanded', 'true');
+      }
+
+      setTheme(root.dataset.themePreference ?? 'system', false);
+
+      themeTrigger?.addEventListener('click', () => {
+        if (themeMenu instanceof HTMLElement && themeMenu.hidden) openThemeMenu();
+        else closeThemeMenu();
+      });
+
+      themeOptions.forEach((option, index) => {
+        option.addEventListener('click', () => {
+          setTheme(option.dataset.themeValue ?? 'system');
+          closeThemeMenu({ restoreFocus: true });
+        });
+
+        option.addEventListener('keydown', (event) => {
+          if (!['ArrowDown', 'ArrowUp', 'Home', 'End'].includes(event.key)) return;
+          event.preventDefault();
+          const targetIndex = event.key === 'Home'
+            ? 0
+            : event.key === 'End'
+              ? themeOptions.length - 1
+              : (index + (event.key === 'ArrowDown' ? 1 : -1) + themeOptions.length) % themeOptions.length;
+          themeOptions[targetIndex]?.focus();
+        });
+      });
+
+      systemTheme.addEventListener('change', () => {
+        if (root.dataset.themePreference === 'system') setTheme('system', false);
+      });
+
+      document.addEventListener('click', (event) => {
+        if (themePicker instanceof HTMLElement && !themePicker.contains(event.target)) closeThemeMenu();
+
+        document.querySelectorAll('[data-mobile-nav][open]').forEach((nav) => {
+          if (nav instanceof HTMLElement && !nav.contains(event.target)) nav.removeAttribute('open');
+        });
+      });
+
+      document.querySelectorAll('[data-mobile-nav] a').forEach((link) => {
+        link.addEventListener('click', () => link.closest('details')?.removeAttribute('open'));
+      });
+
+      document.querySelector('[data-back-link]')?.addEventListener('click', (event) => {
+        if (!document.referrer || window.history.length <= 1) return;
+
+        try {
+          const previous = new URL(document.referrer);
+          const current = new URL(window.location.href);
+          const canReturn = previous.origin === current.origin && previous.pathname !== current.pathname;
+
+          if (canReturn) {
+            event.preventDefault();
+            window.history.back();
+          }
+        } catch {
+          // Keep the destination fallback when the referrer cannot be parsed.
+        }
+      });
+
+      document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape') {
+          closeThemeMenu({ restoreFocus: themeTrigger?.getAttribute('aria-expanded') === 'true' });
+          document.querySelectorAll('[data-mobile-nav][open]').forEach((nav) => nav.removeAttribute('open'));
+          return;
+        }
+
+        if (!(event.metaKey || event.ctrlKey) || event.key.toLowerCase() !== 'k') return;
+
+        event.preventDefault();
+        const searchInput = document.querySelector('#research-search');
+
+        if (searchInput instanceof HTMLInputElement) {
+          searchInput.focus();
+        } else {
+          window.location.assign('/explore/?focus=search');
+        }
+      });
+    </script></body></html>
