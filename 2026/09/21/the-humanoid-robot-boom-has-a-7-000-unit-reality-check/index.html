@@ -1,0 +1,235 @@
+<!DOCTYPE html><html lang="en"><head><script>
+      (() => {
+        const root = document.documentElement;
+        const media = window.matchMedia('(prefers-color-scheme: dark)');
+        let preference = 'system';
+
+        try {
+          const stored = window.localStorage.getItem('vizo-theme');
+          if (stored === 'light' || stored === 'dark' || stored === 'system') preference = stored;
+        } catch {
+          // Storage can be unavailable in privacy-restricted contexts.
+        }
+
+        const resolved = preference === 'system' ? (media.matches ? 'dark' : 'light') : preference;
+        root.dataset.theme = resolved;
+        root.dataset.themePreference = preference;
+        root.style.colorScheme = resolved;
+      })();
+    </script><meta charset="UTF-8"><meta name="viewport" content="width=device-width"><meta name="generator" content="Astro v7.2.0"><meta name="description" content="The first industry-wide sales tally shows how far physical AI still has to travel from spectacular demonstrations to routine productive work."><meta id="theme-color" name="theme-color" content="#0e0f11"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="canonical" href="https://ai-blog.ixo8.com/2026/09/21/the-humanoid-robot-boom-has-a-7-000-unit-reality-check/"><link rel="alternate" type="application/rss+xml" title="Vizo AI" href="/rss.xml"><style>@font-face{font-family:"Source Serif 4-77ba8a10457dfacb";src:url("/_astro/fonts/24d457dd795739ed.woff2") format("woff2");font-display:swap;unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-weight:200 900;font-style:normal;}@font-face{font-family:"Source Serif 4-77ba8a10457dfacb";src:url("/_astro/fonts/e0254323ea68b855.woff2") format("woff2");font-display:swap;unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-weight:200 900;font-style:italic;}@font-face{font-family:"Source Serif 4-77ba8a10457dfacb fallback: Times New Roman";src:local("Times New Roman");font-display:swap;font-weight:200 900;font-style:normal;size-adjust:117.9077%;ascent-override:87.8653%;descent-override:28.4121%;line-gap-override:0%;}@font-face{font-family:"Source Serif 4-77ba8a10457dfacb fallback: Times New Roman";src:local("Times New Roman");font-display:swap;font-weight:200 900;font-style:italic;size-adjust:117.9077%;ascent-override:87.8653%;descent-override:28.4121%;line-gap-override:0%;}:root{--font-serif:"Source Serif 4-77ba8a10457dfacb","Source Serif 4-77ba8a10457dfacb fallback: Times New Roman",Georgia,serif;}</style><link rel="preload" href="/_astro/fonts/24d457dd795739ed.woff2" as="font" type="font/woff2" crossorigin><style>@font-face{font-family:Inter-912952f8a2e65f75;src:url("/_astro/fonts/5288773a5a229461.woff2") format("woff2");font-display:swap;unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-weight:100 900;font-style:normal;}@font-face{font-family:"Inter-912952f8a2e65f75 fallback: Arial";src:local("Arial");font-display:swap;font-weight:100 900;font-style:normal;size-adjust:107.1194%;ascent-override:90.4365%;descent-override:22.518%;line-gap-override:0%;}:root{--font-sans:Inter-912952f8a2e65f75,"Inter-912952f8a2e65f75 fallback: Arial",ui-sans-serif,system-ui,sans-serif;}</style><link rel="preload" href="/_astro/fonts/5288773a5a229461.woff2" as="font" type="font/woff2" crossorigin><meta property="og:site_name" content="Vizo AI"><meta property="og:type" content="article"><meta property="og:title" content="The Humanoid Robot Boom Has a 7,000-Unit Reality Check, Vizo AI"><meta property="og:description" content="The first industry-wide sales tally shows how far physical AI still has to travel from spectacular demonstrations to routine productive work."><meta property="og:url" content="https://ai-blog.ixo8.com/2026/09/21/the-humanoid-robot-boom-has-a-7-000-unit-reality-check/"><meta name="twitter:card" content="summary_large_image"><title>The Humanoid Robot Boom Has a 7,000-Unit Reality Check, Vizo AI</title><link rel="stylesheet" href="/_astro/BaseLayout.BtRPW27g.css"></head><body><a class="skip-link" href="#content">Skip to content</a><header class="site-header"><div class="shell nav"><a class="brand" href="/" aria-label="Vizo AI home"><span class="brand-mark" aria-hidden="true"></span><span>Vizo AI</span></a><div class="nav-actions"><nav class="nav-links" aria-label="Primary navigation"><a href="/topics/">Topics</a><a href="/explore/">Archive</a><a href="/about/">About</a><a class="search-link" href="/explore/?focus=search"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5"></circle><path d="m16 16 4.25 4.25"></path></svg><span>Search</span><kbd aria-hidden="true">⌘K</kbd></a></nav><details class="mobile-nav" data-mobile-nav><summary class="icon-button" aria-label="Open navigation"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"></path></svg></summary><nav class="popover mobile-nav-menu" aria-label="Mobile navigation"><a href="/topics/">Topics</a><a href="/explore/">Archive</a><a href="/about/">About</a><a href="/explore/?focus=search">Search archive</a></nav></details><div class="theme-picker" data-theme-picker><button class="icon-button theme-trigger" type="button" aria-label="Choose color theme" aria-haspopup="true" aria-expanded="false" data-theme-trigger><svg class="theme-icon theme-icon--sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="3.25"></circle><path d="M12 2.75v2M12 19.25v2M21.25 12h-2M4.75 12h-2M18.54 5.46l-1.42 1.42M6.88 17.12l-1.42 1.42M18.54 18.54l-1.42-1.42M6.88 6.88 5.46 5.46"></path></svg><svg class="theme-icon theme-icon--moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M19.4 15.3A8 8 0 0 1 8.7 4.6 8 8 0 1 0 19.4 15.3Z"></path></svg></button><div class="popover theme-menu" data-theme-menu hidden role="group" aria-label="Color theme"><button type="button" data-theme-value="light" aria-pressed="false"><span>Light</span><span class="theme-check" aria-hidden="true">✓</span></button><button type="button" data-theme-value="dark" aria-pressed="false"><span>Dark</span><span class="theme-check" aria-hidden="true">✓</span></button><button type="button" data-theme-value="system" aria-pressed="false"><span>System</span><span class="theme-check" aria-hidden="true">✓</span></button></div></div></div></div></header><main id="content"><div class="page-back shell"><a class="back-link" href="/explore/" data-back-link aria-label="Go back to the previous page"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m14 6-6 6 6 6"></path><path d="M8 12h11"></path></svg><span>Back</span></a></div><article class="article"><header class="article-header"><span class="kicker">Analysis</span><h1 class="article-title">The Humanoid Robot Boom Has a 7,000-Unit Reality Check</h1><p class="article-deck">The first industry-wide sales tally shows how far physical AI still has to travel from spectacular demonstrations to routine productive work.</p><p class="article-byline"><span>By Vizo AI</span><time datetime="2026-09-21">September 21, 2026</time><span>8 min read</span><a href="#sources">12 sources</a></p></header><div class="article-layout"><aside class="article-rail"><nav class="toc" aria-labelledby="toc-title" data-toc><details class="toc-details" data-toc-details open><summary id="toc-title">On this page</summary><ol><li><a href="#the-humanoid-robot-boom-has-a-7000-unit-reality-check" data-toc-link="the-humanoid-robot-boom-has-a-7000-unit-reality-check">The Humanoid Robot Boom Has a 7,000-Unit Reality Check</a></li><li><a href="#a-shipment-is-not-yet-a-worker" data-toc-link="a-shipment-is-not-yet-a-worker">A shipment is not yet a worker</a></li><li><a href="#why-7000-can-coexist-with-enormous-investment" data-toc-link="why-7000-can-coexist-with-enormous-investment">Why 7,000 can coexist with enormous investment</a></li><li><a href="#the-metric-that-matters-is-productive-utilization" data-toc-link="the-metric-that-matters-is-productive-utilization">The metric that matters is productive utilization</a></li><li><a href="#a-harder-benchmark-for-physical-ai" data-toc-link="a-harder-benchmark-for-physical-ai">A harder benchmark for physical AI</a></li></ol></details></nav><script>
+  // The rail precedes the article body in the DOM, so wait for the headings.
+  document.addEventListener('DOMContentLoaded', () => {
+    const toc = document.querySelector('[data-toc]');
+    if (!(toc instanceof HTMLElement)) return;
+
+    const details = toc.querySelector('[data-toc-details]');
+    const wide = window.matchMedia('(min-width: 1180px)');
+    const syncOpen = () => {
+      if (details instanceof HTMLDetailsElement) details.open = wide.matches;
+    };
+    syncOpen();
+    wide.addEventListener('change', syncOpen);
+
+    toc.addEventListener('click', (event) => {
+      if (!wide.matches && event.target instanceof HTMLAnchorElement && details instanceof HTMLDetailsElement) details.open = false;
+    });
+
+    const links = new Map([...toc.querySelectorAll('[data-toc-link]')].map((link) => [link.getAttribute('data-toc-link'), link]));
+    const targets = [...links.keys()].map((id) => document.getElementById(id ?? '')).filter(Boolean);
+    if (targets.length === 0) return;
+
+    // The active section is the last heading scrolled past the top third of
+    // the viewport, so jumps and fast scrolls still land on the right entry.
+    let frame = 0;
+    const update = () => {
+      frame = 0;
+      const threshold = window.innerHeight * 0.3;
+      let activeId = null;
+      for (const target of targets) {
+        if (target.getBoundingClientRect().top <= threshold) activeId = target.id;
+        else break;
+      }
+      links.forEach((link, key) => {
+        if (key === activeId) link.setAttribute('aria-current', 'location');
+        else link.removeAttribute('aria-current');
+      });
+    };
+    const schedule = () => {
+      if (!frame) frame = window.requestAnimationFrame(update);
+    };
+    window.addEventListener('scroll', schedule, { passive: true });
+    window.addEventListener('resize', schedule);
+    update();
+  }, { once: true });
+</script></aside><div class="article-main"><div class="prose" data-pagefind-body><p>The first industry-wide sales tally shows how far physical AI still has to travel from spectacular demonstrations to routine productive work.</p>
+<p>Summary<br>
+Around 7,000 humanoid robots were sold worldwide in 2025 for industrial and professional-service use, according to International Federation of Robotics data reviewed by Reuters. That figure is tiny beside both the broader robotics market and forecasts for humanoid growth. It also clarifies the industry’s near-term challenge: manufacturers are learning to build increasingly capable machines, but commercial value depends on turning pilots, research fleets and data-collection deployments into repeatable productive work. Early deployments from Figure and Agility Robotics show real progress, yet the most useful metric over the next few years will be productive fleet utilization, not headline shipment forecasts.</p>
+<p>Topics/Tags: Humanoid Robots; Physical AI; Industrial Automation; Robotics; Future of Work</p>
+<h2 id="the-humanoid-robot-boom-has-a-7000-unit-reality-check">The Humanoid Robot Boom Has a 7,000-Unit Reality Check</h2>
+<p>Humanoid robotics has spent the past two years accumulating the numbers of a boom: billion-dollar funding rounds, factories designed for five-digit annual output, ambitious shipment forecasts and demonstrations in which machines walk, manipulate objects and respond to natural-language instructions.</p>
+<p>Now the industry has a less theatrical number to work with: 7,000.</p>
+<p>That is roughly how many humanoid robots were sold worldwide in 2025 for industrial and professional-service use, according to figures compiled by the International Federation of Robotics and reviewed by Reuters ahead of publication. The IFR has tracked robotics for three decades, but this is the first time it has broken humanoids out as a distinct category. Its definition requires a human-like appearance and autonomous operation in environments designed for people; legs are not mandatory. [1]</p>
+<p>Seven thousand units does not make the humanoid thesis wrong. It makes the commercialization problem measurable.</p>
+<p>The contrast is useful. About 542,000 conventional industrial robots were installed in 2024, while an estimated 199,000 professional service robots were sold for applications such as transport, hospitality and cleaning. Many humanoids sold in 2025 were not performing productive work at all, IFR secretary general Susanne Bieller told Reuters. Research institutions and companies bought them to collect data and improve AI models. Carmakers, among the earliest industrial adopters, were generally running pilots with single-digit or sometimes double-digit fleets. [1][2]</p>
+<p>At the same time, Bank of America Global Research estimates 90,000 humanoids could ship in 2026 and 1.2 million in 2030. The distance between 7,000 actual units and those forecasts is where the industry now has to prove itself. [1]</p>
+<h2 id="a-shipment-is-not-yet-a-worker">A shipment is not yet a worker</h2>
+<p>The humanoid pitch is economically attractive because factories and warehouses were built around people. A machine that can navigate those spaces, use human-oriented tools and switch among tasks could reduce the need to redesign facilities around specialized automation. Advances in vision-language-action models add a second promise: instead of programming every motion, operators may eventually teach robots through demonstrations, language and accumulated fleet data.</p>
+<p>Those ideas are moving beyond laboratory videos. Figure says its previous-generation Figure 02 robots spent more than 1,250 hours working at BMW’s Spartanburg plant, loaded more than 90,000 parts and contributed to production of more than 30,000 vehicles during an 11-month deployment. The company returned to BMW this summer with Figure 03 for a more complex logistics workflow involving sequencing and moving parts. [3][4]</p>
+<p>Agility Robotics offers another useful data point. The company says its Digit 4 fleet has accumulated more than 65,000 operational hours across customer sites including GXO, Schaeffler, Amazon and Toyota Motor Manufacturing Canada. At GXO, Agility reports that Digit passed a cumulative 100,000-tote milestone. Toyota moved from a pilot to a Robots-as-a-Service commercial agreement in February. [5][6]</p>
+<p>These are company-reported results, not independent proof that humanoids have crossed the threshold to mass deployment. They matter because they reveal what commercialization actually looks like: narrow workflows, controlled environments, measured operating hours and repeated handling tasks. The path to a general-purpose robot is currently being financed by machines doing very specific jobs.</p>
+<p>That is a more demanding business than a demo suggests. A robot can succeed at a task in a controlled video and still be uneconomic once uptime, maintenance, safety procedures, integration, supervision and failure recovery are included. A customer does not ultimately buy dexterity. It buys useful work at an acceptable total cost and risk.</p>
+<h2 id="why-7000-can-coexist-with-enormous-investment">Why 7,000 can coexist with enormous investment</h2>
+<p>Capital markets are funding the expected slope of the adoption curve rather than its current height.</p>
+<p>Apptronik said in February that its extended Series A had reached more than $935 million, with investors including Google, Mercedes-Benz, B Capital, AT&amp;T Ventures, John Deere and Qatar Investment Authority. Figure has built BotQ, a manufacturing facility whose first-generation line was designed for up to 12,000 humanoids annually; in April it said production of Figure 03 had increased from one robot per day to one per hour and that more than 350 units had been produced. Agility’s RoboFab was designed with capacity above 10,000 robots per year. [7][8][9]</p>
+<p>Those capacity numbers are striking against a global market that sold about 7,000 units last year. They should not be read as evidence that tens of thousands of robots already have productive jobs waiting for them. Manufacturing capacity is an option on future demand. It allows suppliers to scale if deployments work, costs fall and customers expand fleets.</p>
+<p>The same distinction applies to AI infrastructure. Figure announced this month a partnership with Nscale for up to 100,000 Nvidia Vera Rubin GPUs, describing an initial $3.5 billion compute commitment with potential to exceed $6 billion. The company says it is increasingly constrained by the data and compute required to train its Helix physical-intelligence system. [10]</p>
+<p>Humanoid robotics therefore has two scaling curves that must meet. One is technological: more robots generate more physical-world data, which can improve models and broaden capabilities. The other is commercial: better capabilities must translate into enough productive hours to justify buying and operating more robots. If the second curve lags, building larger fleets mainly creates expensive training infrastructure.</p>
+<p>China is already testing the valuation side of that equation. Reuters reported on September 21 that Chinese regulators are slowing the rush of humanoid-robot IPO candidates amid concerns over high valuations, losses and revenues tied to state-backed projects or data-collection centers rather than durable market demand. Regulators have not announced a formal ban, but investors told Reuters that scrutiny has shifted toward recurring revenue, commercialization and real-world deployment. [11]</p>
+<p>That development is notable because China has made embodied intelligence a strategic priority and has one of the world’s strongest industrial-robot ecosystems. A government can support an industry while still asking whether public-market valuations have outrun commercial evidence.</p>
+<h2 id="the-metric-that-matters-is-productive-utilization">The metric that matters is productive utilization</h2>
+<p>Shipment counts will improve as suppliers ramp manufacturing, but shipments alone are a poor measure of whether humanoids are becoming economically important. The same robot can be a research platform, a data-collection device, a pilot installation or a production asset. Those uses have very different implications for customers and investors.</p>
+<p>A more revealing scorecard would combine fleet size with productive operating hours, task completion rates, intervention frequency, safety incidents, maintenance burden and total cost per useful task. Few companies disclose all of those measures today, and definitions vary enough to make comparisons difficult.</p>
+<p>That information gap creates room for both legitimate optimism and exaggerated conclusions. Figure’s BMW deployment demonstrates that a humanoid can perform a repetitive production task over a meaningful period. Agility’s reported operational hours and Toyota agreement show a path from pilot to commercial contract. Neither tells us how quickly thousands of customers will find workloads where humanoids beat conventional automation, purpose-built mobile robots or human labor on total economics.</p>
+<p>The competitive pressure will also change as the machines improve. Humanoid form is valuable where customers need compatibility with human environments. It is less obviously optimal where a facility can be redesigned around simpler, faster or cheaper machines. Apptronik itself created Elevate Robotics to pursue industrial automation beyond the constraints of the human form. That is a reminder that the commercial question is not whether a humanoid can perform a task, but whether the humanoid is the best machine for it. [12]</p>
+<p>Software progress complicates the calculation further. Vision-language-action systems can make one hardware platform more adaptable, reducing the engineering effort required for new tasks. But physical systems carry costs that software does not: actuators wear, batteries degrade, falls can damage equipment, safety certification matters and field service has to reach customer sites. Model intelligence can improve the numerator of productivity without eliminating the denominator of hardware economics.</p>
+<h2 id="a-harder-benchmark-for-physical-ai">A harder benchmark for physical AI</h2>
+<p>The 7,000-unit tally arrives at a useful moment because the industry is moving from possibility demonstrations toward deployment claims. The next stage should make the evidence better, not merely the robots more impressive.</p>
+<p>For customers, the question is increasingly operational: how many hours can a fleet perform valuable work without intervention, and what does each completed task cost after maintenance, integration and supervision? For investors, the distinction is between capacity and utilization. A factory capable of building 10,000 robots has strategic value only if customers can absorb them into workflows that generate returns.</p>
+<p>For AI researchers, commercial deployments matter for another reason. Physical intelligence needs data that the internet cannot supply. Every productive robot can become a sensor for edge cases involving contact, balance, object variation and human environments. That creates a potentially powerful feedback loop: useful deployments generate data, better data improves models, and better models expand the set of useful deployments.</p>
+<p>But the loop begins with useful deployment.</p>
+<p>The humanoid market may indeed rise from thousands of units to hundreds of thousands. The current evidence supports taking that possibility seriously. It does not support treating the forecast as an accomplished fact. Seven thousand is valuable precisely because it gives the industry a baseline against which the next wave of claims can be tested.</p>
+<p>If the 2026 tally jumps dramatically, the most revealing question will not be how many humanoids left factories. It will be how many arrived at customer sites and stayed busy.</p>
+<p>Sources<br>
+[1] Reuters, “Humanoid robot sales tally hit 7,000 globally last year,” Sept. 21, 2026. <a href="https://www.reuters.com/technology/humanoid-robot-sales-tally-hit-7000-globally-last-year-2026-09-21/">https://www.reuters.com/technology/humanoid-robot-sales-tally-hit-7000-globally-last-year-2026-09-21/</a><br>
+[2] International Federation of Robotics, World Robotics 2025 / industrial robot statistics. <a href="https://ifr.org/">https://ifr.org/</a><br>
+[3] Figure, “F.02 Contributed to the Production of 30,000 Cars at BMW,” Nov. 19, 2025. <a href="https://www.figure.ai/news/production-at-bmw">https://www.figure.ai/news/production-at-bmw</a><br>
+[4] Figure, “F.03 Arrives at BMW,” June 30, 2026. <a href="https://www.figure.ai/news/f-03-at-bmw">https://www.figure.ai/news/f-03-at-bmw</a><br>
+[5] Agility Robotics, “Agility Unveils Digit 5 Humanoid Robot Built for Cooperatively Safe Work at Scale,” Sept. 15, 2026. <a href="https://www.agilityrobotics.com/content/agility-unveils-digit-5-humanoid-robot-built-for-cooperatively-safe-work-at-scale">https://www.agilityrobotics.com/content/agility-unveils-digit-5-humanoid-robot-built-for-cooperatively-safe-work-at-scale</a><br>
+[6] Agility Robotics, Toyota Motor Manufacturing Canada commercial agreement, Feb. 19, 2026. <a href="https://www.agilityrobotics.com/content/agility-robotics-announces-commercial-agreement-with-toyota-motor-manufacturing-canada">https://www.agilityrobotics.com/content/agility-robotics-announces-commercial-agreement-with-toyota-motor-manufacturing-canada</a><br>
+[7] Apptronik, Series A-X financing, Feb. 11, 2026. <a href="https://apptronik.com/news-collection/apptronik-closes-over-935-million-series-a">https://apptronik.com/news-collection/apptronik-closes-over-935-million-series-a</a><br>
+[8] Figure, “Ramping Figure 03 Production,” Apr. 29, 2026. <a href="https://www.figure.ai/news/ramping-figure-03-production">https://www.figure.ai/news/ramping-figure-03-production</a><br>
+[9] Agility Robotics, RoboFab manufacturing facility. <a href="https://www.agilityrobotics.com/content/opening-robofab-worlds-first-factory-for-humanoid-robots">https://www.agilityrobotics.com/content/opening-robofab-worlds-first-factory-for-humanoid-robots</a><br>
+[10] Figure, Nscale partnership, Sept. 3, 2026. <a href="https://www.figure.ai/news/figure-and-nscale-sign-strategic-partnership">https://www.figure.ai/news/figure-and-nscale-sign-strategic-partnership</a><br>
+[11] Reuters, “China slows humanoid robot IPO rush as hype outruns reality,” Sept. 21, 2026. <a href="https://www.reuters.com/business/finance/china-slows-humanoid-robot-ipo-rush-hype-outruns-reality-2026-09-21/">https://www.reuters.com/business/finance/china-slows-humanoid-robot-ipo-rush-hype-outruns-reality-2026-09-21/</a><br>
+[12] Apptronik, press release archive / Elevate Robotics announcement. <a href="https://apptronik.com/company/press-releases">https://apptronik.com/company/press-releases</a></p>
+</div><footer class="article-record"><section id="sources" class="sources" aria-labelledby="sources-title"><h2 id="sources-title">Sources</h2><ol><li><a href="https://www.reuters.com/technology/humanoid-robot-sales-tally-hit-7000-globally-last-year-2026-09-21/" rel="noreferrer"><span class="source-domain">reuters.com</span><span class="source-path">/technology/humanoid-robot-sales-tally-hit-7000-globally-last-year-2026-09-21</span></a></li><li><a href="https://ifr.org/" rel="noreferrer"><span class="source-domain">ifr.org</span></a></li><li><a href="https://www.figure.ai/news/production-at-bmw" rel="noreferrer"><span class="source-domain">figure.ai</span><span class="source-path">/news/production-at-bmw</span></a></li><li><a href="https://www.figure.ai/news/f-03-at-bmw" rel="noreferrer"><span class="source-domain">figure.ai</span><span class="source-path">/news/f-03-at-bmw</span></a></li><li><a href="https://www.agilityrobotics.com/content/agility-unveils-digit-5-humanoid-robot-built-for-cooperatively-safe-work-at-scale" rel="noreferrer"><span class="source-domain">agilityrobotics.com</span><span class="source-path">/content/agility-unveils-digit-5-humanoid-robot-built-for-cooperatively-safe-work-at-scale</span></a></li><li><a href="https://www.agilityrobotics.com/content/agility-robotics-announces-commercial-agreement-with-toyota-motor-manufacturing-canada" rel="noreferrer"><span class="source-domain">agilityrobotics.com</span><span class="source-path">/content/agility-robotics-announces-commercial-agreement-with-toyota-motor-manufacturing-canada</span></a></li><li><a href="https://apptronik.com/news-collection/apptronik-closes-over-935-million-series-a" rel="noreferrer"><span class="source-domain">apptronik.com</span><span class="source-path">/news-collection/apptronik-closes-over-935-million-series-a</span></a></li><li><a href="https://www.figure.ai/news/ramping-figure-03-production" rel="noreferrer"><span class="source-domain">figure.ai</span><span class="source-path">/news/ramping-figure-03-production</span></a></li><li><a href="https://www.agilityrobotics.com/content/opening-robofab-worlds-first-factory-for-humanoid-robots" rel="noreferrer"><span class="source-domain">agilityrobotics.com</span><span class="source-path">/content/opening-robofab-worlds-first-factory-for-humanoid-robots</span></a></li><li><a href="https://www.figure.ai/news/figure-and-nscale-sign-strategic-partnership" rel="noreferrer"><span class="source-domain">figure.ai</span><span class="source-path">/news/figure-and-nscale-sign-strategic-partnership</span></a></li><li><a href="https://www.reuters.com/business/finance/china-slows-humanoid-robot-ipo-rush-hype-outruns-reality-2026-09-21/" rel="noreferrer"><span class="source-domain">reuters.com</span><span class="source-path">/business/finance/china-slows-humanoid-robot-ipo-rush-hype-outruns-reality-2026-09-21</span></a></li><li><a href="https://apptronik.com/company/press-releases" rel="noreferrer"><span class="source-domain">apptronik.com</span><span class="source-path">/company/press-releases</span></a></li></ol></section><dl class="record-list"><div><dt>Published</dt><dd><time datetime="2026-09-21">September 21, 2026</time></dd></div><div><dt>Sources recorded</dt><dd>12</dd></div></dl></footer></div></div></article><section class="section shell related" aria-labelledby="related-title"><div class="section-head"><h2 id="related-title" class="section-title">Related analysis</h2></div><div class="related-grid"><article class="story story--compact"><span class="kicker">Analysis</span><h3 class="story-title"><a href="/2026/09/23/apple-is-trying-to-put-a-price-ceiling-on-the-ai-cloud/">Apple Is Trying to Put a Price Ceiling on the AI Cloud</a></h3><p class="story-meta"><time datetime="2026-09-23">Sep 23, 2026</time><span aria-hidden="true">·</span><span>8 min read</span></p></article><article class="story story--compact"><span class="kicker">Analysis</span><h3 class="story-title"><a href="/2026/09/18/mantic-s-25-million-bet-turns-forecasting-into-an-ai-product-category/">Mantic’s $25 Million Bet Turns Forecasting Into an AI Product Category</a></h3><p class="story-meta"><time datetime="2026-09-18">Sep 18, 2026</time><span aria-hidden="true">·</span><span>7 min read</span></p></article><article class="story story--compact"><a class="kicker" href="/topics/ai-drug-discovery/">AI Drug Discovery</a><h3 class="story-title"><a href="/2026/09/16/bytedance-s-290-million-anew-labs-spinout-tests-a-different-model-for-ai-drug-discovery/">ByteDance’s $290 Million Anew Labs Spinout Tests a Different Model for AI Drug Discovery</a></h3><p class="story-meta"><time datetime="2026-09-16">Sep 16, 2026</time><span aria-hidden="true">·</span><span>2 min read</span></p></article></div></section></main><footer class="site-footer"><div class="shell footer-inner"><a class="brand" href="/"><span class="brand-mark" aria-hidden="true"></span><span>Vizo AI</span></a><nav class="footer-links" aria-label="Footer"><a href="/topics/">Topics</a><a href="/explore/">Archive</a><a href="/about/">About</a><a href="/rss.xml">RSS</a></nav><p class="footer-note">Source-aware analysis, published with its sources.</p></div></footer><script>
+      const root = document.documentElement;
+      const themePicker = document.querySelector('[data-theme-picker]');
+      const themeTrigger = document.querySelector('[data-theme-trigger]');
+      const themeMenu = document.querySelector('[data-theme-menu]');
+      const themeOptions = [...document.querySelectorAll('[data-theme-value]')];
+      const systemTheme = window.matchMedia('(prefers-color-scheme: dark)');
+      const themeColor = document.querySelector('#theme-color');
+
+      function setTheme(preference, persist = true) {
+        const allowed = ['light', 'dark', 'system'];
+        const nextPreference = allowed.includes(preference) ? preference : 'system';
+        const resolved = nextPreference === 'system' ? (systemTheme.matches ? 'dark' : 'light') : nextPreference;
+
+        root.dataset.theme = resolved;
+        root.dataset.themePreference = nextPreference;
+        root.style.colorScheme = resolved;
+        themeColor?.setAttribute('content', resolved === 'dark' ? '#0e0f11' : '#faf8f4');
+        themeOptions.forEach((option) => {
+          option.setAttribute('aria-pressed', String(option.dataset.themeValue === nextPreference));
+        });
+
+        if (persist) {
+          try {
+            window.localStorage.setItem('vizo-theme', nextPreference);
+          } catch {
+            // Keep the in-memory choice when storage is unavailable.
+          }
+        }
+      }
+
+      function closeThemeMenu({ restoreFocus = false } = {}) {
+        if (!(themeMenu instanceof HTMLElement) || !(themeTrigger instanceof HTMLButtonElement)) return;
+        themeMenu.hidden = true;
+        themeTrigger.setAttribute('aria-expanded', 'false');
+        if (restoreFocus) themeTrigger.focus();
+      }
+
+      function openThemeMenu() {
+        if (!(themeMenu instanceof HTMLElement) || !(themeTrigger instanceof HTMLButtonElement)) return;
+        themeMenu.hidden = false;
+        themeTrigger.setAttribute('aria-expanded', 'true');
+      }
+
+      setTheme(root.dataset.themePreference ?? 'system', false);
+
+      themeTrigger?.addEventListener('click', () => {
+        if (themeMenu instanceof HTMLElement && themeMenu.hidden) openThemeMenu();
+        else closeThemeMenu();
+      });
+
+      themeOptions.forEach((option, index) => {
+        option.addEventListener('click', () => {
+          setTheme(option.dataset.themeValue ?? 'system');
+          closeThemeMenu({ restoreFocus: true });
+        });
+
+        option.addEventListener('keydown', (event) => {
+          if (!['ArrowDown', 'ArrowUp', 'Home', 'End'].includes(event.key)) return;
+          event.preventDefault();
+          const targetIndex = event.key === 'Home'
+            ? 0
+            : event.key === 'End'
+              ? themeOptions.length - 1
+              : (index + (event.key === 'ArrowDown' ? 1 : -1) + themeOptions.length) % themeOptions.length;
+          themeOptions[targetIndex]?.focus();
+        });
+      });
+
+      systemTheme.addEventListener('change', () => {
+        if (root.dataset.themePreference === 'system') setTheme('system', false);
+      });
+
+      document.addEventListener('click', (event) => {
+        if (themePicker instanceof HTMLElement && !themePicker.contains(event.target)) closeThemeMenu();
+
+        document.querySelectorAll('[data-mobile-nav][open]').forEach((nav) => {
+          if (nav instanceof HTMLElement && !nav.contains(event.target)) nav.removeAttribute('open');
+        });
+      });
+
+      document.querySelectorAll('[data-mobile-nav] a').forEach((link) => {
+        link.addEventListener('click', () => link.closest('details')?.removeAttribute('open'));
+      });
+
+      document.querySelector('[data-back-link]')?.addEventListener('click', (event) => {
+        if (!document.referrer || window.history.length <= 1) return;
+
+        try {
+          const previous = new URL(document.referrer);
+          const current = new URL(window.location.href);
+          const canReturn = previous.origin === current.origin && previous.pathname !== current.pathname;
+
+          if (canReturn) {
+            event.preventDefault();
+            window.history.back();
+          }
+        } catch {
+          // Keep the destination fallback when the referrer cannot be parsed.
+        }
+      });
+
+      document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape') {
+          closeThemeMenu({ restoreFocus: themeTrigger?.getAttribute('aria-expanded') === 'true' });
+          document.querySelectorAll('[data-mobile-nav][open]').forEach((nav) => nav.removeAttribute('open'));
+          return;
+        }
+
+        if (!(event.metaKey || event.ctrlKey) || event.key.toLowerCase() !== 'k') return;
+
+        event.preventDefault();
+        const searchInput = document.querySelector('#research-search');
+
+        if (searchInput instanceof HTMLInputElement) {
+          searchInput.focus();
+        } else {
+          window.location.assign('/explore/?focus=search');
+        }
+      });
+    </script></body></html>

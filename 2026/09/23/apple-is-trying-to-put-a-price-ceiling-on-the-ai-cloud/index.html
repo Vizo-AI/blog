@@ -1,0 +1,221 @@
+<!DOCTYPE html><html lang="en"><head><script>
+      (() => {
+        const root = document.documentElement;
+        const media = window.matchMedia('(prefers-color-scheme: dark)');
+        let preference = 'system';
+
+        try {
+          const stored = window.localStorage.getItem('vizo-theme');
+          if (stored === 'light' || stored === 'dark' || stored === 'system') preference = stored;
+        } catch {
+          // Storage can be unavailable in privacy-restricted contexts.
+        }
+
+        const resolved = preference === 'system' ? (media.matches ? 'dark' : 'light') : preference;
+        root.dataset.theme = resolved;
+        root.dataset.themePreference = preference;
+        root.style.colorScheme = resolved;
+      })();
+    </script><meta charset="UTF-8"><meta name="viewport" content="width=device-width"><meta name="generator" content="Astro v7.2.0"><meta name="description" content="Apple’s new Mac Studio turns local inference from a privacy feature into a procurement question: when does owning the machine beat renting tokens?"><meta id="theme-color" name="theme-color" content="#0e0f11"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="canonical" href="https://ai-blog.ixo8.com/2026/09/23/apple-is-trying-to-put-a-price-ceiling-on-the-ai-cloud/"><link rel="alternate" type="application/rss+xml" title="Vizo AI" href="/rss.xml"><style>@font-face{font-family:"Source Serif 4-77ba8a10457dfacb";src:url("/_astro/fonts/24d457dd795739ed.woff2") format("woff2");font-display:swap;unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-weight:200 900;font-style:normal;}@font-face{font-family:"Source Serif 4-77ba8a10457dfacb";src:url("/_astro/fonts/e0254323ea68b855.woff2") format("woff2");font-display:swap;unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-weight:200 900;font-style:italic;}@font-face{font-family:"Source Serif 4-77ba8a10457dfacb fallback: Times New Roman";src:local("Times New Roman");font-display:swap;font-weight:200 900;font-style:normal;size-adjust:117.9077%;ascent-override:87.8653%;descent-override:28.4121%;line-gap-override:0%;}@font-face{font-family:"Source Serif 4-77ba8a10457dfacb fallback: Times New Roman";src:local("Times New Roman");font-display:swap;font-weight:200 900;font-style:italic;size-adjust:117.9077%;ascent-override:87.8653%;descent-override:28.4121%;line-gap-override:0%;}:root{--font-serif:"Source Serif 4-77ba8a10457dfacb","Source Serif 4-77ba8a10457dfacb fallback: Times New Roman",Georgia,serif;}</style><link rel="preload" href="/_astro/fonts/24d457dd795739ed.woff2" as="font" type="font/woff2" crossorigin><style>@font-face{font-family:Inter-912952f8a2e65f75;src:url("/_astro/fonts/5288773a5a229461.woff2") format("woff2");font-display:swap;unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-weight:100 900;font-style:normal;}@font-face{font-family:"Inter-912952f8a2e65f75 fallback: Arial";src:local("Arial");font-display:swap;font-weight:100 900;font-style:normal;size-adjust:107.1194%;ascent-override:90.4365%;descent-override:22.518%;line-gap-override:0%;}:root{--font-sans:Inter-912952f8a2e65f75,"Inter-912952f8a2e65f75 fallback: Arial",ui-sans-serif,system-ui,sans-serif;}</style><link rel="preload" href="/_astro/fonts/5288773a5a229461.woff2" as="font" type="font/woff2" crossorigin><meta property="og:site_name" content="Vizo AI"><meta property="og:type" content="article"><meta property="og:title" content="Apple Is Trying to Put a Price Ceiling on the AI Cloud, Vizo AI"><meta property="og:description" content="Apple’s new Mac Studio turns local inference from a privacy feature into a procurement question: when does owning the machine beat renting tokens?"><meta property="og:url" content="https://ai-blog.ixo8.com/2026/09/23/apple-is-trying-to-put-a-price-ceiling-on-the-ai-cloud/"><meta name="twitter:card" content="summary_large_image"><title>Apple Is Trying to Put a Price Ceiling on the AI Cloud, Vizo AI</title><link rel="stylesheet" href="/_astro/BaseLayout.BtRPW27g.css"></head><body><a class="skip-link" href="#content">Skip to content</a><header class="site-header"><div class="shell nav"><a class="brand" href="/" aria-label="Vizo AI home"><span class="brand-mark" aria-hidden="true"></span><span>Vizo AI</span></a><div class="nav-actions"><nav class="nav-links" aria-label="Primary navigation"><a href="/topics/">Topics</a><a href="/explore/">Archive</a><a href="/about/">About</a><a class="search-link" href="/explore/?focus=search"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5"></circle><path d="m16 16 4.25 4.25"></path></svg><span>Search</span><kbd aria-hidden="true">⌘K</kbd></a></nav><details class="mobile-nav" data-mobile-nav><summary class="icon-button" aria-label="Open navigation"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"></path></svg></summary><nav class="popover mobile-nav-menu" aria-label="Mobile navigation"><a href="/topics/">Topics</a><a href="/explore/">Archive</a><a href="/about/">About</a><a href="/explore/?focus=search">Search archive</a></nav></details><div class="theme-picker" data-theme-picker><button class="icon-button theme-trigger" type="button" aria-label="Choose color theme" aria-haspopup="true" aria-expanded="false" data-theme-trigger><svg class="theme-icon theme-icon--sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="3.25"></circle><path d="M12 2.75v2M12 19.25v2M21.25 12h-2M4.75 12h-2M18.54 5.46l-1.42 1.42M6.88 17.12l-1.42 1.42M18.54 18.54l-1.42-1.42M6.88 6.88 5.46 5.46"></path></svg><svg class="theme-icon theme-icon--moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M19.4 15.3A8 8 0 0 1 8.7 4.6 8 8 0 1 0 19.4 15.3Z"></path></svg></button><div class="popover theme-menu" data-theme-menu hidden role="group" aria-label="Color theme"><button type="button" data-theme-value="light" aria-pressed="false"><span>Light</span><span class="theme-check" aria-hidden="true">✓</span></button><button type="button" data-theme-value="dark" aria-pressed="false"><span>Dark</span><span class="theme-check" aria-hidden="true">✓</span></button><button type="button" data-theme-value="system" aria-pressed="false"><span>System</span><span class="theme-check" aria-hidden="true">✓</span></button></div></div></div></div></header><main id="content"><div class="page-back shell"><a class="back-link" href="/explore/" data-back-link aria-label="Go back to the previous page"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m14 6-6 6 6 6"></path><path d="M8 12h11"></path></svg><span>Back</span></a></div><article class="article"><header class="article-header"><span class="kicker">Analysis</span><h1 class="article-title">Apple Is Trying to Put a Price Ceiling on the AI Cloud</h1><p class="article-deck">Apple’s new Mac Studio turns local inference from a privacy feature into a procurement question: when does owning the machine beat renting tokens?</p><p class="article-byline"><span>By Vizo AI</span><time datetime="2026-09-23">September 23, 2026</time><span>8 min read</span></p></header><div class="article-layout"><aside class="article-rail"><nav class="toc" aria-labelledby="toc-title" data-toc><details class="toc-details" data-toc-details open><summary id="toc-title">On this page</summary><ol><li><a href="#apple-is-trying-to-put-a-price-ceiling-on-the-ai-cloud" data-toc-link="apple-is-trying-to-put-a-price-ceiling-on-the-ai-cloud">Apple Is Trying to Put a Price Ceiling on the AI Cloud</a></li><li><a href="#from-token-bills-to-workload-economics" data-toc-link="from-token-bills-to-workload-economics">From token bills to workload economics</a></li><li><a href="#privacy-becomes-an-economic-feature" data-toc-link="privacy-becomes-an-economic-feature">Privacy becomes an economic feature</a></li><li><a href="#why-nvidia-is-not-the-obvious-loser" data-toc-link="why-nvidia-is-not-the-obvious-loser">Why Nvidia is not the obvious loser</a></li><li><a href="#a-procurement-discipline-for-ai" data-toc-link="a-procurement-discipline-for-ai">A procurement discipline for AI</a></li><li><a href="#the-next-contest-is-over-placement" data-toc-link="the-next-contest-is-over-placement">The next contest is over placement</a></li></ol></details></nav><script>
+  // The rail precedes the article body in the DOM, so wait for the headings.
+  document.addEventListener('DOMContentLoaded', () => {
+    const toc = document.querySelector('[data-toc]');
+    if (!(toc instanceof HTMLElement)) return;
+
+    const details = toc.querySelector('[data-toc-details]');
+    const wide = window.matchMedia('(min-width: 1180px)');
+    const syncOpen = () => {
+      if (details instanceof HTMLDetailsElement) details.open = wide.matches;
+    };
+    syncOpen();
+    wide.addEventListener('change', syncOpen);
+
+    toc.addEventListener('click', (event) => {
+      if (!wide.matches && event.target instanceof HTMLAnchorElement && details instanceof HTMLDetailsElement) details.open = false;
+    });
+
+    const links = new Map([...toc.querySelectorAll('[data-toc-link]')].map((link) => [link.getAttribute('data-toc-link'), link]));
+    const targets = [...links.keys()].map((id) => document.getElementById(id ?? '')).filter(Boolean);
+    if (targets.length === 0) return;
+
+    // The active section is the last heading scrolled past the top third of
+    // the viewport, so jumps and fast scrolls still land on the right entry.
+    let frame = 0;
+    const update = () => {
+      frame = 0;
+      const threshold = window.innerHeight * 0.3;
+      let activeId = null;
+      for (const target of targets) {
+        if (target.getBoundingClientRect().top <= threshold) activeId = target.id;
+        else break;
+      }
+      links.forEach((link, key) => {
+        if (key === activeId) link.setAttribute('aria-current', 'location');
+        else link.removeAttribute('aria-current');
+      });
+    };
+    const schedule = () => {
+      if (!frame) frame = window.requestAnimationFrame(update);
+    };
+    window.addEventListener('scroll', schedule, { passive: true });
+    window.addEventListener('resize', schedule);
+    update();
+  }, { once: true });
+</script></aside><div class="article-main"><div class="prose" data-pagefind-body><p>Apple’s new Mac Studio turns local inference from a privacy feature into a procurement question: when does owning the machine beat renting tokens?</p>
+<p>Summary<br>
+Apple began shipping its new Mac mini and Mac Studio on September 22 with an unusually explicit enterprise AI pitch. The M5 Ultra Mac Studio can be configured with 512GB of unified memory, Apple says it can run very large language models locally, and multiple systems can be clustered over Thunderbolt 5 for distributed inference. Apple hardware chief Johny Srouji framed the economics directly: once the machine is bought, there is no per-token charge. That does not make the cloud obsolete. Training, elastic workloads, frontier proprietary models and large shared services still favor data centers. But for stable, high-utilization inference workloads, local hardware introduces a credible alternative that enterprises can benchmark against metered cloud consumption. The strategic consequence is less about Apple displacing Nvidia or Microsoft than about forcing AI buyers to think in workload portfolios: which inference should be rented, and which should be owned?</p>
+<p>Topics/Tags: On-Device AI; Enterprise AI; Apple Silicon; AI Infrastructure; Local LLMs</p>
+<h2 id="apple-is-trying-to-put-a-price-ceiling-on-the-ai-cloud">Apple Is Trying to Put a Price Ceiling on the AI Cloud</h2>
+<p>For most companies, generative AI arrived with a meter attached. Every prompt, completion, agent loop and background task consumes tokens or compute somewhere else, and the bill scales with use. The cloud made adoption easy because teams could start without buying specialized infrastructure. It also turned inference into a recurring operating expense whose unit economics can become uncomfortable once experimental usage becomes routine.</p>
+<p>Apple is now making a conspicuously different pitch. Its new Mac mini and Mac Studio began shipping September 22, and the company is selling them partly as machines for running AI locally. The top Mac Studio, built around the M5 Ultra, supports as much as 512GB of unified memory and 1.2TB/s of memory bandwidth. Apple says that is enough for researchers to run enormous language models entirely on the device. Thunderbolt 5 with Remote Direct Memory Access can also link multiple Mac Studios, with Apple claiming up to three times the distributed-inference performance of a single system. [1][2]</p>
+<p>The more revealing part of the launch is economic rather than technical. Speaking to Reuters, Apple hardware chief Johny Srouji contrasted buying a Mac with paying repeatedly for cloud inference: after the hardware purchase, the machine can be used again and again without a per-token fee. Reuters reported that Apple demonstrated four Mac Studios running a trillion-parameter model from a single wall outlet as part of its enterprise pitch. [3]</p>
+<p>That claim deserves more restraint than the marketing version invites. A Mac on a desk is not free compute. Capital cost, electricity, administration, depreciation, model engineering and utilization all matter. Nor can a local system reproduce every service available from a hyperscaler or frontier-model provider. Still, Apple has put a useful question in front of enterprise buyers: if an AI workload is predictable, private and heavily used, why should every inference call remain a rental?</p>
+<h2 id="from-token-bills-to-workload-economics">From token bills to workload economics</h2>
+<p>Cloud inference has powerful advantages. Capacity can expand quickly, infrastructure teams do not have to provision every machine in advance, and companies can access frontier models that would be impractical or impossible to run locally. Those advantages are especially strong for volatile demand, consumer-facing services with large peaks, model training and workloads that depend on proprietary models served only through APIs.</p>
+<p>The economics change when demand becomes steady. A developer assistant used all day, an internal document classifier processing a predictable queue, a local research agent running overnight or a secure summarization system serving a fixed team may generate enough repeated inference that a purchased machine can be evaluated against years of usage charges. The correct comparison is not “Mac versus cloud” in the abstract. It is the total cost of a specific workload under two operating models.</p>
+<p>That comparison has become more plausible because memory, not merely arithmetic throughput, constrains many local large-model workloads. Apple’s unified-memory architecture lets the CPU and GPU draw from the same large pool rather than forcing model weights into a smaller discrete GPU memory envelope. The M5 Ultra configuration’s 512GB ceiling is therefore strategically relevant even if raw benchmark comparisons with data-center accelerators remain messy. It expands the class of models and context-heavy workflows that can fit on one workstation. [1]</p>
+<p>This creates a spectrum rather than a binary choice. At one end are lightweight local tasks on inexpensive machines. In the middle are high-memory workstations running larger open models for developers, researchers or regulated teams. At the other end are cloud clusters serving elastic demand and the largest proprietary systems. Enterprises can move workloads among those tiers as model sizes, prices and privacy requirements change.</p>
+<h2 id="privacy-becomes-an-economic-feature">Privacy becomes an economic feature</h2>
+<p>Local inference is usually discussed as a privacy benefit: sensitive data can remain on hardware controlled by the organization instead of being sent to an external service. That remains important in legal, healthcare, financial, defense and research settings. But keeping data local can also reduce the organizational cost of approving an AI workload.</p>
+<p>A cloud service may require vendor review, data-processing agreements, retention policies, access controls and decisions about whether prompts can leave a particular environment. Local deployment does not eliminate governance; models can still leak information, execute unsafe actions or be misconfigured. It can, however, change the boundary around which governance is built. For some workloads, a company may prefer to secure a machine and an approved model rather than negotiate how every prompt is handled by an outside platform.</p>
+<p>That advantage is strongest when the model itself is good enough. Local economics are irrelevant if the workload requires capabilities available only from a frontier hosted model. This is the main limit on Apple’s argument. The value of owning inference rises as open and downloadable models close enough of the capability gap for specific business tasks. It falls whenever the best answer requires a remote model that is materially more capable.</p>
+<p>The cloud vendors are not standing still either. Providers can cut token prices, improve batching and caching, offer reserved capacity, build private deployments and make smaller models dramatically cheaper. A workstation purchased today also depreciates technologically; a cloud customer can move to new accelerators without replacing office hardware. High utilization favors ownership, while rapid technical change favors renting. Enterprise buyers will have to model both.</p>
+<h2 id="why-nvidia-is-not-the-obvious-loser">Why Nvidia is not the obvious loser</h2>
+<p>It is tempting to cast Apple’s launch as a direct attack on Nvidia because local Macs can substitute for some GPU-backed inference. Reuters framed the new machines partly around Apple taking on Nvidia and Microsoft in the effort to lower AI costs. The competitive reality is less tidy. [3]</p>
+<p>Nvidia’s strongest position remains in training, data-center acceleration, networking and the software ecosystem around large-scale AI. A company that moves a developer assistant from a cloud GPU to a Mac does not imply that frontier training demand disappears. In fact, cheaper local inference can increase overall AI usage by making more workloads economical. The market can grow while some inference shifts toward edge or desk-side hardware.</p>
+<p>Microsoft faces a different tension. Its Azure business benefits when AI workloads remain metered in the cloud, while Windows competes with the Mac at the endpoint. Microsoft and its PC partners therefore have reason to make local AI more capable too. The likely result is competition over where inference executes, not a clean victory for one architecture.</p>
+<p>That matters for software vendors. Applications that can route intelligently between local and cloud models may gain leverage. A coding tool, for example, could send routine transformations to a local model, reserve frontier APIs for difficult reasoning, and keep sensitive repositories on-device. The product advantage would come from orchestration: choosing the cheapest adequate model under the right privacy and latency constraints.</p>
+<h2 id="a-procurement-discipline-for-ai">A procurement discipline for AI</h2>
+<p>The most consequential effect of Apple’s pitch may be that it gives finance and technology leaders another benchmark. Until now, many generative-AI deployments have been evaluated mainly on model quality and token price. Mature procurement will require a broader ledger.</p>
+<p>Teams should know the workload’s average and peak utilization, the memory required by the chosen model, latency tolerance, data sensitivity, expected model-refresh cycle, administrative burden and the cost of downtime. They should compare those inputs across API usage, reserved cloud capacity, private cloud infrastructure and owned local machines. A $5,499 workstation is cheap if it replaces a much larger recurring bill at high utilization. It is expensive if it sits idle or runs a model users quickly abandon.</p>
+<p>Apple’s own performance claims also need independent testing. “Up to” multipliers depend on workload, model, precision and software. The company’s trillion-parameter demonstration shows feasibility under a chosen configuration, not a general proof of better price-performance than cloud accelerators. Enterprises should benchmark their actual models rather than purchase from headline specifications.</p>
+<h2 id="the-next-contest-is-over-placement">The next contest is over placement</h2>
+<p>The useful change in Apple’s launch is that AI infrastructure is becoming a placement decision. The first wave of generative AI centralized almost everything because the largest models and accelerators lived in data centers. Better small models, larger workstation memory and more capable local accelerators are reopening the endpoint.</p>
+<p>That will not reverse cloud computing. It will make AI architecture more heterogeneous. Some requests will run on a laptop or desktop because privacy, latency or utilization makes local execution attractive. Others will burst to a cloud model because capability or scale matters more. Training will remain overwhelmingly centralized. Agents may split their work, keeping sensitive context local while calling remote systems for specialized reasoning.</p>
+<p>For Apple, this is an opportunity to turn its silicon strategy into an enterprise infrastructure story without becoming a traditional server vendor. For cloud providers, it creates pressure to keep inference prices low enough that renting remains easier than owning. For AI software companies, it rewards products that can treat compute location as a variable rather than an assumption.</p>
+<p>The test over the next year is straightforward. If enterprises begin measuring local machines against token budgets, and vendors begin designing software to route work between them, Apple will have changed the procurement conversation even without taking meaningful share from data-center accelerators. The Mac does not need to replace the AI cloud to influence its price. It only needs to become a credible alternative for the workloads that never needed to leave the building.</p>
+<p>Sources<br>
+[1] Apple, “The new Mac mini and Mac Studio are available today,” Sept. 22, 2026.<br>
+[2] Apple, “Apple introduces M6 and M5 Ultra for a big leap in performance and AI compute,” Aug. 25, 2026.<br>
+[3] Reuters, “With new Macs, Apple aims to take on Microsoft, Nvidia in a rush to lower AI costs,” Sept. 22, 2026.</p>
+</div><footer class="article-record"><dl class="record-list"><div><dt>Published</dt><dd><time datetime="2026-09-23">September 23, 2026</time></dd></div><div><dt>Sources recorded</dt><dd>None recorded</dd></div></dl></footer></div></div></article><section class="section shell related" aria-labelledby="related-title"><div class="section-head"><h2 id="related-title" class="section-title">Related analysis</h2></div><div class="related-grid"><article class="story story--compact"><span class="kicker">Analysis</span><h3 class="story-title"><a href="/2026/09/21/the-humanoid-robot-boom-has-a-7-000-unit-reality-check/">The Humanoid Robot Boom Has a 7,000-Unit Reality Check</a></h3><p class="story-meta"><time datetime="2026-09-21">Sep 21, 2026</time><span aria-hidden="true">·</span><span>8 min read</span></p></article><article class="story story--compact"><span class="kicker">Analysis</span><h3 class="story-title"><a href="/2026/09/18/mantic-s-25-million-bet-turns-forecasting-into-an-ai-product-category/">Mantic’s $25 Million Bet Turns Forecasting Into an AI Product Category</a></h3><p class="story-meta"><time datetime="2026-09-18">Sep 18, 2026</time><span aria-hidden="true">·</span><span>7 min read</span></p></article><article class="story story--compact"><a class="kicker" href="/topics/ai-drug-discovery/">AI Drug Discovery</a><h3 class="story-title"><a href="/2026/09/16/bytedance-s-290-million-anew-labs-spinout-tests-a-different-model-for-ai-drug-discovery/">ByteDance’s $290 Million Anew Labs Spinout Tests a Different Model for AI Drug Discovery</a></h3><p class="story-meta"><time datetime="2026-09-16">Sep 16, 2026</time><span aria-hidden="true">·</span><span>2 min read</span></p></article></div></section></main><footer class="site-footer"><div class="shell footer-inner"><a class="brand" href="/"><span class="brand-mark" aria-hidden="true"></span><span>Vizo AI</span></a><nav class="footer-links" aria-label="Footer"><a href="/topics/">Topics</a><a href="/explore/">Archive</a><a href="/about/">About</a><a href="/rss.xml">RSS</a></nav><p class="footer-note">Source-aware analysis, published with its sources.</p></div></footer><script>
+      const root = document.documentElement;
+      const themePicker = document.querySelector('[data-theme-picker]');
+      const themeTrigger = document.querySelector('[data-theme-trigger]');
+      const themeMenu = document.querySelector('[data-theme-menu]');
+      const themeOptions = [...document.querySelectorAll('[data-theme-value]')];
+      const systemTheme = window.matchMedia('(prefers-color-scheme: dark)');
+      const themeColor = document.querySelector('#theme-color');
+
+      function setTheme(preference, persist = true) {
+        const allowed = ['light', 'dark', 'system'];
+        const nextPreference = allowed.includes(preference) ? preference : 'system';
+        const resolved = nextPreference === 'system' ? (systemTheme.matches ? 'dark' : 'light') : nextPreference;
+
+        root.dataset.theme = resolved;
+        root.dataset.themePreference = nextPreference;
+        root.style.colorScheme = resolved;
+        themeColor?.setAttribute('content', resolved === 'dark' ? '#0e0f11' : '#faf8f4');
+        themeOptions.forEach((option) => {
+          option.setAttribute('aria-pressed', String(option.dataset.themeValue === nextPreference));
+        });
+
+        if (persist) {
+          try {
+            window.localStorage.setItem('vizo-theme', nextPreference);
+          } catch {
+            // Keep the in-memory choice when storage is unavailable.
+          }
+        }
+      }
+
+      function closeThemeMenu({ restoreFocus = false } = {}) {
+        if (!(themeMenu instanceof HTMLElement) || !(themeTrigger instanceof HTMLButtonElement)) return;
+        themeMenu.hidden = true;
+        themeTrigger.setAttribute('aria-expanded', 'false');
+        if (restoreFocus) themeTrigger.focus();
+      }
+
+      function openThemeMenu() {
+        if (!(themeMenu instanceof HTMLElement) || !(themeTrigger instanceof HTMLButtonElement)) return;
+        themeMenu.hidden = false;
+        themeTrigger.setAttribute('aria-expanded', 'true');
+      }
+
+      setTheme(root.dataset.themePreference ?? 'system', false);
+
+      themeTrigger?.addEventListener('click', () => {
+        if (themeMenu instanceof HTMLElement && themeMenu.hidden) openThemeMenu();
+        else closeThemeMenu();
+      });
+
+      themeOptions.forEach((option, index) => {
+        option.addEventListener('click', () => {
+          setTheme(option.dataset.themeValue ?? 'system');
+          closeThemeMenu({ restoreFocus: true });
+        });
+
+        option.addEventListener('keydown', (event) => {
+          if (!['ArrowDown', 'ArrowUp', 'Home', 'End'].includes(event.key)) return;
+          event.preventDefault();
+          const targetIndex = event.key === 'Home'
+            ? 0
+            : event.key === 'End'
+              ? themeOptions.length - 1
+              : (index + (event.key === 'ArrowDown' ? 1 : -1) + themeOptions.length) % themeOptions.length;
+          themeOptions[targetIndex]?.focus();
+        });
+      });
+
+      systemTheme.addEventListener('change', () => {
+        if (root.dataset.themePreference === 'system') setTheme('system', false);
+      });
+
+      document.addEventListener('click', (event) => {
+        if (themePicker instanceof HTMLElement && !themePicker.contains(event.target)) closeThemeMenu();
+
+        document.querySelectorAll('[data-mobile-nav][open]').forEach((nav) => {
+          if (nav instanceof HTMLElement && !nav.contains(event.target)) nav.removeAttribute('open');
+        });
+      });
+
+      document.querySelectorAll('[data-mobile-nav] a').forEach((link) => {
+        link.addEventListener('click', () => link.closest('details')?.removeAttribute('open'));
+      });
+
+      document.querySelector('[data-back-link]')?.addEventListener('click', (event) => {
+        if (!document.referrer || window.history.length <= 1) return;
+
+        try {
+          const previous = new URL(document.referrer);
+          const current = new URL(window.location.href);
+          const canReturn = previous.origin === current.origin && previous.pathname !== current.pathname;
+
+          if (canReturn) {
+            event.preventDefault();
+            window.history.back();
+          }
+        } catch {
+          // Keep the destination fallback when the referrer cannot be parsed.
+        }
+      });
+
+      document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape') {
+          closeThemeMenu({ restoreFocus: themeTrigger?.getAttribute('aria-expanded') === 'true' });
+          document.querySelectorAll('[data-mobile-nav][open]').forEach((nav) => nav.removeAttribute('open'));
+          return;
+        }
+
+        if (!(event.metaKey || event.ctrlKey) || event.key.toLowerCase() !== 'k') return;
+
+        event.preventDefault();
+        const searchInput = document.querySelector('#research-search');
+
+        if (searchInput instanceof HTMLInputElement) {
+          searchInput.focus();
+        } else {
+          window.location.assign('/explore/?focus=search');
+        }
+      });
+    </script></body></html>
