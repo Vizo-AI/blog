@@ -1,0 +1,227 @@
+<!DOCTYPE html><html lang="en"><head><script>
+      (() => {
+        const root = document.documentElement;
+        const media = window.matchMedia('(prefers-color-scheme: dark)');
+        let preference = 'system';
+
+        try {
+          const stored = window.localStorage.getItem('vizo-theme');
+          if (stored === 'light' || stored === 'dark' || stored === 'system') preference = stored;
+        } catch {
+          // Storage can be unavailable in privacy-restricted contexts.
+        }
+
+        const resolved = preference === 'system' ? (media.matches ? 'dark' : 'light') : preference;
+        root.dataset.theme = resolved;
+        root.dataset.themePreference = preference;
+        root.style.colorScheme = resolved;
+      })();
+    </script><meta charset="UTF-8"><meta name="viewport" content="width=device-width"><meta name="generator" content="Astro v7.2.0"><meta name="description" content="McDonald’s pricing engine shows why enterprise AI governance has to cover objective functions, override rights and data boundaries, not merely model accuracy."><meta id="theme-color" name="theme-color" content="#0e0f11"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="canonical" href="https://ai-blog.ixo8.com/2026/09/30/when-ai-starts-pricing-the-big-mac-the-governance-problem-moves-to-the-checkout/"><link rel="alternate" type="application/rss+xml" title="Vizo AI" href="/rss.xml"><style>@font-face{font-family:"Source Serif 4-77ba8a10457dfacb";src:url("/_astro/fonts/24d457dd795739ed.woff2") format("woff2");font-display:swap;unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-weight:200 900;font-style:normal;}@font-face{font-family:"Source Serif 4-77ba8a10457dfacb";src:url("/_astro/fonts/e0254323ea68b855.woff2") format("woff2");font-display:swap;unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-weight:200 900;font-style:italic;}@font-face{font-family:"Source Serif 4-77ba8a10457dfacb fallback: Times New Roman";src:local("Times New Roman");font-display:swap;font-weight:200 900;font-style:normal;size-adjust:117.9077%;ascent-override:87.8653%;descent-override:28.4121%;line-gap-override:0%;}@font-face{font-family:"Source Serif 4-77ba8a10457dfacb fallback: Times New Roman";src:local("Times New Roman");font-display:swap;font-weight:200 900;font-style:italic;size-adjust:117.9077%;ascent-override:87.8653%;descent-override:28.4121%;line-gap-override:0%;}:root{--font-serif:"Source Serif 4-77ba8a10457dfacb","Source Serif 4-77ba8a10457dfacb fallback: Times New Roman",Georgia,serif;}</style><link rel="preload" href="/_astro/fonts/24d457dd795739ed.woff2" as="font" type="font/woff2" crossorigin><style>@font-face{font-family:Inter-912952f8a2e65f75;src:url("/_astro/fonts/5288773a5a229461.woff2") format("woff2");font-display:swap;unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-weight:100 900;font-style:normal;}@font-face{font-family:"Inter-912952f8a2e65f75 fallback: Arial";src:local("Arial");font-display:swap;font-weight:100 900;font-style:normal;size-adjust:107.1194%;ascent-override:90.4365%;descent-override:22.518%;line-gap-override:0%;}:root{--font-sans:Inter-912952f8a2e65f75,"Inter-912952f8a2e65f75 fallback: Arial",ui-sans-serif,system-ui,sans-serif;}</style><link rel="preload" href="/_astro/fonts/5288773a5a229461.woff2" as="font" type="font/woff2" crossorigin><meta property="og:site_name" content="Vizo AI"><meta property="og:type" content="article"><meta property="og:title" content="When AI Starts Pricing the Big Mac, the Governance Problem Moves to the Checkout, Vizo AI"><meta property="og:description" content="McDonald’s pricing engine shows why enterprise AI governance has to cover objective functions, override rights and data boundaries, not merely model accuracy."><meta property="og:url" content="https://ai-blog.ixo8.com/2026/09/30/when-ai-starts-pricing-the-big-mac-the-governance-problem-moves-to-the-checkout/"><meta name="twitter:card" content="summary_large_image"><title>When AI Starts Pricing the Big Mac, the Governance Problem Moves to the Checkout, Vizo AI</title><link rel="stylesheet" href="/_astro/BaseLayout.BtRPW27g.css"></head><body><a class="skip-link" href="#content">Skip to content</a><header class="site-header"><div class="shell nav"><a class="brand" href="/" aria-label="Vizo AI home"><span class="brand-mark" aria-hidden="true"></span><span>Vizo AI</span></a><div class="nav-actions"><nav class="nav-links" aria-label="Primary navigation"><a href="/topics/">Topics</a><a href="/explore/">Archive</a><a href="/about/">About</a><a class="search-link" href="/explore/?focus=search"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5"></circle><path d="m16 16 4.25 4.25"></path></svg><span>Search</span><kbd aria-hidden="true">⌘K</kbd></a></nav><details class="mobile-nav" data-mobile-nav><summary class="icon-button" aria-label="Open navigation"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"></path></svg></summary><nav class="popover mobile-nav-menu" aria-label="Mobile navigation"><a href="/topics/">Topics</a><a href="/explore/">Archive</a><a href="/about/">About</a><a href="/explore/?focus=search">Search archive</a></nav></details><div class="theme-picker" data-theme-picker><button class="icon-button theme-trigger" type="button" aria-label="Choose color theme" aria-haspopup="true" aria-expanded="false" data-theme-trigger><svg class="theme-icon theme-icon--sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="3.25"></circle><path d="M12 2.75v2M12 19.25v2M21.25 12h-2M4.75 12h-2M18.54 5.46l-1.42 1.42M6.88 17.12l-1.42 1.42M18.54 18.54l-1.42-1.42M6.88 6.88 5.46 5.46"></path></svg><svg class="theme-icon theme-icon--moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M19.4 15.3A8 8 0 0 1 8.7 4.6 8 8 0 1 0 19.4 15.3Z"></path></svg></button><div class="popover theme-menu" data-theme-menu hidden role="group" aria-label="Color theme"><button type="button" data-theme-value="light" aria-pressed="false"><span>Light</span><span class="theme-check" aria-hidden="true">✓</span></button><button type="button" data-theme-value="dark" aria-pressed="false"><span>Dark</span><span class="theme-check" aria-hidden="true">✓</span></button><button type="button" data-theme-value="system" aria-pressed="false"><span>System</span><span class="theme-check" aria-hidden="true">✓</span></button></div></div></div></div></header><main id="content"><div class="page-back shell"><a class="back-link" href="/explore/" data-back-link aria-label="Go back to the previous page"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m14 6-6 6 6 6"></path><path d="M8 12h11"></path></svg><span>Back</span></a></div><article class="article"><header class="article-header"><span class="kicker">Analysis</span><h1 class="article-title">When AI Starts Pricing the Big Mac, the Governance Problem Moves to the Checkout</h1><p class="article-deck">McDonald’s pricing engine shows why enterprise AI governance has to cover objective functions, override rights and data boundaries, not merely model accuracy.</p><p class="article-byline"><span>By Vizo AI</span><time datetime="2026-09-30">September 30, 2026</time><span>8 min read</span></p></header><div class="article-layout"><aside class="article-rail"><nav class="toc" aria-labelledby="toc-title" data-toc><details class="toc-details" data-toc-details open><summary id="toc-title">On this page</summary><ol><li><a href="#a-familiar-practice-becomes-computational" data-toc-link="a-familiar-practice-becomes-computational">A familiar practice becomes computational</a></li><li><a href="#the-franchise-model-makes-the-algorithm-more-interesting" data-toc-link="the-franchise-model-makes-the-algorithm-more-interesting">The franchise model makes the algorithm more interesting</a></li><li><a href="#recommendation-versus-decision" data-toc-link="recommendation-versus-decision">Recommendation versus decision</a></li><li><a href="#the-consumer-problem-is-trust-not-only-price" data-toc-link="the-consumer-problem-is-trust-not-only-price">The consumer problem is trust, not only price</a></li><li><a href="#the-next-enterprise-ai-battleground-may-be-ordinary-decisions" data-toc-link="the-next-enterprise-ai-battleground-may-be-ordinary-decisions">The next enterprise AI battleground may be ordinary decisions</a></li></ol></details></nav><script>
+  // The rail precedes the article body in the DOM, so wait for the headings.
+  document.addEventListener('DOMContentLoaded', () => {
+    const toc = document.querySelector('[data-toc]');
+    if (!(toc instanceof HTMLElement)) return;
+
+    const details = toc.querySelector('[data-toc-details]');
+    const wide = window.matchMedia('(min-width: 1180px)');
+    const syncOpen = () => {
+      if (details instanceof HTMLDetailsElement) details.open = wide.matches;
+    };
+    syncOpen();
+    wide.addEventListener('change', syncOpen);
+
+    toc.addEventListener('click', (event) => {
+      if (!wide.matches && event.target instanceof HTMLAnchorElement && details instanceof HTMLDetailsElement) details.open = false;
+    });
+
+    const links = new Map([...toc.querySelectorAll('[data-toc-link]')].map((link) => [link.getAttribute('data-toc-link'), link]));
+    const targets = [...links.keys()].map((id) => document.getElementById(id ?? '')).filter(Boolean);
+    if (targets.length === 0) return;
+
+    // The active section is the last heading scrolled past the top third of
+    // the viewport, so jumps and fast scrolls still land on the right entry.
+    let frame = 0;
+    const update = () => {
+      frame = 0;
+      const threshold = window.innerHeight * 0.3;
+      let activeId = null;
+      for (const target of targets) {
+        if (target.getBoundingClientRect().top <= threshold) activeId = target.id;
+        else break;
+      }
+      links.forEach((link, key) => {
+        if (key === activeId) link.setAttribute('aria-current', 'location');
+        else link.removeAttribute('aria-current');
+      });
+    };
+    const schedule = () => {
+      if (!frame) frame = window.requestAnimationFrame(update);
+    };
+    window.addEventListener('scroll', schedule, { passive: true });
+    window.addEventListener('resize', schedule);
+    update();
+  }, { once: true });
+</script></aside><div class="article-main"><div class="prose" data-pagefind-body><p>McDonald’s pricing engine shows why enterprise AI governance has to cover objective functions, override rights and data boundaries, not merely model accuracy.</p>
+<p>McDonald’s has spent years telling investors that technology can make one of the world’s largest restaurant systems more efficient. Its latest pricing machinery shows a more consequential use for that technology: deciding what a customer should be asked to pay.</p>
+<p>Reuters reported on September 29 that McDonald’s increasingly uses a machine-learning pricing engine across its U.S. system and some international markets. The tool analyzes millions of transactions, local competitive prices and store-level demand to recommend what the company calls an “optimal price” for individual menu items at individual restaurants. Screenshots reviewed by Reuters showed the system estimating “customer willingness to pay” in an area. Franchisees retain formal authority over final prices, McDonald’s says, although several operators told Reuters they feel pressure to follow the recommendations.</p>
+<p>This is an unusually useful enterprise-AI case study because it strips away much of the abstraction surrounding adoption. The system is not writing marketing copy or summarizing meetings. It is helping allocate economic value among a global brand, thousands of franchise operators and millions of customers.</p>
+<p>The business question is therefore larger than whether machine learning can predict the best price for a Big Mac. It is whether companies can deploy optimization systems without allowing a technically sophisticated recommendation to blur who chose the objective, who owns the decision and who bears the consequences.</p>
+<h2 id="a-familiar-practice-becomes-computational">A familiar practice becomes computational</h2>
+<p>Businesses have always varied prices. Airlines change fares. Hotels charge more when rooms are scarce. Retailers run promotions. Restaurants in expensive neighborhoods often charge more than restaurants elsewhere. McDonald’s itself emphasizes that its independent franchisees set their own prices and that costs and market conditions differ by location.</p>
+<p>Machine learning changes the scale and precision of that process.</p>
+<p>According to Reuters, McDonald’s engine continually analyzes transaction data from nearly 14,000 U.S. restaurants. It also incorporates public menu prices from nearby competitors. The output is restaurant-specific and item-specific. In September, Reuters found a Big Mac selling for $5.69 at one company-operated Fresno restaurant and $6.89 at another company-operated location two miles away, a 21% difference. Reuters could not establish that the algorithm caused that particular gap, an important limitation.</p>
+<p>The system is also not the same thing as personalized or “surveillance” pricing. Reuters’ reporting describes location-level recommendations, not a mechanism that charges two identifiable people different prices for the same burger based on individual browsing histories or personal profiles. The Federal Trade Commission is separately scrutinizing personalized pricing based on consumer data.</p>
+<p>That boundary matters because the technical capability is expanding. FTC staff reported in 2025 that pricing intermediaries can use granular information including location, demographics, browsing behavior, shopping history and even online interactions to tailor prices or offers. In August 2026, the agency proposed an enforcement policy under which undisclosed use of personal data for individualized pricing could violate federal prohibitions on unfair or deceptive practices. FTC Chair Andrew Ferguson said consumers generally expect a listed price to be the price others see, rather than a retailer’s private estimate of their willingness to pay.</p>
+<p>McDonald’s current system sits on the safer side of that line as described publicly. Yet its use of “willingness to pay” at the restaurant level illustrates how quickly ordinary revenue management can move toward a more contested form of algorithmic optimization.</p>
+<h2 id="the-franchise-model-makes-the-algorithm-more-interesting">The franchise model makes the algorithm more interesting</h2>
+<p>The technology becomes more revealing when viewed through McDonald’s economics.</p>
+<p>Roughly 95% of McDonald’s restaurants worldwide were franchised at the end of 2025. The company’s annual report says conventional franchised revenue includes rent and royalties based on a percentage of restaurant sales, plus initial fees. McDonald’s describes the model as producing stable, predictable revenue that is largely a function of franchisee sales.</p>
+<p>A franchise operator has a different cost structure. The operator pays wages, food costs, utilities, occupancy expenses and other store-level costs. A price that maximizes restaurant revenue does not necessarily maximize restaurant profit, customer traffic or the long-run health of a local market.</p>
+<p>Reuters reported that this divergence is visible in the pricing debate. Some franchisees resisted recent recommendations for lower or more conservative prices as their operating expenses remained elevated. McDonald’s, meanwhile, has made affordability a prominent corporate priority. In April it expanded its U.S. McValue platform with an under-$3 menu and a $4 breakfast deal. The company says its pricing portal is advisory and designed to help franchisees make informed decisions.</p>
+<p>That combination creates a governance problem familiar well beyond fast food. An optimization model does not discover a neutral “best” answer. Someone chooses the objective function.</p>
+<p>Should the system maximize revenue? Transactions? Store-level operating profit? Franchisee cash flow? Customer retention? Market share? Affordability among lower-income consumers? A model can incorporate several goals, but their weights remain business choices.</p>
+<p>Reuters reported that McDonald’s works with Tiger Analytics on parameters and corporate targets for the pricing platform. Former Tiger employees described rules such as avoiding summer price increases for ice cream and drinks, and focusing increases on items that had not recently risen in price. Those are not merely predictions. They encode commercial policy.</p>
+<p>The most consequential control in an AI pricing system may therefore sit upstream of the model: who is authorized to define what “optimal” means.</p>
+<h2 id="recommendation-versus-decision">Recommendation versus decision</h2>
+<p>McDonald’s says franchisees are always free to determine final prices. That formal separation is significant. It also shows why enterprise governance cannot stop at whether a human technically remains in the loop.</p>
+<p>Reuters reported that McDonald’s records deviations from pricing recommendations and that several franchisees described calls or other pressure when they departed from the guidance. CEO Chris Kempczinski has also discussed “pricing non-compliance” as part of some franchisee business-review conversations. McDonald’s says the portal is a tool, not a mandate.</p>
+<p>Both things can be true: an operator can retain legal discretion while a recommendation becomes organizationally difficult to reject.</p>
+<p>This pattern appears throughout enterprise AI. A credit model may technically advise a loan officer. A hiring system may rank candidates for a recruiter. A fraud model may flag transactions for an analyst. If managers measure employees on adherence to the model, require explanations for deviations or make the automated recommendation the path of least resistance, “human oversight” can become procedural rather than substantive.</p>
+<p>That is why companies need to audit decision rights alongside model accuracy. Useful questions include how often humans override a recommendation, whether overrides are penalized, what evidence the system exposes, which variables drive the output and whether the person accepting the recommendation understands the trade-off being optimized.</p>
+<p>For McDonald’s, the issue also intersects with competition law. The pricing portal warns users that franchisees “may be competitors” and emphasizes compliance with antitrust law, according to Reuters. Former FTC commissioner William Kovacic told Reuters that the warning acknowledges a potential issue amid scrutiny of pricing algorithms. Other experts quoted by Reuters said legal risk may be low because courts have historically given brands considerable latitude over franchise pricing.</p>
+<p>That disagreement is precisely why algorithmic pricing deserves governance before litigation settles every boundary. The legal risk depends on facts: what information is shared, who controls the system, how recommendations are generated and how independent operators respond.</p>
+<h2 id="the-consumer-problem-is-trust-not-only-price">The consumer problem is trust, not only price</h2>
+<p>There is an easy way to overstate this story: describe every location-specific price as discriminatory AI pricing. That would collapse ordinary geographic pricing, algorithmic recommendations and individualized surveillance pricing into one category.</p>
+<p>The more durable consumer issue is transparency.</p>
+<p>Customers generally cannot observe the objective function behind a price. A restaurant may be responding to rent, wages, local competition, demand, a national affordability campaign or an algorithm’s estimate of price sensitivity. From the customer’s side, those mechanisms collapse into a number on a menu board or app.</p>
+<p>AI makes that opacity more consequential because it allows companies to test and update decisions across far more variables and locations than a human pricing team could manage manually. The same machinery can lower prices where demand is weak, preserve prices on sensitive products, or recommend increases where customers appear able to absorb them. Optimization is not inherently synonymous with gouging.</p>
+<p>McDonald’s recent strategy demonstrates the other side. The company has been pushing inexpensive meal deals and an under-$3 menu, and Reuters reported that its engine has recently recommended more conservative pricing, including decreases, in some cases. A system built to estimate willingness to pay can still be directed toward traffic and affordability when management believes those goals matter more.</p>
+<p>That makes governance more important, not less. Companies should be able to explain what data they use, at what level prices vary, which objectives the system pursues, who can override it and what protections prevent the optimization from crossing into prohibited or unacceptable discrimination.</p>
+<h2 id="the-next-enterprise-ai-battleground-may-be-ordinary-decisions">The next enterprise AI battleground may be ordinary decisions</h2>
+<p>Much of the AI governance debate focuses on frontier-model safety, autonomous agents and catastrophic misuse. Those issues deserve attention. McDonald’s pricing engine points toward a quieter category of risk that will reach businesses sooner: AI embedded in routine commercial decisions.</p>
+<p>Pricing, credit, insurance, scheduling, inventory, promotions and compensation are attractive targets for machine learning because they generate abundant data and have measurable outcomes. They are also decisions that distribute money and opportunity.</p>
+<p>The firms that deploy these systems successfully will need more than accurate predictions. They will need explicit objectives, defensible data boundaries, genuine decision rights and records showing how recommendations became actions.</p>
+<p>For McDonald’s, the near-term test is visible in the franchise system. If AI pricing improves affordability, traffic and operator economics together, the platform can become a powerful coordination tool. If franchisees believe the algorithm primarily shifts value toward corporate priorities, or customers conclude that prices are being engineered around their capacity to pay, technical sophistication will not rescue trust.</p>
+<p>The lesson travels far beyond burgers. As AI moves into the machinery of everyday business, governance increasingly begins before the model makes a prediction. It begins when somebody decides what the machine should optimize.</p>
+<p>Topics: Enterprise AI; Algorithmic Pricing; AI Governance; Retail Technology; Consumer Protection</p>
+</div><footer class="article-record"><dl class="record-list"><div><dt>Published</dt><dd><time datetime="2026-09-30">September 30, 2026</time></dd></div><div><dt>Sources recorded</dt><dd>None recorded</dd></div></dl></footer></div></div></article><section class="section shell related" aria-labelledby="related-title"><div class="section-head"><h2 id="related-title" class="section-title">Related analysis</h2></div><div class="related-grid"><article class="story story--compact"><span class="kicker">Analysis</span><h3 class="story-title"><a href="/2026/10/02/europe-s-ai-adoption-problem-is-becoming-a-financing-problem/">Europe’s AI Adoption Problem Is Becoming a Financing Problem</a></h3><p class="story-meta"><time datetime="2026-10-02">Oct 2, 2026</time><span aria-hidden="true">·</span><span>8 min read</span></p></article><article class="story story--compact"><span class="kicker">Analysis</span><h3 class="story-title"><a href="/2026/09/28/when-an-ai-agent-causes-harm-washington-is-looking-past-the-robot/">When an AI Agent Causes Harm, Washington Is Looking Past the Robot</a></h3><p class="story-meta"><time datetime="2026-09-28">Sep 28, 2026</time><span aria-hidden="true">·</span><span>7 min read</span></p></article><article class="story story--compact"><span class="kicker">Analysis</span><h3 class="story-title"><a href="/2026/09/23/apple-is-trying-to-put-a-price-ceiling-on-the-ai-cloud/">Apple Is Trying to Put a Price Ceiling on the AI Cloud</a></h3><p class="story-meta"><time datetime="2026-09-23">Sep 23, 2026</time><span aria-hidden="true">·</span><span>8 min read</span></p></article></div></section></main><footer class="site-footer"><div class="shell footer-inner"><a class="brand" href="/"><span class="brand-mark" aria-hidden="true"></span><span>Vizo AI</span></a><nav class="footer-links" aria-label="Footer"><a href="/topics/">Topics</a><a href="/explore/">Archive</a><a href="/about/">About</a><a href="/rss.xml">RSS</a></nav><p class="footer-note">Source-aware analysis, published with its sources.</p></div></footer><script>
+      const root = document.documentElement;
+      const themePicker = document.querySelector('[data-theme-picker]');
+      const themeTrigger = document.querySelector('[data-theme-trigger]');
+      const themeMenu = document.querySelector('[data-theme-menu]');
+      const themeOptions = [...document.querySelectorAll('[data-theme-value]')];
+      const systemTheme = window.matchMedia('(prefers-color-scheme: dark)');
+      const themeColor = document.querySelector('#theme-color');
+
+      function setTheme(preference, persist = true) {
+        const allowed = ['light', 'dark', 'system'];
+        const nextPreference = allowed.includes(preference) ? preference : 'system';
+        const resolved = nextPreference === 'system' ? (systemTheme.matches ? 'dark' : 'light') : nextPreference;
+
+        root.dataset.theme = resolved;
+        root.dataset.themePreference = nextPreference;
+        root.style.colorScheme = resolved;
+        themeColor?.setAttribute('content', resolved === 'dark' ? '#0e0f11' : '#faf8f4');
+        themeOptions.forEach((option) => {
+          option.setAttribute('aria-pressed', String(option.dataset.themeValue === nextPreference));
+        });
+
+        if (persist) {
+          try {
+            window.localStorage.setItem('vizo-theme', nextPreference);
+          } catch {
+            // Keep the in-memory choice when storage is unavailable.
+          }
+        }
+      }
+
+      function closeThemeMenu({ restoreFocus = false } = {}) {
+        if (!(themeMenu instanceof HTMLElement) || !(themeTrigger instanceof HTMLButtonElement)) return;
+        themeMenu.hidden = true;
+        themeTrigger.setAttribute('aria-expanded', 'false');
+        if (restoreFocus) themeTrigger.focus();
+      }
+
+      function openThemeMenu() {
+        if (!(themeMenu instanceof HTMLElement) || !(themeTrigger instanceof HTMLButtonElement)) return;
+        themeMenu.hidden = false;
+        themeTrigger.setAttribute('aria-expanded', 'true');
+      }
+
+      setTheme(root.dataset.themePreference ?? 'system', false);
+
+      themeTrigger?.addEventListener('click', () => {
+        if (themeMenu instanceof HTMLElement && themeMenu.hidden) openThemeMenu();
+        else closeThemeMenu();
+      });
+
+      themeOptions.forEach((option, index) => {
+        option.addEventListener('click', () => {
+          setTheme(option.dataset.themeValue ?? 'system');
+          closeThemeMenu({ restoreFocus: true });
+        });
+
+        option.addEventListener('keydown', (event) => {
+          if (!['ArrowDown', 'ArrowUp', 'Home', 'End'].includes(event.key)) return;
+          event.preventDefault();
+          const targetIndex = event.key === 'Home'
+            ? 0
+            : event.key === 'End'
+              ? themeOptions.length - 1
+              : (index + (event.key === 'ArrowDown' ? 1 : -1) + themeOptions.length) % themeOptions.length;
+          themeOptions[targetIndex]?.focus();
+        });
+      });
+
+      systemTheme.addEventListener('change', () => {
+        if (root.dataset.themePreference === 'system') setTheme('system', false);
+      });
+
+      document.addEventListener('click', (event) => {
+        if (themePicker instanceof HTMLElement && !themePicker.contains(event.target)) closeThemeMenu();
+
+        document.querySelectorAll('[data-mobile-nav][open]').forEach((nav) => {
+          if (nav instanceof HTMLElement && !nav.contains(event.target)) nav.removeAttribute('open');
+        });
+      });
+
+      document.querySelectorAll('[data-mobile-nav] a').forEach((link) => {
+        link.addEventListener('click', () => link.closest('details')?.removeAttribute('open'));
+      });
+
+      document.querySelector('[data-back-link]')?.addEventListener('click', (event) => {
+        if (!document.referrer || window.history.length <= 1) return;
+
+        try {
+          const previous = new URL(document.referrer);
+          const current = new URL(window.location.href);
+          const canReturn = previous.origin === current.origin && previous.pathname !== current.pathname;
+
+          if (canReturn) {
+            event.preventDefault();
+            window.history.back();
+          }
+        } catch {
+          // Keep the destination fallback when the referrer cannot be parsed.
+        }
+      });
+
+      document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape') {
+          closeThemeMenu({ restoreFocus: themeTrigger?.getAttribute('aria-expanded') === 'true' });
+          document.querySelectorAll('[data-mobile-nav][open]').forEach((nav) => nav.removeAttribute('open'));
+          return;
+        }
+
+        if (!(event.metaKey || event.ctrlKey) || event.key.toLowerCase() !== 'k') return;
+
+        event.preventDefault();
+        const searchInput = document.querySelector('#research-search');
+
+        if (searchInput instanceof HTMLInputElement) {
+          searchInput.focus();
+        } else {
+          window.location.assign('/explore/?focus=search');
+        }
+      });
+    </script></body></html>

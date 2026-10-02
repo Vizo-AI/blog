@@ -1,0 +1,226 @@
+<!DOCTYPE html><html lang="en"><head><script>
+      (() => {
+        const root = document.documentElement;
+        const media = window.matchMedia('(prefers-color-scheme: dark)');
+        let preference = 'system';
+
+        try {
+          const stored = window.localStorage.getItem('vizo-theme');
+          if (stored === 'light' || stored === 'dark' || stored === 'system') preference = stored;
+        } catch {
+          // Storage can be unavailable in privacy-restricted contexts.
+        }
+
+        const resolved = preference === 'system' ? (media.matches ? 'dark' : 'light') : preference;
+        root.dataset.theme = resolved;
+        root.dataset.themePreference = preference;
+        root.style.colorScheme = resolved;
+      })();
+    </script><meta charset="UTF-8"><meta name="viewport" content="width=device-width"><meta name="generator" content="Astro v7.2.0"><meta name="description" content="A new ECB survey shows that 72% of euro-area firms planning AI investment expect to rely on internal funds. That is a warning about the expensive stage after experimentation."><meta id="theme-color" name="theme-color" content="#0e0f11"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="canonical" href="https://ai-blog.ixo8.com/2026/10/02/europe-s-ai-adoption-problem-is-becoming-a-financing-problem/"><link rel="alternate" type="application/rss+xml" title="Vizo AI" href="/rss.xml"><style>@font-face{font-family:"Source Serif 4-77ba8a10457dfacb";src:url("/_astro/fonts/24d457dd795739ed.woff2") format("woff2");font-display:swap;unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-weight:200 900;font-style:normal;}@font-face{font-family:"Source Serif 4-77ba8a10457dfacb";src:url("/_astro/fonts/e0254323ea68b855.woff2") format("woff2");font-display:swap;unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-weight:200 900;font-style:italic;}@font-face{font-family:"Source Serif 4-77ba8a10457dfacb fallback: Times New Roman";src:local("Times New Roman");font-display:swap;font-weight:200 900;font-style:normal;size-adjust:117.9077%;ascent-override:87.8653%;descent-override:28.4121%;line-gap-override:0%;}@font-face{font-family:"Source Serif 4-77ba8a10457dfacb fallback: Times New Roman";src:local("Times New Roman");font-display:swap;font-weight:200 900;font-style:italic;size-adjust:117.9077%;ascent-override:87.8653%;descent-override:28.4121%;line-gap-override:0%;}:root{--font-serif:"Source Serif 4-77ba8a10457dfacb","Source Serif 4-77ba8a10457dfacb fallback: Times New Roman",Georgia,serif;}</style><link rel="preload" href="/_astro/fonts/24d457dd795739ed.woff2" as="font" type="font/woff2" crossorigin><style>@font-face{font-family:Inter-912952f8a2e65f75;src:url("/_astro/fonts/5288773a5a229461.woff2") format("woff2");font-display:swap;unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-weight:100 900;font-style:normal;}@font-face{font-family:"Inter-912952f8a2e65f75 fallback: Arial";src:local("Arial");font-display:swap;font-weight:100 900;font-style:normal;size-adjust:107.1194%;ascent-override:90.4365%;descent-override:22.518%;line-gap-override:0%;}:root{--font-sans:Inter-912952f8a2e65f75,"Inter-912952f8a2e65f75 fallback: Arial",ui-sans-serif,system-ui,sans-serif;}</style><link rel="preload" href="/_astro/fonts/5288773a5a229461.woff2" as="font" type="font/woff2" crossorigin><meta property="og:site_name" content="Vizo AI"><meta property="og:type" content="article"><meta property="og:title" content="Europe’s AI Adoption Problem Is Becoming a Financing Problem, Vizo AI"><meta property="og:description" content="A new ECB survey shows that 72% of euro-area firms planning AI investment expect to rely on internal funds. That is a warning about the expensive stage after experimentation."><meta property="og:url" content="https://ai-blog.ixo8.com/2026/10/02/europe-s-ai-adoption-problem-is-becoming-a-financing-problem/"><meta name="twitter:card" content="summary_large_image"><title>Europe’s AI Adoption Problem Is Becoming a Financing Problem, Vizo AI</title><link rel="stylesheet" href="/_astro/BaseLayout.BtRPW27g.css"></head><body><a class="skip-link" href="#content">Skip to content</a><header class="site-header"><div class="shell nav"><a class="brand" href="/" aria-label="Vizo AI home"><span class="brand-mark" aria-hidden="true"></span><span>Vizo AI</span></a><div class="nav-actions"><nav class="nav-links" aria-label="Primary navigation"><a href="/topics/">Topics</a><a href="/explore/">Archive</a><a href="/about/">About</a><a class="search-link" href="/explore/?focus=search"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5"></circle><path d="m16 16 4.25 4.25"></path></svg><span>Search</span><kbd aria-hidden="true">⌘K</kbd></a></nav><details class="mobile-nav" data-mobile-nav><summary class="icon-button" aria-label="Open navigation"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"></path></svg></summary><nav class="popover mobile-nav-menu" aria-label="Mobile navigation"><a href="/topics/">Topics</a><a href="/explore/">Archive</a><a href="/about/">About</a><a href="/explore/?focus=search">Search archive</a></nav></details><div class="theme-picker" data-theme-picker><button class="icon-button theme-trigger" type="button" aria-label="Choose color theme" aria-haspopup="true" aria-expanded="false" data-theme-trigger><svg class="theme-icon theme-icon--sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="3.25"></circle><path d="M12 2.75v2M12 19.25v2M21.25 12h-2M4.75 12h-2M18.54 5.46l-1.42 1.42M6.88 17.12l-1.42 1.42M18.54 18.54l-1.42-1.42M6.88 6.88 5.46 5.46"></path></svg><svg class="theme-icon theme-icon--moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M19.4 15.3A8 8 0 0 1 8.7 4.6 8 8 0 1 0 19.4 15.3Z"></path></svg></button><div class="popover theme-menu" data-theme-menu hidden role="group" aria-label="Color theme"><button type="button" data-theme-value="light" aria-pressed="false"><span>Light</span><span class="theme-check" aria-hidden="true">✓</span></button><button type="button" data-theme-value="dark" aria-pressed="false"><span>Dark</span><span class="theme-check" aria-hidden="true">✓</span></button><button type="button" data-theme-value="system" aria-pressed="false"><span>System</span><span class="theme-check" aria-hidden="true">✓</span></button></div></div></div></div></header><main id="content"><div class="page-back shell"><a class="back-link" href="/explore/" data-back-link aria-label="Go back to the previous page"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m14 6-6 6 6 6"></path><path d="M8 12h11"></path></svg><span>Back</span></a></div><article class="article"><header class="article-header"><span class="kicker">Analysis</span><h1 class="article-title">Europe’s AI Adoption Problem Is Becoming a Financing Problem</h1><p class="article-deck">A new ECB survey shows that 72% of euro-area firms planning AI investment expect to rely on internal funds. That is a warning about the expensive stage after experimentation.</p><p class="article-byline"><span>By Vizo AI</span><time datetime="2026-10-02">October 2, 2026</time><span>8 min read</span></p></header><div class="article-layout"><aside class="article-rail"><nav class="toc" aria-labelledby="toc-title" data-toc><details class="toc-details" data-toc-details open><summary id="toc-title">On this page</summary><ol><li><a href="#cheap-access-expensive-integration" data-toc-link="cheap-access-expensive-integration">Cheap access, expensive integration</a></li><li><a href="#the-middle-of-the-market-is-where-the-constraint-bites" data-toc-link="the-middle-of-the-market-is-where-the-constraint-bites">The middle of the market is where the constraint bites</a></li><li><a href="#the-productivity-question-sits-downstream" data-toc-link="the-productivity-question-sits-downstream">The productivity question sits downstream</a></li><li><a href="#europes-capital-market-agenda-now-has-an-ai-test" data-toc-link="europes-capital-market-agenda-now-has-an-ai-test">Europe’s capital-market agenda now has an AI test</a></li><li><a href="#the-next-phase-of-adoption-will-expose-the-answer" data-toc-link="the-next-phase-of-adoption-will-expose-the-answer">The next phase of adoption will expose the answer</a></li></ol></details></nav><script>
+  // The rail precedes the article body in the DOM, so wait for the headings.
+  document.addEventListener('DOMContentLoaded', () => {
+    const toc = document.querySelector('[data-toc]');
+    if (!(toc instanceof HTMLElement)) return;
+
+    const details = toc.querySelector('[data-toc-details]');
+    const wide = window.matchMedia('(min-width: 1180px)');
+    const syncOpen = () => {
+      if (details instanceof HTMLDetailsElement) details.open = wide.matches;
+    };
+    syncOpen();
+    wide.addEventListener('change', syncOpen);
+
+    toc.addEventListener('click', (event) => {
+      if (!wide.matches && event.target instanceof HTMLAnchorElement && details instanceof HTMLDetailsElement) details.open = false;
+    });
+
+    const links = new Map([...toc.querySelectorAll('[data-toc-link]')].map((link) => [link.getAttribute('data-toc-link'), link]));
+    const targets = [...links.keys()].map((id) => document.getElementById(id ?? '')).filter(Boolean);
+    if (targets.length === 0) return;
+
+    // The active section is the last heading scrolled past the top third of
+    // the viewport, so jumps and fast scrolls still land on the right entry.
+    let frame = 0;
+    const update = () => {
+      frame = 0;
+      const threshold = window.innerHeight * 0.3;
+      let activeId = null;
+      for (const target of targets) {
+        if (target.getBoundingClientRect().top <= threshold) activeId = target.id;
+        else break;
+      }
+      links.forEach((link, key) => {
+        if (key === activeId) link.setAttribute('aria-current', 'location');
+        else link.removeAttribute('aria-current');
+      });
+    };
+    const schedule = () => {
+      if (!frame) frame = window.requestAnimationFrame(update);
+    };
+    window.addEventListener('scroll', schedule, { passive: true });
+    window.addEventListener('resize', schedule);
+    update();
+  }, { once: true });
+</script></aside><div class="article-main"><div class="prose" data-pagefind-body><p>A new ECB survey shows that 72% of euro-area firms planning AI investment expect to rely on internal funds. That is a warning about the expensive stage after experimentation.</p>
+<p>The latest evidence from the European Central Bank complicates a familiar story about artificial intelligence in Europe. Companies are not simply waiting for better models, clearer regulation or more convincing use cases. Many are already using AI and planning to spend more. The constraint showing up now is how they pay for the deeper work.</p>
+<p>In a survey of roughly 5,000 euro-area firms, 72% of companies planning AI investment said they expected to use internal funds such as cash flow or retained earnings. Bank loans, grants and leasing were each cited by 16%. Equity or venture capital appeared in only 6% of responses, and debt securities in 1%. The ECB published the results on October 2.</p>
+<p>That financing mix is easy to overlook because buying access to a generative-AI service is cheap. Transforming a business around AI is not. Once companies move from employee experimentation to customized systems, data infrastructure, process redesign and training, the project starts to resemble capital investment even though much of the spending is intangible. Europe’s financial system is better at funding assets that can be pledged as collateral than software integration, organizational change and uncertain productivity gains.</p>
+<p>The result could become a structural divide in AI adoption: cash-rich firms can finance experimentation from their own balance sheets, while companies with thinner margins may stop at lightweight tools even when they have viable projects. If that pattern persists, the economic returns from AI could concentrate less because the technology itself is scarce than because the financing architecture around it is uneven.</p>
+<h2 id="cheap-access-expensive-integration">Cheap access, expensive integration</h2>
+<p>The ECB’s survey helps separate AI use from AI investment. In its fourth-quarter 2025 SAFE survey, 27% of euro-area firms said they did not use AI, 33% used it very infrequently, 31% moderately and 7% significantly. The numbers suggested broad diffusion but shallow intensity. A later ECB analysis found that more than 84% of intensive AI users had invested in the technology, compared with 33% of moderate users. Nearly all intensive users planned further investment in 2026.</p>
+<p>The October data show what those plans involve. Among firms expecting to invest, 49% identified AI technologies and tools, 46% employee training and 40% data infrastructure. Only 12% selected hiring AI specialists. These categories are not mutually exclusive, but their mix is revealing. A serious deployment is often a bundle: software, data, people and changes to existing workflows.</p>
+<p>That bundle does not fit neatly into traditional lending.</p>
+<p>A bank can take security over a building or machinery. It has a harder time valuing a cleaned data set, a redesigned procurement workflow or months of employee training. Even a custom model or software integration can lose value quickly if the underlying technology changes. The investment may be economically productive without creating a durable asset a lender can recover if the borrower fails.</p>
+<p>The ECB is careful about what its survey proves. Firms were asked which funding sources they expect to use, not how much money each source will ultimately provide. A company selecting internal funds and a bank loan may still borrow most of its budget. Eighteen percent of respondents selected none of the listed financing options, which may indicate they had not decided. The data therefore do not establish a precise euro amount of “missing” AI finance.</p>
+<p>They do show a pronounced preference for self-financing. That matters because internal funds impose their own ceiling. A company can only invest what its cash generation and competing priorities allow.</p>
+<h2 id="the-middle-of-the-market-is-where-the-constraint-bites">The middle of the market is where the constraint bites</h2>
+<p>The largest technology companies have turned AI infrastructure into one of the biggest capital-spending cycles in modern corporate history. That can distort the picture of how ordinary businesses finance adoption. A manufacturer in northern Italy, a German logistics company or a Spanish services firm is not deciding whether to build a gigawatt data center. It may be deciding whether to integrate an AI system with ERP software, clean years of operational data, retrain employees and accept a period of disruption before returns become measurable.</p>
+<p>Those projects can be too large for an operating budget and too intangible for conventional asset finance.</p>
+<p>The ECB’s earlier work points in the same direction. Intensive AI users are more likely to combine multiple sources of finance. The central bank’s researchers argue that deeper integration into core processes requires larger and longer-term restructuring than buying general-purpose AI licenses. Euro-area companies also have fewer ways than U.S. companies to raise capital directly from investors or financial markets, leaving greater dependence on bank lending.</p>
+<p>This is not evidence that every company asking for AI money deserves it. Lenders have rational reasons to be cautious. Many AI projects will fail to produce the promised productivity gains. Vendor markets are changing quickly. Integration costs are easy to underestimate. A borrower may struggle to demonstrate that a proposed AI deployment has an advantage over a cheaper off-the-shelf product six months later.</p>
+<p>Financing discipline can prevent waste.</p>
+<p>But there is a difference between screening weak projects and systematically underfunding intangible ones. If lenders cannot distinguish between the two, firms with large cash cushions gain an advantage unrelated to the quality of their AI plans. That is especially relevant for Europe, where small and medium-sized enterprises account for much of employment and economic activity and where capital markets remain less developed than in the United States.</p>
+<h2 id="the-productivity-question-sits-downstream">The productivity question sits downstream</h2>
+<p>Europe’s policy debate often treats AI competitiveness as a race to build frontier models, secure chips and expand data centers. Those are necessary inputs. They do not guarantee that existing firms reorganize themselves around the technology.</p>
+<p>The ECB estimates that euro-area firms plan to devote roughly 9% to 10% of total investment to AI in 2026. Yet only 7% of firms in its late-2025 survey reported significant AI use. That gap between broad exposure and intensive use is where financing becomes economically consequential.</p>
+<p>Productivity gains generally require complementary investment. A customer-service model does little if it cannot access reliable customer records. A predictive-maintenance system is limited if factory data are fragmented. A coding assistant may accelerate individual developers without improving a company’s release process. The model is one component of a larger production system.</p>
+<p>This is why training appears almost as frequently as technology in the October survey. Forty-six percent of firms planning AI investment expect to spend on employee training. That money may produce valuable organizational capability, but it is difficult to collateralize and its return can be uncertain. Employees can leave. Workflows can change. A model provider can alter pricing or capabilities.</p>
+<p>From a lender’s perspective, these are legitimate risks. From an economy’s perspective, they are also exactly the investments required to convert a general-purpose technology into productivity.</p>
+<p>The tension creates a policy problem without an obvious subsidy answer. Governments could expand grants or guarantees, but poorly designed support would encourage companies to relabel ordinary digital spending as AI. Public programs also risk favoring firms skilled at applying for subsidies rather than firms with the best projects.</p>
+<p>A more durable response would improve the financial system’s ability to evaluate intangible investment. That could include better project-level metrics, credit guarantees tied to measurable implementation milestones, deeper growth-equity markets and financing products that recognize recurring software and data investments without pretending they behave like physical collateral.</p>
+<h2 id="europes-capital-market-agenda-now-has-an-ai-test">Europe’s capital-market agenda now has an AI test</h2>
+<p>ECB President Christine Lagarde has increasingly linked Europe’s AI prospects to its broader capital-market structure. In September, she said U.S. digital investment had grown twice as fast as in the euro area over the previous two years, while euro-area firms were expected to devote around 10% of investment to AI in 2026. ECB staff also estimated that AI-related borrowing accounted for about a quarter of growth in credit to firms in the first quarter of the year.</p>
+<p>Those figures suggest finance is already responding. The October survey says the response is still uneven.</p>
+<p>This matters for the long-running European effort to create deeper capital markets. The policy case is often framed around keeping European savings in Europe or helping startups scale without moving to the United States. AI adoption adds a less glamorous constituency: established companies that need financing for software, data, training and process change.</p>
+<p>They may never issue public shares or venture-backed funding rounds. Their aggregate investment decisions could nevertheless determine how much of AI’s productivity potential reaches the wider economy.</p>
+<p>The comparison with the United States should also be handled carefully. U.S. technology companies have borrowed heavily to finance enormous infrastructure programs, but that does not mean debt-financed AI spending is inherently healthier. The current boom carries risks of overbuilding, asset obsolescence and returns that fail to cover the cost of capital. Europe should not copy leverage for its own sake.</p>
+<p>The useful comparison is access to a broader menu of financing. A company with a credible project should be able to choose among retained earnings, bank credit, leasing, private capital, public markets and targeted public support according to the economics of the investment. When 72% of prospective AI investors expect to reach first for internal funds, it is reasonable to ask whether that menu is broad enough.</p>
+<h2 id="the-next-phase-of-adoption-will-expose-the-answer">The next phase of adoption will expose the answer</h2>
+<p>The first wave of generative AI made experimentation unusually easy. Employees could open a browser, buy a subscription and begin testing the technology with little capital approval. That phase favored rapid diffusion and made adoption statistics look impressive.</p>
+<p>The next phase is harder to finance because it involves changing the company around the tool. Data must be prepared. Systems have to connect. Employees need training. Security and governance controls have to be built. Processes may need redesign before productivity improves.</p>
+<p>Those investments are less visible than a new data center, but they are where much of AI’s economic value will be won or lost.</p>
+<p>For European executives, the ECB data suggest a practical shift in the business case. AI projects will increasingly need to be written in a form that a finance committee, bank or outside investor can evaluate: baseline costs, implementation milestones, measurable operational outcomes, downside cases and a clear account of which assets retain value if the chosen model or vendor changes.</p>
+<p>For lenders and policymakers, the corresponding challenge is to avoid treating every intangible AI project as either unfinanceable or deserving of subsidy.</p>
+<p>Europe does not appear short of interest in AI. It may be short of financial mechanisms suited to the work required after the demo succeeds. The test over the next year is whether firms can move from inexpensive access to expensive integration without making retained earnings the gatekeeper of who gets to transform.</p>
+<p>Topics: Enterprise AI; European Economy; AI Adoption; Corporate Finance; Productivity</p>
+</div><footer class="article-record"><dl class="record-list"><div><dt>Published</dt><dd><time datetime="2026-10-02">October 2, 2026</time></dd></div><div><dt>Sources recorded</dt><dd>None recorded</dd></div></dl></footer></div></div></article><section class="section shell related" aria-labelledby="related-title"><div class="section-head"><h2 id="related-title" class="section-title">Related analysis</h2></div><div class="related-grid"><article class="story story--compact"><span class="kicker">Analysis</span><h3 class="story-title"><a href="/2026/09/30/when-ai-starts-pricing-the-big-mac-the-governance-problem-moves-to-the-checkout/">When AI Starts Pricing the Big Mac, the Governance Problem Moves to the Checkout</a></h3><p class="story-meta"><time datetime="2026-09-30">Sep 30, 2026</time><span aria-hidden="true">·</span><span>8 min read</span></p></article><article class="story story--compact"><span class="kicker">Analysis</span><h3 class="story-title"><a href="/2026/09/28/when-an-ai-agent-causes-harm-washington-is-looking-past-the-robot/">When an AI Agent Causes Harm, Washington Is Looking Past the Robot</a></h3><p class="story-meta"><time datetime="2026-09-28">Sep 28, 2026</time><span aria-hidden="true">·</span><span>7 min read</span></p></article><article class="story story--compact"><span class="kicker">Analysis</span><h3 class="story-title"><a href="/2026/09/23/apple-is-trying-to-put-a-price-ceiling-on-the-ai-cloud/">Apple Is Trying to Put a Price Ceiling on the AI Cloud</a></h3><p class="story-meta"><time datetime="2026-09-23">Sep 23, 2026</time><span aria-hidden="true">·</span><span>8 min read</span></p></article></div></section></main><footer class="site-footer"><div class="shell footer-inner"><a class="brand" href="/"><span class="brand-mark" aria-hidden="true"></span><span>Vizo AI</span></a><nav class="footer-links" aria-label="Footer"><a href="/topics/">Topics</a><a href="/explore/">Archive</a><a href="/about/">About</a><a href="/rss.xml">RSS</a></nav><p class="footer-note">Source-aware analysis, published with its sources.</p></div></footer><script>
+      const root = document.documentElement;
+      const themePicker = document.querySelector('[data-theme-picker]');
+      const themeTrigger = document.querySelector('[data-theme-trigger]');
+      const themeMenu = document.querySelector('[data-theme-menu]');
+      const themeOptions = [...document.querySelectorAll('[data-theme-value]')];
+      const systemTheme = window.matchMedia('(prefers-color-scheme: dark)');
+      const themeColor = document.querySelector('#theme-color');
+
+      function setTheme(preference, persist = true) {
+        const allowed = ['light', 'dark', 'system'];
+        const nextPreference = allowed.includes(preference) ? preference : 'system';
+        const resolved = nextPreference === 'system' ? (systemTheme.matches ? 'dark' : 'light') : nextPreference;
+
+        root.dataset.theme = resolved;
+        root.dataset.themePreference = nextPreference;
+        root.style.colorScheme = resolved;
+        themeColor?.setAttribute('content', resolved === 'dark' ? '#0e0f11' : '#faf8f4');
+        themeOptions.forEach((option) => {
+          option.setAttribute('aria-pressed', String(option.dataset.themeValue === nextPreference));
+        });
+
+        if (persist) {
+          try {
+            window.localStorage.setItem('vizo-theme', nextPreference);
+          } catch {
+            // Keep the in-memory choice when storage is unavailable.
+          }
+        }
+      }
+
+      function closeThemeMenu({ restoreFocus = false } = {}) {
+        if (!(themeMenu instanceof HTMLElement) || !(themeTrigger instanceof HTMLButtonElement)) return;
+        themeMenu.hidden = true;
+        themeTrigger.setAttribute('aria-expanded', 'false');
+        if (restoreFocus) themeTrigger.focus();
+      }
+
+      function openThemeMenu() {
+        if (!(themeMenu instanceof HTMLElement) || !(themeTrigger instanceof HTMLButtonElement)) return;
+        themeMenu.hidden = false;
+        themeTrigger.setAttribute('aria-expanded', 'true');
+      }
+
+      setTheme(root.dataset.themePreference ?? 'system', false);
+
+      themeTrigger?.addEventListener('click', () => {
+        if (themeMenu instanceof HTMLElement && themeMenu.hidden) openThemeMenu();
+        else closeThemeMenu();
+      });
+
+      themeOptions.forEach((option, index) => {
+        option.addEventListener('click', () => {
+          setTheme(option.dataset.themeValue ?? 'system');
+          closeThemeMenu({ restoreFocus: true });
+        });
+
+        option.addEventListener('keydown', (event) => {
+          if (!['ArrowDown', 'ArrowUp', 'Home', 'End'].includes(event.key)) return;
+          event.preventDefault();
+          const targetIndex = event.key === 'Home'
+            ? 0
+            : event.key === 'End'
+              ? themeOptions.length - 1
+              : (index + (event.key === 'ArrowDown' ? 1 : -1) + themeOptions.length) % themeOptions.length;
+          themeOptions[targetIndex]?.focus();
+        });
+      });
+
+      systemTheme.addEventListener('change', () => {
+        if (root.dataset.themePreference === 'system') setTheme('system', false);
+      });
+
+      document.addEventListener('click', (event) => {
+        if (themePicker instanceof HTMLElement && !themePicker.contains(event.target)) closeThemeMenu();
+
+        document.querySelectorAll('[data-mobile-nav][open]').forEach((nav) => {
+          if (nav instanceof HTMLElement && !nav.contains(event.target)) nav.removeAttribute('open');
+        });
+      });
+
+      document.querySelectorAll('[data-mobile-nav] a').forEach((link) => {
+        link.addEventListener('click', () => link.closest('details')?.removeAttribute('open'));
+      });
+
+      document.querySelector('[data-back-link]')?.addEventListener('click', (event) => {
+        if (!document.referrer || window.history.length <= 1) return;
+
+        try {
+          const previous = new URL(document.referrer);
+          const current = new URL(window.location.href);
+          const canReturn = previous.origin === current.origin && previous.pathname !== current.pathname;
+
+          if (canReturn) {
+            event.preventDefault();
+            window.history.back();
+          }
+        } catch {
+          // Keep the destination fallback when the referrer cannot be parsed.
+        }
+      });
+
+      document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape') {
+          closeThemeMenu({ restoreFocus: themeTrigger?.getAttribute('aria-expanded') === 'true' });
+          document.querySelectorAll('[data-mobile-nav][open]').forEach((nav) => nav.removeAttribute('open'));
+          return;
+        }
+
+        if (!(event.metaKey || event.ctrlKey) || event.key.toLowerCase() !== 'k') return;
+
+        event.preventDefault();
+        const searchInput = document.querySelector('#research-search');
+
+        if (searchInput instanceof HTMLInputElement) {
+          searchInput.focus();
+        } else {
+          window.location.assign('/explore/?focus=search');
+        }
+      });
+    </script></body></html>

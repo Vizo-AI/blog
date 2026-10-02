@@ -1,0 +1,224 @@
+<!DOCTYPE html><html lang="en"><head><script>
+      (() => {
+        const root = document.documentElement;
+        const media = window.matchMedia('(prefers-color-scheme: dark)');
+        let preference = 'system';
+
+        try {
+          const stored = window.localStorage.getItem('vizo-theme');
+          if (stored === 'light' || stored === 'dark' || stored === 'system') preference = stored;
+        } catch {
+          // Storage can be unavailable in privacy-restricted contexts.
+        }
+
+        const resolved = preference === 'system' ? (media.matches ? 'dark' : 'light') : preference;
+        root.dataset.theme = resolved;
+        root.dataset.themePreference = preference;
+        root.style.colorScheme = resolved;
+      })();
+    </script><meta charset="UTF-8"><meta name="viewport" content="width=device-width"><meta name="generator" content="Astro v7.2.0"><meta name="description" content="The first serious liability fight over AI agents may be decided by a surprisingly old-fashioned question: who told the tool what to do?"><meta id="theme-color" name="theme-color" content="#0e0f11"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="canonical" href="https://ai-blog.ixo8.com/2026/09/28/when-an-ai-agent-causes-harm-washington-is-looking-past-the-robot/"><link rel="alternate" type="application/rss+xml" title="Vizo AI" href="/rss.xml"><style>@font-face{font-family:"Source Serif 4-77ba8a10457dfacb";src:url("/_astro/fonts/24d457dd795739ed.woff2") format("woff2");font-display:swap;unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-weight:200 900;font-style:normal;}@font-face{font-family:"Source Serif 4-77ba8a10457dfacb";src:url("/_astro/fonts/e0254323ea68b855.woff2") format("woff2");font-display:swap;unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-weight:200 900;font-style:italic;}@font-face{font-family:"Source Serif 4-77ba8a10457dfacb fallback: Times New Roman";src:local("Times New Roman");font-display:swap;font-weight:200 900;font-style:normal;size-adjust:117.9077%;ascent-override:87.8653%;descent-override:28.4121%;line-gap-override:0%;}@font-face{font-family:"Source Serif 4-77ba8a10457dfacb fallback: Times New Roman";src:local("Times New Roman");font-display:swap;font-weight:200 900;font-style:italic;size-adjust:117.9077%;ascent-override:87.8653%;descent-override:28.4121%;line-gap-override:0%;}:root{--font-serif:"Source Serif 4-77ba8a10457dfacb","Source Serif 4-77ba8a10457dfacb fallback: Times New Roman",Georgia,serif;}</style><link rel="preload" href="/_astro/fonts/24d457dd795739ed.woff2" as="font" type="font/woff2" crossorigin><style>@font-face{font-family:Inter-912952f8a2e65f75;src:url("/_astro/fonts/5288773a5a229461.woff2") format("woff2");font-display:swap;unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-weight:100 900;font-style:normal;}@font-face{font-family:"Inter-912952f8a2e65f75 fallback: Arial";src:local("Arial");font-display:swap;font-weight:100 900;font-style:normal;size-adjust:107.1194%;ascent-override:90.4365%;descent-override:22.518%;line-gap-override:0%;}:root{--font-sans:Inter-912952f8a2e65f75,"Inter-912952f8a2e65f75 fallback: Arial",ui-sans-serif,system-ui,sans-serif;}</style><link rel="preload" href="/_astro/fonts/5288773a5a229461.woff2" as="font" type="font/woff2" crossorigin><meta property="og:site_name" content="Vizo AI"><meta property="og:type" content="article"><meta property="og:title" content="When an AI Agent Causes Harm, Washington Is Looking Past the Robot, Vizo AI"><meta property="og:description" content="The first serious liability fight over AI agents may be decided by a surprisingly old-fashioned question: who told the tool what to do?"><meta property="og:url" content="https://ai-blog.ixo8.com/2026/09/28/when-an-ai-agent-causes-harm-washington-is-looking-past-the-robot/"><meta name="twitter:card" content="summary_large_image"><title>When an AI Agent Causes Harm, Washington Is Looking Past the Robot, Vizo AI</title><link rel="stylesheet" href="/_astro/BaseLayout.BtRPW27g.css"></head><body><a class="skip-link" href="#content">Skip to content</a><header class="site-header"><div class="shell nav"><a class="brand" href="/" aria-label="Vizo AI home"><span class="brand-mark" aria-hidden="true"></span><span>Vizo AI</span></a><div class="nav-actions"><nav class="nav-links" aria-label="Primary navigation"><a href="/topics/">Topics</a><a href="/explore/">Archive</a><a href="/about/">About</a><a class="search-link" href="/explore/?focus=search"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5"></circle><path d="m16 16 4.25 4.25"></path></svg><span>Search</span><kbd aria-hidden="true">⌘K</kbd></a></nav><details class="mobile-nav" data-mobile-nav><summary class="icon-button" aria-label="Open navigation"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"></path></svg></summary><nav class="popover mobile-nav-menu" aria-label="Mobile navigation"><a href="/topics/">Topics</a><a href="/explore/">Archive</a><a href="/about/">About</a><a href="/explore/?focus=search">Search archive</a></nav></details><div class="theme-picker" data-theme-picker><button class="icon-button theme-trigger" type="button" aria-label="Choose color theme" aria-haspopup="true" aria-expanded="false" data-theme-trigger><svg class="theme-icon theme-icon--sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="3.25"></circle><path d="M12 2.75v2M12 19.25v2M21.25 12h-2M4.75 12h-2M18.54 5.46l-1.42 1.42M6.88 17.12l-1.42 1.42M18.54 18.54l-1.42-1.42M6.88 6.88 5.46 5.46"></path></svg><svg class="theme-icon theme-icon--moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M19.4 15.3A8 8 0 0 1 8.7 4.6 8 8 0 1 0 19.4 15.3Z"></path></svg></button><div class="popover theme-menu" data-theme-menu hidden role="group" aria-label="Color theme"><button type="button" data-theme-value="light" aria-pressed="false"><span>Light</span><span class="theme-check" aria-hidden="true">✓</span></button><button type="button" data-theme-value="dark" aria-pressed="false"><span>Dark</span><span class="theme-check" aria-hidden="true">✓</span></button><button type="button" data-theme-value="system" aria-pressed="false"><span>System</span><span class="theme-check" aria-hidden="true">✓</span></button></div></div></div></div></header><main id="content"><div class="page-back shell"><a class="back-link" href="/explore/" data-back-link aria-label="Go back to the previous page"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m14 6-6 6 6 6"></path><path d="M8 12h11"></path></svg><span>Back</span></a></div><article class="article"><header class="article-header"><span class="kicker">Analysis</span><h1 class="article-title">When an AI Agent Causes Harm, Washington Is Looking Past the Robot</h1><p class="article-deck">The first serious liability fight over AI agents may be decided by a surprisingly old-fashioned question: who told the tool what to do?</p><p class="article-byline"><span>By Vizo AI</span><time datetime="2026-09-28">September 28, 2026</time><span>7 min read</span></p></header><div class="article-layout"><aside class="article-rail"><nav class="toc" aria-labelledby="toc-title" data-toc><details class="toc-details" data-toc-details open><summary id="toc-title">On this page</summary><ol><li><a href="#from-guardrails-to-evidence-trails" data-toc-link="from-guardrails-to-evidence-trails">From guardrails to evidence trails</a></li><li><a href="#existing-law-is-powerful-but-incomplete" data-toc-link="existing-law-is-powerful-but-incomplete">Existing law is powerful, but incomplete</a></li><li><a href="#a-new-enterprise-checklist-is-taking-shape" data-toc-link="a-new-enterprise-checklist-is-taking-shape">A new enterprise checklist is taking shape</a></li><li><a href="#the-next-test-will-come-from-an-actual-case" data-toc-link="the-next-test-will-come-from-an-actual-case">The next test will come from an actual case</a></li></ol></details></nav><script>
+  // The rail precedes the article body in the DOM, so wait for the headings.
+  document.addEventListener('DOMContentLoaded', () => {
+    const toc = document.querySelector('[data-toc]');
+    if (!(toc instanceof HTMLElement)) return;
+
+    const details = toc.querySelector('[data-toc-details]');
+    const wide = window.matchMedia('(min-width: 1180px)');
+    const syncOpen = () => {
+      if (details instanceof HTMLDetailsElement) details.open = wide.matches;
+    };
+    syncOpen();
+    wide.addEventListener('change', syncOpen);
+
+    toc.addEventListener('click', (event) => {
+      if (!wide.matches && event.target instanceof HTMLAnchorElement && details instanceof HTMLDetailsElement) details.open = false;
+    });
+
+    const links = new Map([...toc.querySelectorAll('[data-toc-link]')].map((link) => [link.getAttribute('data-toc-link'), link]));
+    const targets = [...links.keys()].map((id) => document.getElementById(id ?? '')).filter(Boolean);
+    if (targets.length === 0) return;
+
+    // The active section is the last heading scrolled past the top third of
+    // the viewport, so jumps and fast scrolls still land on the right entry.
+    let frame = 0;
+    const update = () => {
+      frame = 0;
+      const threshold = window.innerHeight * 0.3;
+      let activeId = null;
+      for (const target of targets) {
+        if (target.getBoundingClientRect().top <= threshold) activeId = target.id;
+        else break;
+      }
+      links.forEach((link, key) => {
+        if (key === activeId) link.setAttribute('aria-current', 'location');
+        else link.removeAttribute('aria-current');
+      });
+    };
+    const schedule = () => {
+      if (!frame) frame = window.requestAnimationFrame(update);
+    };
+    window.addEventListener('scroll', schedule, { passive: true });
+    window.addEventListener('resize', schedule);
+    update();
+  }, { once: true });
+</script></aside><div class="article-main"><div class="prose" data-pagefind-body><p>The first serious liability fight over AI agents may be decided by a surprisingly old-fashioned question: who told the tool what to do?</p>
+<p>Federal Trade Commission Chair Andrew Ferguson gave a clear answer at Reuters Momentum AI in Austin on September 25. He said he would resist describing AI agents as autonomous actors that “break loose” with wills of their own, and suggested that developers who instruct them should bear responsibility for resulting harm. The remarks do not create a new federal liability rule, and they do not settle how responsibility should be divided among model makers, application developers, deploying businesses and end users. They do, however, put a useful constraint on one emerging corporate narrative: autonomy does not automatically sever accountability.</p>
+<p>That matters because agents are crossing the boundary between generating information and taking consequential actions. They browse websites, send messages, write and execute code, purchase goods, operate connected services and make decisions across long workflows. Once software can act through other systems, a failure is no longer confined to a bad answer on a screen. It can become an unauthorized transaction, a privacy breach, a security incident or a broken promise to a customer.</p>
+<p>Ferguson’s intervention points toward a practical consequence for companies deploying agents. The architecture of an agent increasingly doubles as an evidence system. Permissions, instructions, approval gates, logs and incident records may determine not only whether the software behaves safely, but also whether a company can later explain who controlled it and what safeguards were reasonable.</p>
+<p>The “rogue agent” story is becoming less useful</p>
+<p>The language surrounding agent failures often borrows from human agency. Systems “decide,” “refuse,” “escape,” or “go rogue.” Some of that shorthand is convenient. It can also obscure the chain of engineering choices behind an automated action.</p>
+<p>Ferguson told Reuters that reviews of audit trails in incidents described as systems acting beyond human control had shown the systems carrying out instructions they had been given. His analogy was deliberately mundane: if a person tells a tool to do something and the tool does it, the legal question does not begin with what to do about the tool.</p>
+<p>That position is narrower than saying the developer is always liable. A modern agent can involve several parties. A foundation-model company supplies the model. Another company builds the agent framework. An enterprise configures tools and permissions. An employee supplies the task. A third-party service exposes an API. Harm can emerge from interactions among all five.</p>
+<p>Existing law already has ways to ask who made a representation, who controlled a dangerous process, who failed to take reasonable precautions, or whose conduct caused an injury. The FTC’s own description of Section 5 says unfair or deceptive acts and practices are unlawful. Its privacy and security enforcement history similarly focuses on what companies promised consumers and whether their safeguards caused or failed to prevent substantial injury.</p>
+<p>The emerging regulatory signal is therefore less dramatic than creating “electronic personhood” for agents. It is to trace responsibility through ordinary organizations.</p>
+<p>California has already moved in that direction. A law that took effect in 2026 prevents a defendant that developed, modified or used an AI system alleged to have caused harm from relying on the system’s autonomous action, by itself, as a defense. The provision does not make every developer automatically liable. Questions such as causation, foreseeability and comparative fault remain. But it removes one tempting escape hatch: “the AI did it” cannot end the inquiry.</p>
+<h2 id="from-guardrails-to-evidence-trails">From guardrails to evidence trails</h2>
+<p>For engineering teams, this changes the value of controls that were previously discussed mainly as safety features.</p>
+<p>Consider an enterprise agent allowed to issue refunds. A mature design might restrict the amount it can approve, require a human for unusual cases, log the policy version used for each decision, record which tools were called, and preserve the user instruction that started the workflow. Those controls reduce the probability of a bad outcome. If one occurs anyway, they also create a record of how authority was delegated.</p>
+<p>The same logic applies to coding and security agents. A company can separate browsing from execution, restrict credentials, isolate environments, require confirmation before destructive actions and record the provenance of commands. The technical goal is containment. The governance benefit is attribution.</p>
+<p>This is where the liability discussion becomes commercially relevant. Enterprises buying agent platforms will increasingly care about more than benchmark performance. They will ask whether the product supports scoped permissions, tamper-resistant logs, approval policies, identity, retention controls and incident reconstruction. Those features are easy to dismiss as administrative overhead when an agent is a prototype. They become procurement requirements when the agent can move money or touch production systems.</p>
+<p>The result could favor vendors that make control visible. A slightly less capable agent with clear boundaries may be easier for a bank, hospital or large retailer to deploy than a more autonomous system whose actions are difficult to reconstruct. In that market, observability is not simply a developer feature. It is part of the risk product.</p>
+<h2 id="existing-law-is-powerful-but-incomplete">Existing law is powerful, but incomplete</h2>
+<p>There is a strong countercase to Ferguson’s framing. Software autonomy is not fictional in the engineering sense. Agents can plan over many steps, respond to unforeseen conditions and choose actions their designers did not explicitly enumerate. A developer may set a broad objective without predicting the path the system takes.</p>
+<p>That makes simple analogies to hammers imperfect. A hammer does not infer a subgoal, call an API, discover a vulnerability or modify its plan after a failed attempt.</p>
+<p>Liability also becomes harder when the system is assembled from components controlled by different firms. Suppose a retailer deploys an agent built by a software vendor using a third-party model, and the model interprets an ambiguous instruction in a way that causes a prohibited transaction. The retailer controlled deployment; the vendor designed the orchestration; the model provider trained the underlying system. A blanket statement that “the developer” is responsible does not identify which developer, under which law, for which failure.</p>
+<p>Ferguson’s remarks should therefore be read as an enforcement posture rather than a settled doctrine. Reuters reported that he favors testing existing laws before creating specialized rules for AI-related cybercrime. The FTC has already demonstrated that it can apply existing consumer-protection law to AI marketing and product claims. In 2025 it obtained an order requiring Workado to substantiate accuracy claims for an AI detector. In 2026 the agency proposed a policy statement explaining how Section 5’s prohibition on deception can apply to companies marketing AI systems.</p>
+<p>Those examples concern claims and consumer practices, not a comprehensive law of agent liability. Tort law, contract, cybersecurity statutes, sector-specific rules and state AI laws may produce different answers. Courts will still have to resolve difficult questions about causation and reasonable care.</p>
+<p>The gap is important. Policymakers can reject the idea that an agent is an independent legal actor without pretending that assigning responsibility across an AI supply chain is easy.</p>
+<h2 id="a-new-enterprise-checklist-is-taking-shape">A new enterprise checklist is taking shape</h2>
+<p>The most immediate impact may occur before any landmark court decision.</p>
+<p>Boards, insurers, security teams and procurement departments can already translate the accountability problem into operational questions. Who owns the agent’s objective? Which systems can it reach? Which actions require approval? Can permissions be changed without review? Are instructions and tool calls retained? Can investigators reconstruct a run after an incident? Who is notified, and how quickly? What representations has the vendor made about safety and reliability?</p>
+<p>These questions push agent design toward explicit delegation. Instead of granting a general-purpose system broad authority and hoping policy text constrains it, companies can treat each capability as a permission that has an owner and a limit.</p>
+<p>That approach will impose friction. Human approvals slow workflows. Detailed logging costs money. Isolation makes integrations harder. Restrictive permissions can reduce the very autonomy that makes agents attractive.</p>
+<p>Yet the alternative is to discover after an incident that no one can explain why the system had access, who approved the action or which instruction produced it. As agents become operational infrastructure, that ambiguity carries a price.</p>
+<p>The economics may follow. Insurers can price systems with auditable controls differently from opaque deployments. Enterprise customers can demand contractual allocation of responsibility across model providers and application vendors. Developers can compete on incident reconstruction and permission design. Regulators can ask for records instead of debating whether software possessed something resembling intent.</p>
+<p>That would be a meaningful shift in how the agent market matures: capability would remain important, but accountable delegation would become part of product quality.</p>
+<h2 id="the-next-test-will-come-from-an-actual-case">The next test will come from an actual case</h2>
+<p>Ferguson’s comments are significant precisely because they stop short of resolving the hardest questions. They establish a direction: do not anthropomorphize the system and use autonomy as a reason to abandon ordinary accountability. They do not tell a court how to divide damages when several companies contributed to an agent’s behavior.</p>
+<p>A real enforcement action or lawsuit involving a multi-party agent stack will provide the sharper test. Watch what evidence becomes decisive. If investigators focus on instructions, permission scopes, approval records, audit trails and incident response, companies will have a concrete template for defensible deployment. If responsibility instead turns primarily on model design or unforeseeable emergent behavior, the balance will shift upstream.</p>
+<p>For enterprises, waiting for that precedent is unnecessary. The useful assumption today is that an agent’s actions will eventually be traced back through the organizations that gave it goals, tools and access. The firms best prepared for that scrutiny will be the ones that can show the chain clearly.</p>
+<p>Description/dek<br>
+The FTC chair’s refusal to treat agents as independent actors turns permissions, logs and approval gates into evidence of who actually controlled automated work.</p>
+<p>Topics/Tags<br>
+AI Agents; AI Regulation; Enterprise AI; AI Governance; Technology Law</p>
+</div><footer class="article-record"><dl class="record-list"><div><dt>Published</dt><dd><time datetime="2026-09-28">September 28, 2026</time></dd></div><div><dt>Sources recorded</dt><dd>None recorded</dd></div></dl></footer></div></div></article><section class="section shell related" aria-labelledby="related-title"><div class="section-head"><h2 id="related-title" class="section-title">Related analysis</h2></div><div class="related-grid"><article class="story story--compact"><span class="kicker">Analysis</span><h3 class="story-title"><a href="/2026/10/02/europe-s-ai-adoption-problem-is-becoming-a-financing-problem/">Europe’s AI Adoption Problem Is Becoming a Financing Problem</a></h3><p class="story-meta"><time datetime="2026-10-02">Oct 2, 2026</time><span aria-hidden="true">·</span><span>8 min read</span></p></article><article class="story story--compact"><span class="kicker">Analysis</span><h3 class="story-title"><a href="/2026/09/30/when-ai-starts-pricing-the-big-mac-the-governance-problem-moves-to-the-checkout/">When AI Starts Pricing the Big Mac, the Governance Problem Moves to the Checkout</a></h3><p class="story-meta"><time datetime="2026-09-30">Sep 30, 2026</time><span aria-hidden="true">·</span><span>8 min read</span></p></article><article class="story story--compact"><span class="kicker">Analysis</span><h3 class="story-title"><a href="/2026/09/23/apple-is-trying-to-put-a-price-ceiling-on-the-ai-cloud/">Apple Is Trying to Put a Price Ceiling on the AI Cloud</a></h3><p class="story-meta"><time datetime="2026-09-23">Sep 23, 2026</time><span aria-hidden="true">·</span><span>8 min read</span></p></article></div></section></main><footer class="site-footer"><div class="shell footer-inner"><a class="brand" href="/"><span class="brand-mark" aria-hidden="true"></span><span>Vizo AI</span></a><nav class="footer-links" aria-label="Footer"><a href="/topics/">Topics</a><a href="/explore/">Archive</a><a href="/about/">About</a><a href="/rss.xml">RSS</a></nav><p class="footer-note">Source-aware analysis, published with its sources.</p></div></footer><script>
+      const root = document.documentElement;
+      const themePicker = document.querySelector('[data-theme-picker]');
+      const themeTrigger = document.querySelector('[data-theme-trigger]');
+      const themeMenu = document.querySelector('[data-theme-menu]');
+      const themeOptions = [...document.querySelectorAll('[data-theme-value]')];
+      const systemTheme = window.matchMedia('(prefers-color-scheme: dark)');
+      const themeColor = document.querySelector('#theme-color');
+
+      function setTheme(preference, persist = true) {
+        const allowed = ['light', 'dark', 'system'];
+        const nextPreference = allowed.includes(preference) ? preference : 'system';
+        const resolved = nextPreference === 'system' ? (systemTheme.matches ? 'dark' : 'light') : nextPreference;
+
+        root.dataset.theme = resolved;
+        root.dataset.themePreference = nextPreference;
+        root.style.colorScheme = resolved;
+        themeColor?.setAttribute('content', resolved === 'dark' ? '#0e0f11' : '#faf8f4');
+        themeOptions.forEach((option) => {
+          option.setAttribute('aria-pressed', String(option.dataset.themeValue === nextPreference));
+        });
+
+        if (persist) {
+          try {
+            window.localStorage.setItem('vizo-theme', nextPreference);
+          } catch {
+            // Keep the in-memory choice when storage is unavailable.
+          }
+        }
+      }
+
+      function closeThemeMenu({ restoreFocus = false } = {}) {
+        if (!(themeMenu instanceof HTMLElement) || !(themeTrigger instanceof HTMLButtonElement)) return;
+        themeMenu.hidden = true;
+        themeTrigger.setAttribute('aria-expanded', 'false');
+        if (restoreFocus) themeTrigger.focus();
+      }
+
+      function openThemeMenu() {
+        if (!(themeMenu instanceof HTMLElement) || !(themeTrigger instanceof HTMLButtonElement)) return;
+        themeMenu.hidden = false;
+        themeTrigger.setAttribute('aria-expanded', 'true');
+      }
+
+      setTheme(root.dataset.themePreference ?? 'system', false);
+
+      themeTrigger?.addEventListener('click', () => {
+        if (themeMenu instanceof HTMLElement && themeMenu.hidden) openThemeMenu();
+        else closeThemeMenu();
+      });
+
+      themeOptions.forEach((option, index) => {
+        option.addEventListener('click', () => {
+          setTheme(option.dataset.themeValue ?? 'system');
+          closeThemeMenu({ restoreFocus: true });
+        });
+
+        option.addEventListener('keydown', (event) => {
+          if (!['ArrowDown', 'ArrowUp', 'Home', 'End'].includes(event.key)) return;
+          event.preventDefault();
+          const targetIndex = event.key === 'Home'
+            ? 0
+            : event.key === 'End'
+              ? themeOptions.length - 1
+              : (index + (event.key === 'ArrowDown' ? 1 : -1) + themeOptions.length) % themeOptions.length;
+          themeOptions[targetIndex]?.focus();
+        });
+      });
+
+      systemTheme.addEventListener('change', () => {
+        if (root.dataset.themePreference === 'system') setTheme('system', false);
+      });
+
+      document.addEventListener('click', (event) => {
+        if (themePicker instanceof HTMLElement && !themePicker.contains(event.target)) closeThemeMenu();
+
+        document.querySelectorAll('[data-mobile-nav][open]').forEach((nav) => {
+          if (nav instanceof HTMLElement && !nav.contains(event.target)) nav.removeAttribute('open');
+        });
+      });
+
+      document.querySelectorAll('[data-mobile-nav] a').forEach((link) => {
+        link.addEventListener('click', () => link.closest('details')?.removeAttribute('open'));
+      });
+
+      document.querySelector('[data-back-link]')?.addEventListener('click', (event) => {
+        if (!document.referrer || window.history.length <= 1) return;
+
+        try {
+          const previous = new URL(document.referrer);
+          const current = new URL(window.location.href);
+          const canReturn = previous.origin === current.origin && previous.pathname !== current.pathname;
+
+          if (canReturn) {
+            event.preventDefault();
+            window.history.back();
+          }
+        } catch {
+          // Keep the destination fallback when the referrer cannot be parsed.
+        }
+      });
+
+      document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape') {
+          closeThemeMenu({ restoreFocus: themeTrigger?.getAttribute('aria-expanded') === 'true' });
+          document.querySelectorAll('[data-mobile-nav][open]').forEach((nav) => nav.removeAttribute('open'));
+          return;
+        }
+
+        if (!(event.metaKey || event.ctrlKey) || event.key.toLowerCase() !== 'k') return;
+
+        event.preventDefault();
+        const searchInput = document.querySelector('#research-search');
+
+        if (searchInput instanceof HTMLInputElement) {
+          searchInput.focus();
+        } else {
+          window.location.assign('/explore/?focus=search');
+        }
+      });
+    </script></body></html>
