@@ -1,0 +1,218 @@
+<!DOCTYPE html><html lang="en"><head><script>
+      (() => {
+        const root = document.documentElement;
+        const media = window.matchMedia('(prefers-color-scheme: dark)');
+        let preference = 'system';
+
+        try {
+          const stored = window.localStorage.getItem('vizo-theme');
+          if (stored === 'light' || stored === 'dark' || stored === 'system') preference = stored;
+        } catch {
+          // Storage can be unavailable in privacy-restricted contexts.
+        }
+
+        const resolved = preference === 'system' ? (media.matches ? 'dark' : 'light') : preference;
+        root.dataset.theme = resolved;
+        root.dataset.themePreference = preference;
+        root.style.colorScheme = resolved;
+      })();
+    </script><meta charset="UTF-8"><meta name="viewport" content="width=device-width"><meta name="generator" content="Astro v7.2.0"><meta name="description" content="A survey of Chinese model releases raises a procurement question that applies far beyond China: can a buyer verify the safety claims for the precise version it intends to deploy?"><meta id="theme-color" name="theme-color" content="#0e0f11"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="canonical" href="https://ai-blog.ixo8.com/2026/10/12/857-ai-releases-nine-timely-safety-reports-the-evidence-gap-facing-model-buyers/"><link rel="alternate" type="application/rss+xml" title="Vizo AI" href="/rss.xml"><style>@font-face{font-family:"Source Serif 4-77ba8a10457dfacb";src:url("/_astro/fonts/24d457dd795739ed.woff2") format("woff2");font-display:swap;unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-weight:200 900;font-style:normal;}@font-face{font-family:"Source Serif 4-77ba8a10457dfacb";src:url("/_astro/fonts/e0254323ea68b855.woff2") format("woff2");font-display:swap;unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-weight:200 900;font-style:italic;}@font-face{font-family:"Source Serif 4-77ba8a10457dfacb fallback: Times New Roman";src:local("Times New Roman");font-display:swap;font-weight:200 900;font-style:normal;size-adjust:117.9077%;ascent-override:87.8653%;descent-override:28.4121%;line-gap-override:0%;}@font-face{font-family:"Source Serif 4-77ba8a10457dfacb fallback: Times New Roman";src:local("Times New Roman");font-display:swap;font-weight:200 900;font-style:italic;size-adjust:117.9077%;ascent-override:87.8653%;descent-override:28.4121%;line-gap-override:0%;}:root{--font-serif:"Source Serif 4-77ba8a10457dfacb","Source Serif 4-77ba8a10457dfacb fallback: Times New Roman",Georgia,serif;}</style><link rel="preload" href="/_astro/fonts/24d457dd795739ed.woff2" as="font" type="font/woff2" crossorigin><style>@font-face{font-family:Inter-912952f8a2e65f75;src:url("/_astro/fonts/5288773a5a229461.woff2") format("woff2");font-display:swap;unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-weight:100 900;font-style:normal;}@font-face{font-family:"Inter-912952f8a2e65f75 fallback: Arial";src:local("Arial");font-display:swap;font-weight:100 900;font-style:normal;size-adjust:107.1194%;ascent-override:90.4365%;descent-override:22.518%;line-gap-override:0%;}:root{--font-sans:Inter-912952f8a2e65f75,"Inter-912952f8a2e65f75 fallback: Arial",ui-sans-serif,system-ui,sans-serif;}</style><link rel="preload" href="/_astro/fonts/5288773a5a229461.woff2" as="font" type="font/woff2" crossorigin><meta property="og:site_name" content="Vizo AI"><meta property="og:type" content="article"><meta property="og:title" content="857 AI Releases, Nine Timely Safety Reports: The Evidence Gap Facing Model Buyers, Vizo AI"><meta property="og:description" content="A survey of Chinese model releases raises a procurement question that applies far beyond China: can a buyer verify the safety claims for the precise version it intends to deploy?"><meta property="og:url" content="https://ai-blog.ixo8.com/2026/10/12/857-ai-releases-nine-timely-safety-reports-the-evidence-gap-facing-model-buyers/"><meta name="twitter:card" content="summary_large_image"><title>857 AI Releases, Nine Timely Safety Reports: The Evidence Gap Facing Model Buyers, Vizo AI</title><link rel="stylesheet" href="/_astro/BaseLayout.BtRPW27g.css"></head><body><a class="skip-link" href="#content">Skip to content</a><header class="site-header"><div class="shell nav"><a class="brand" href="/" aria-label="Vizo AI home"><span class="brand-mark" aria-hidden="true"></span><span>Vizo AI</span></a><div class="nav-actions"><nav class="nav-links" aria-label="Primary navigation"><a href="/topics/">Topics</a><a href="/explore/">Archive</a><a href="/about/">About</a><a class="search-link" href="/explore/?focus=search"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5"></circle><path d="m16 16 4.25 4.25"></path></svg><span>Search</span><kbd aria-hidden="true">⌘K</kbd></a></nav><details class="mobile-nav" data-mobile-nav><summary class="icon-button" aria-label="Open navigation"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"></path></svg></summary><nav class="popover mobile-nav-menu" aria-label="Mobile navigation"><a href="/topics/">Topics</a><a href="/explore/">Archive</a><a href="/about/">About</a><a href="/explore/?focus=search">Search archive</a></nav></details><div class="theme-picker" data-theme-picker><button class="icon-button theme-trigger" type="button" aria-label="Choose color theme" aria-haspopup="true" aria-expanded="false" data-theme-trigger><svg class="theme-icon theme-icon--sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="3.25"></circle><path d="M12 2.75v2M12 19.25v2M21.25 12h-2M4.75 12h-2M18.54 5.46l-1.42 1.42M6.88 17.12l-1.42 1.42M18.54 18.54l-1.42-1.42M6.88 6.88 5.46 5.46"></path></svg><svg class="theme-icon theme-icon--moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M19.4 15.3A8 8 0 0 1 8.7 4.6 8 8 0 1 0 19.4 15.3Z"></path></svg></button><div class="popover theme-menu" data-theme-menu hidden role="group" aria-label="Color theme"><button type="button" data-theme-value="light" aria-pressed="false"><span>Light</span><span class="theme-check" aria-hidden="true">✓</span></button><button type="button" data-theme-value="dark" aria-pressed="false"><span>Dark</span><span class="theme-check" aria-hidden="true">✓</span></button><button type="button" data-theme-value="system" aria-pressed="false"><span>System</span><span class="theme-check" aria-hidden="true">✓</span></button></div></div></div></div></header><main id="content"><div class="page-back shell"><a class="back-link" href="/explore/" data-back-link aria-label="Go back to the previous page"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m14 6-6 6 6 6"></path><path d="M8 12h11"></path></svg><span>Back</span></a></div><article class="article"><header class="article-header"><span class="kicker">Analysis</span><h1 class="article-title">857 AI Releases, Nine Timely Safety Reports: The Evidence Gap Facing Model Buyers</h1><p class="article-deck">A survey of Chinese model releases raises a procurement question that applies far beyond China: can a buyer verify the safety claims for the precise version it intends to deploy?</p><p class="article-byline"><span>By Vizo AI</span><time datetime="2026-10-12">October 12, 2026</time><span>8 min read</span></p></header><div class="article-layout"><aside class="article-rail"><nav class="toc" aria-labelledby="toc-title" data-toc><details class="toc-details" data-toc-details open><summary id="toc-title">On this page</summary><ol><li><a href="#inside-the-release-census" data-toc-link="inside-the-release-census">Inside the release census</a></li><li><a href="#what-a-buyer-should-demand" data-toc-link="what-a-buyer-should-demand">What a buyer should demand</a></li><li><a href="#the-cost-of-publishing-late" data-toc-link="the-cost-of-publishing-late">The cost of publishing late</a></li></ol></details></nav><script>
+  // The rail precedes the article body in the DOM, so wait for the headings.
+  document.addEventListener('DOMContentLoaded', () => {
+    const toc = document.querySelector('[data-toc]');
+    if (!(toc instanceof HTMLElement)) return;
+
+    const details = toc.querySelector('[data-toc-details]');
+    const wide = window.matchMedia('(min-width: 1180px)');
+    const syncOpen = () => {
+      if (details instanceof HTMLDetailsElement) details.open = wide.matches;
+    };
+    syncOpen();
+    wide.addEventListener('change', syncOpen);
+
+    toc.addEventListener('click', (event) => {
+      if (!wide.matches && event.target instanceof HTMLAnchorElement && details instanceof HTMLDetailsElement) details.open = false;
+    });
+
+    const links = new Map([...toc.querySelectorAll('[data-toc-link]')].map((link) => [link.getAttribute('data-toc-link'), link]));
+    const targets = [...links.keys()].map((id) => document.getElementById(id ?? '')).filter(Boolean);
+    if (targets.length === 0) return;
+
+    // The active section is the last heading scrolled past the top third of
+    // the viewport, so jumps and fast scrolls still land on the right entry.
+    let frame = 0;
+    const update = () => {
+      frame = 0;
+      const threshold = window.innerHeight * 0.3;
+      let activeId = null;
+      for (const target of targets) {
+        if (target.getBoundingClientRect().top <= threshold) activeId = target.id;
+        else break;
+      }
+      links.forEach((link, key) => {
+        if (key === activeId) link.setAttribute('aria-current', 'location');
+        else link.removeAttribute('aria-current');
+      });
+    };
+    const schedule = () => {
+      if (!frame) frame = window.requestAnimationFrame(update);
+    };
+    window.addEventListener('scroll', schedule, { passive: true });
+    window.addEventListener('resize', schedule);
+    update();
+  }, { once: true });
+</script></aside><div class="article-main"><div class="prose" data-pagefind-body><p>A survey of Chinese model releases raises a procurement question that applies far beyond China: can a buyer verify the safety claims for the precise version it intends to deploy?</p>
+<p>A model can arrive with a benchmark chart, a technical report and a long list of capabilities, yet leave a prospective customer unable to answer a basic procurement question: what safety tests were run on this exact release, and what did they show?</p>
+<p>An October 8 audit by SemiAnalysis puts a number on that information gap in China’s fast-moving model market. The research firm catalogued 857 releases from nine leading Chinese developers between 2021 and September 15, 2026. It found published, model-specific safety results for 31 releases, or 3.6%. Only nine had results available at or before launch. Reuters independently reported the findings on October 9. [1][2]</p>
+<p>These figures describe what developers disclosed publicly, not all the testing they performed. They also cannot establish that Chinese models are more dangerous than American ones: the study does not provide a comparable US release census. Still, for companies choosing models, the absence of timely evidence has a concrete cost. They must either conduct more testing themselves, accept more uncertainty or narrow the uses they permit.</p>
+<p>The procurement problem is becoming more urgent as models gain the ability to use tools, write code and carry out multi-step tasks. A fluent answer can be checked after the fact. An agent with access to a production system may create a problem before a human sees its output. The evidence needed to approve those two uses is different.</p>
+<h2 id="inside-the-release-census">Inside the release census</h2>
+<p>SemiAnalysis counted 741 product releases and 116 research releases across Alibaba, ByteDance, Tencent, Baidu, DeepSeek, Moonshot, Z.ai, MiniMax and StepFun. The researchers matched developer model cards, release notes and technical reports to specific versions. General statements that a system had been safety-trained or evaluated did not qualify. A result had to address a defined issue, such as harmful outputs, jailbreak resistance, privacy, refusal behavior or dangerous capabilities, and be attributable to a named model. [1]</p>
+<p>That is a demanding standard, and rightly so for someone deciding whether to deploy a particular checkpoint. Safety findings for one model size cannot automatically be transferred to a smaller variant, a later update or a version with different tool access. A test may remain informative across related models, but the inference should be explicit rather than silently assumed.</p>
+<p>Of the 31 releases with qualifying results, nine had them by launch. Sixteen received documentation later, with a median delay of 42 days; for six, the researchers could not establish timing or a precise model match. Another ten releases contained claims of evaluation without reported results, and three were documented only in press or investor accounts. The researchers classified 813 releases as having no safety disclosure. These categories matter: subtracting 31 from 857 and calling every remaining release wholly undocumented would erase distinctions the study made. [1]</p>
+<p>There is also a denominator problem. The count includes many sizes, fine-tunes and snapshots, not 857 equally consequential frontier launches. Alibaba alone accounts for 238 releases under the study’s counting rules. A company that publishes numerous variants can look worse by this measure than a company with fewer releases, even if both document their flagship systems similarly. The report explicitly warns against using its company percentages as a league table of safety performance.</p>
+<p>A narrower finding is harder to dismiss. The researchers say 93% of reasoning-model releases in their sample lacked published safety results. Reasoning models are especially relevant to autonomous workflows because they can plan and iterate across steps. That does not prove a dangerous capability; it makes evidence about tool use, failure modes and attempted misuse more valuable to the organization taking responsibility for deployment. [1]</p>
+<p>The rules recognize threats; the evidence remains uneven</p>
+<p>China is not ignoring AI safety in its official language. In September, the National Technical Committee 260 on Cybersecurity released AI Safety Governance Framework 3.0 under the guidance of the Cyberspace Administration of China. The official notice describes updated risk classifications and technical responses. The framework discusses models acquiring unauthorized permissions, bypassing safeguards and deceiving evaluators, according to SemiAnalysis’s reading of the text. [1][3]</p>
+<p>The status of that document is crucial. It is a nonbinding governance framework, not a law that automatically requires each frontier developer to publish a pre-release dangerous-capability assessment. China also has binding requirements governing consumer-facing services and content, including labeling and other application-level controls. These can address genuine harms. They do not answer every question about what a powerful underlying model can do before it is integrated into an application.</p>
+<p>SemiAnalysis interprets this arrangement as a preference for fast development combined with tighter controls at the point of use. That is an analytical judgment, not an official admission of indifference to safety. The same report describes Chinese technical researchers advocating stronger frontier safeguards, and identifies Z.ai as a relatively more consistent publisher of safety material. The landscape is neither uniformly silent nor institutionally empty.</p>
+<p>The distinction between model-level and application-level rules has practical consequences. A service provider can filter outputs, limit user access and keep audit logs while remaining uncertain about whether its underlying model can execute an unfamiliar exploit chain or evade oversight under pressure. Conversely, a developer can publish an impressive safety card while an integrator gives the model excessive permissions. Both layers require controls; neither substitutes for the other.</p>
+<p>Europe offers a useful regulatory contrast. Article 55 of the EU AI Act requires providers of general-purpose AI models classified as presenting systemic risk to evaluate models using appropriate protocols, document adversarial testing, assess and mitigate systemic risks, report serious incidents and maintain cybersecurity protections. Those obligations apply to a defined class of models, not every update to every small model. Public disclosure and regulator-facing documentation are also different things. [4][5]</p>
+<p>The comparison therefore should not become a simple claim that one jurisdiction tests and another does not. It shows that governments are choosing different places to attach duties: the model’s capability, the service offered to users, or both. Buyers operating across borders inherit those differences.</p>
+<h2 id="what-a-buyer-should-demand">What a buyer should demand</h2>
+<p>Consider an enterprise adopting an open-weight model for internal coding assistance. Open weights can be inspected and deployed under the organization’s control, but access to weights is not equivalent to knowing how the model behaved in adversarial testing. The buyer still needs to know whether the model leaks secrets, follows malicious instructions embedded in retrieved documents, produces insecure code or acts outside its assigned permissions.</p>
+<p>For a customer-service chatbot, testing may emphasize harmful content, privacy and reliable refusal. For a tool-using agent with repository or payment access, the evaluation needs to include privilege escalation, prompt injection, unauthorized transactions and recovery after failure. A single aggregate safety score cannot establish suitability for all of these uses.</p>
+<p>A usable disclosure would identify the exact model version, evaluation date, test categories, methodology, relevant access to tools, results, important failures, mitigations and known limitations. It would say what was not tested. The evidence should travel with the release, not appear months later after organizations have already built on it. Independent testing can supplement the developer’s work, particularly when a buyer’s environment creates risks the original evaluation did not cover.</p>
+<p>This is consistent with the US National Institute of Standards and Technology’s voluntary AI Risk Management Framework resources, which emphasize testing, evaluation, verification and validation rather than treating vendor assurances as sufficient evidence. NIST’s framework does not certify individual models, and compliance with a framework is not a guarantee of safe operation. Its value here is procedural: specify the intended use, gather relevant evidence and monitor what changes. [6]</p>
+<p>The commercial incentive to disclose is uneven. A well-documented release can reassure large regulated customers and shorten their internal review. But detailed testing costs money, slows release preparation and may reveal weaknesses to competitors or attackers. Open-weight developers may also struggle to anticipate the many ways downstream users will modify and deploy their models. Requiring every patch to carry a full frontier-style report could generate paperwork without proportionate safety benefit.</p>
+<p>That is the strongest objection to turning 3.6% into a blanket verdict. Some releases are minor variants; some tests are private; some sensitive results cannot responsibly be published in full. And even the Western companies that issue system cards do not supply a complete, standardized comparison set across every model they ship. An OpenAI system card, for example, demonstrates that substantial testing can be described publicly, but it is a company-produced account with its own methods and limits. [7]</p>
+<p>A better standard would be tiered. Material changes to capability, tool access or deployment scope should trigger fresh, version-specific testing. Small variants could inherit evidence where the developer explains why it remains applicable. Sensitive details could be shared confidentially with qualified auditors or regulators, while public summaries still identify categories assessed, major limitations and the existence of independent review.</p>
+<h2 id="the-cost-of-publishing-late">The cost of publishing late</h2>
+<p>The timing result may be more consequential than the headline percentage. Only nine of the 857 releases had qualifying safety results available by launch. An evaluation published six weeks later can help an existing user reassess risk, but it cannot inform the initial purchasing decision. Meanwhile, models may already be embedded in products, fine-tuned for specialized tasks or connected to enterprise tools.</p>
+<p>There is an operational remedy that does not require waiting for international agreement. Buyers can require version-locked model inventories, their own deployment-specific red-team tests, permission boundaries and rollback plans. Procurement teams can ask suppliers to provide a safety-evidence package before approval, then require updates after material model changes. These steps do not eliminate uncertainty; they make it visible and assign responsibility for managing it.</p>
+<p>For policymakers, the next useful benchmark is not another count of documents. It is a comparable, cross-country study using the same release definitions, the same treatment of variants and a clear distinction among internal tests, public summaries and independently validated results. Without that baseline, national comparisons will remain vulnerable to selection effects and different reporting conventions.</p>
+<p>The immediate test belongs to the model market itself. If developers compete increasingly on price and capability while customers demand trustworthy autonomy, the missing safety report will become a procurement bottleneck. A model can be open, cheap and technically impressive. For a consequential deployment, somebody still has to produce evidence that the particular version is fit for the job. Until then, the buyer is underwriting an uncertainty the model developer has not publicly measured.</p>
+<p>For organizations selecting a model this quarter, the practical threshold is simple: require evidence that names the version, reflects the planned use, and arrives before the deployment decision. A polished benchmark page cannot substitute for that record.</p>
+<p>Source links: [1] <a href="https://newsletter.semianalysis.com/p/beijing-will-not-pace-the-frontier">https://newsletter.semianalysis.com/p/beijing-will-not-pace-the-frontier</a>; [2] <a href="https://www.reuters.com/legal/litigation/china-ai-developers-publish-safety-tests-just-36-model-releases-report-finds-2026-10-09/">https://www.reuters.com/legal/litigation/china-ai-developers-publish-safety-tests-just-36-model-releases-report-finds-2026-10-09/</a>; [3] <a href="https://www.cac.gov.cn/2026-09/14/c_1791137092283345.htm">https://www.cac.gov.cn/2026-09/14/c_1791137092283345.htm</a>; [4] <a href="https://ai-act-service-desk.ec.europa.eu/en/ai-act/article-55">https://ai-act-service-desk.ec.europa.eu/en/ai-act/article-55</a>; [5] <a href="https://ai-act-service-desk.ec.europa.eu/en/ai-act/article-51">https://ai-act-service-desk.ec.europa.eu/en/ai-act/article-51</a>; [6] <a href="https://airc.nist.gov/">https://airc.nist.gov/</a>; [7] <a href="https://openai.com/index/gpt-5-5-instant-system-card/">https://openai.com/index/gpt-5-5-instant-system-card/</a></p>
+<p>Topics: AI Safety Evaluations; Chinese AI Models; Model Transparency; Enterprise AI Procurement; AI Regulation</p>
+</div><footer class="article-record"><dl class="record-list"><div><dt>Published</dt><dd><time datetime="2026-10-12">October 12, 2026</time></dd></div><div><dt>Sources recorded</dt><dd>None recorded</dd></div></dl></footer></div></div></article><section class="section shell related" aria-labelledby="related-title"><div class="section-head"><h2 id="related-title" class="section-title">Related analysis</h2></div><div class="related-grid"><article class="story story--compact"><span class="kicker">Analysis</span><h3 class="story-title"><a href="/2026/10/14/gemini-4-argon-s-launch-discount-expires-in-november-enterprise-buyers-need-a-different-scorecard/">Gemini 4 Argon’s Launch Discount Expires in November. Enterprise Buyers Need a Different Scorecard.</a></h3><p class="story-meta"><time datetime="2026-10-14">Oct 14, 2026</time><span aria-hidden="true">·</span><span>8 min read</span></p></article><article class="story story--compact"><span class="kicker">Analysis</span><h3 class="story-title"><a href="/2026/10/02/europe-s-ai-adoption-problem-is-becoming-a-financing-problem/">Europe’s AI Adoption Problem Is Becoming a Financing Problem</a></h3><p class="story-meta"><time datetime="2026-10-02">Oct 2, 2026</time><span aria-hidden="true">·</span><span>8 min read</span></p></article><article class="story story--compact"><span class="kicker">Analysis</span><h3 class="story-title"><a href="/2026/09/30/when-ai-starts-pricing-the-big-mac-the-governance-problem-moves-to-the-checkout/">When AI Starts Pricing the Big Mac, the Governance Problem Moves to the Checkout</a></h3><p class="story-meta"><time datetime="2026-09-30">Sep 30, 2026</time><span aria-hidden="true">·</span><span>8 min read</span></p></article></div></section></main><footer class="site-footer"><div class="shell footer-inner"><a class="brand" href="/"><span class="brand-mark" aria-hidden="true"></span><span>Vizo AI</span></a><nav class="footer-links" aria-label="Footer"><a href="/topics/">Topics</a><a href="/explore/">Archive</a><a href="/about/">About</a><a href="/rss.xml">RSS</a></nav><p class="footer-note">Source-aware analysis, published with its sources.</p></div></footer><script>
+      const root = document.documentElement;
+      const themePicker = document.querySelector('[data-theme-picker]');
+      const themeTrigger = document.querySelector('[data-theme-trigger]');
+      const themeMenu = document.querySelector('[data-theme-menu]');
+      const themeOptions = [...document.querySelectorAll('[data-theme-value]')];
+      const systemTheme = window.matchMedia('(prefers-color-scheme: dark)');
+      const themeColor = document.querySelector('#theme-color');
+
+      function setTheme(preference, persist = true) {
+        const allowed = ['light', 'dark', 'system'];
+        const nextPreference = allowed.includes(preference) ? preference : 'system';
+        const resolved = nextPreference === 'system' ? (systemTheme.matches ? 'dark' : 'light') : nextPreference;
+
+        root.dataset.theme = resolved;
+        root.dataset.themePreference = nextPreference;
+        root.style.colorScheme = resolved;
+        themeColor?.setAttribute('content', resolved === 'dark' ? '#0e0f11' : '#faf8f4');
+        themeOptions.forEach((option) => {
+          option.setAttribute('aria-pressed', String(option.dataset.themeValue === nextPreference));
+        });
+
+        if (persist) {
+          try {
+            window.localStorage.setItem('vizo-theme', nextPreference);
+          } catch {
+            // Keep the in-memory choice when storage is unavailable.
+          }
+        }
+      }
+
+      function closeThemeMenu({ restoreFocus = false } = {}) {
+        if (!(themeMenu instanceof HTMLElement) || !(themeTrigger instanceof HTMLButtonElement)) return;
+        themeMenu.hidden = true;
+        themeTrigger.setAttribute('aria-expanded', 'false');
+        if (restoreFocus) themeTrigger.focus();
+      }
+
+      function openThemeMenu() {
+        if (!(themeMenu instanceof HTMLElement) || !(themeTrigger instanceof HTMLButtonElement)) return;
+        themeMenu.hidden = false;
+        themeTrigger.setAttribute('aria-expanded', 'true');
+      }
+
+      setTheme(root.dataset.themePreference ?? 'system', false);
+
+      themeTrigger?.addEventListener('click', () => {
+        if (themeMenu instanceof HTMLElement && themeMenu.hidden) openThemeMenu();
+        else closeThemeMenu();
+      });
+
+      themeOptions.forEach((option, index) => {
+        option.addEventListener('click', () => {
+          setTheme(option.dataset.themeValue ?? 'system');
+          closeThemeMenu({ restoreFocus: true });
+        });
+
+        option.addEventListener('keydown', (event) => {
+          if (!['ArrowDown', 'ArrowUp', 'Home', 'End'].includes(event.key)) return;
+          event.preventDefault();
+          const targetIndex = event.key === 'Home'
+            ? 0
+            : event.key === 'End'
+              ? themeOptions.length - 1
+              : (index + (event.key === 'ArrowDown' ? 1 : -1) + themeOptions.length) % themeOptions.length;
+          themeOptions[targetIndex]?.focus();
+        });
+      });
+
+      systemTheme.addEventListener('change', () => {
+        if (root.dataset.themePreference === 'system') setTheme('system', false);
+      });
+
+      document.addEventListener('click', (event) => {
+        if (themePicker instanceof HTMLElement && !themePicker.contains(event.target)) closeThemeMenu();
+
+        document.querySelectorAll('[data-mobile-nav][open]').forEach((nav) => {
+          if (nav instanceof HTMLElement && !nav.contains(event.target)) nav.removeAttribute('open');
+        });
+      });
+
+      document.querySelectorAll('[data-mobile-nav] a').forEach((link) => {
+        link.addEventListener('click', () => link.closest('details')?.removeAttribute('open'));
+      });
+
+      document.querySelector('[data-back-link]')?.addEventListener('click', (event) => {
+        if (!document.referrer || window.history.length <= 1) return;
+
+        try {
+          const previous = new URL(document.referrer);
+          const current = new URL(window.location.href);
+          const canReturn = previous.origin === current.origin && previous.pathname !== current.pathname;
+
+          if (canReturn) {
+            event.preventDefault();
+            window.history.back();
+          }
+        } catch {
+          // Keep the destination fallback when the referrer cannot be parsed.
+        }
+      });
+
+      document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape') {
+          closeThemeMenu({ restoreFocus: themeTrigger?.getAttribute('aria-expanded') === 'true' });
+          document.querySelectorAll('[data-mobile-nav][open]').forEach((nav) => nav.removeAttribute('open'));
+          return;
+        }
+
+        if (!(event.metaKey || event.ctrlKey) || event.key.toLowerCase() !== 'k') return;
+
+        event.preventDefault();
+        const searchInput = document.querySelector('#research-search');
+
+        if (searchInput instanceof HTMLInputElement) {
+          searchInput.focus();
+        } else {
+          window.location.assign('/explore/?focus=search');
+        }
+      });
+    </script></body></html>

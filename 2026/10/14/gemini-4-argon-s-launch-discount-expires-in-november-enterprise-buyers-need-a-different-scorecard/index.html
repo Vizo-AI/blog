@@ -1,0 +1,214 @@
+<!DOCTYPE html><html lang="en"><head><script>
+      (() => {
+        const root = document.documentElement;
+        const media = window.matchMedia('(prefers-color-scheme: dark)');
+        let preference = 'system';
+
+        try {
+          const stored = window.localStorage.getItem('vizo-theme');
+          if (stored === 'light' || stored === 'dark' || stored === 'system') preference = stored;
+        } catch {
+          // Storage can be unavailable in privacy-restricted contexts.
+        }
+
+        const resolved = preference === 'system' ? (media.matches ? 'dark' : 'light') : preference;
+        root.dataset.theme = resolved;
+        root.dataset.themePreference = preference;
+        root.style.colorScheme = resolved;
+      })();
+    </script><meta charset="UTF-8"><meta name="viewport" content="width=device-width"><meta name="generator" content="Astro v7.2.0"><meta name="description" content="Google has put an expiration date on the introductory price of its most capable AI model. For a buyer planning an agent deployment, that date belongs in the spreadsheet before any benchmark score does. The Gemini 4 Argon API costs \$2…"><meta id="theme-color" name="theme-color" content="#0e0f11"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="canonical" href="https://ai-blog.ixo8.com/2026/10/14/gemini-4-argon-s-launch-discount-expires-in-november-enterprise-buyers-need-a-different-scorecard/"><link rel="alternate" type="application/rss+xml" title="Vizo AI" href="/rss.xml"><style>@font-face{font-family:"Source Serif 4-77ba8a10457dfacb";src:url("/_astro/fonts/24d457dd795739ed.woff2") format("woff2");font-display:swap;unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-weight:200 900;font-style:normal;}@font-face{font-family:"Source Serif 4-77ba8a10457dfacb";src:url("/_astro/fonts/e0254323ea68b855.woff2") format("woff2");font-display:swap;unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-weight:200 900;font-style:italic;}@font-face{font-family:"Source Serif 4-77ba8a10457dfacb fallback: Times New Roman";src:local("Times New Roman");font-display:swap;font-weight:200 900;font-style:normal;size-adjust:117.9077%;ascent-override:87.8653%;descent-override:28.4121%;line-gap-override:0%;}@font-face{font-family:"Source Serif 4-77ba8a10457dfacb fallback: Times New Roman";src:local("Times New Roman");font-display:swap;font-weight:200 900;font-style:italic;size-adjust:117.9077%;ascent-override:87.8653%;descent-override:28.4121%;line-gap-override:0%;}:root{--font-serif:"Source Serif 4-77ba8a10457dfacb","Source Serif 4-77ba8a10457dfacb fallback: Times New Roman",Georgia,serif;}</style><link rel="preload" href="/_astro/fonts/24d457dd795739ed.woff2" as="font" type="font/woff2" crossorigin><style>@font-face{font-family:Inter-912952f8a2e65f75;src:url("/_astro/fonts/5288773a5a229461.woff2") format("woff2");font-display:swap;unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-weight:100 900;font-style:normal;}@font-face{font-family:"Inter-912952f8a2e65f75 fallback: Arial";src:local("Arial");font-display:swap;font-weight:100 900;font-style:normal;size-adjust:107.1194%;ascent-override:90.4365%;descent-override:22.518%;line-gap-override:0%;}:root{--font-sans:Inter-912952f8a2e65f75,"Inter-912952f8a2e65f75 fallback: Arial",ui-sans-serif,system-ui,sans-serif;}</style><link rel="preload" href="/_astro/fonts/5288773a5a229461.woff2" as="font" type="font/woff2" crossorigin><meta property="og:site_name" content="Vizo AI"><meta property="og:type" content="article"><meta property="og:title" content="Gemini 4 Argon’s Launch Discount Expires in November. Enterprise Buyers Need a Different Scorecard., Vizo AI"><meta property="og:description" content="Google has put an expiration date on the introductory price of its most capable AI model. For a buyer planning an agent deployment, that date belongs in the spreadsheet before any benchmark score does. The Gemini 4 Argon API costs \$2…"><meta property="og:url" content="https://ai-blog.ixo8.com/2026/10/14/gemini-4-argon-s-launch-discount-expires-in-november-enterprise-buyers-need-a-different-scorecard/"><meta name="twitter:card" content="summary_large_image"><title>Gemini 4 Argon’s Launch Discount Expires in November. Enterprise Buyers Need a Different Scorecard., Vizo AI</title><link rel="stylesheet" href="/_astro/BaseLayout.BtRPW27g.css"></head><body><a class="skip-link" href="#content">Skip to content</a><header class="site-header"><div class="shell nav"><a class="brand" href="/" aria-label="Vizo AI home"><span class="brand-mark" aria-hidden="true"></span><span>Vizo AI</span></a><div class="nav-actions"><nav class="nav-links" aria-label="Primary navigation"><a href="/topics/">Topics</a><a href="/explore/">Archive</a><a href="/about/">About</a><a class="search-link" href="/explore/?focus=search"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5"></circle><path d="m16 16 4.25 4.25"></path></svg><span>Search</span><kbd aria-hidden="true">⌘K</kbd></a></nav><details class="mobile-nav" data-mobile-nav><summary class="icon-button" aria-label="Open navigation"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"></path></svg></summary><nav class="popover mobile-nav-menu" aria-label="Mobile navigation"><a href="/topics/">Topics</a><a href="/explore/">Archive</a><a href="/about/">About</a><a href="/explore/?focus=search">Search archive</a></nav></details><div class="theme-picker" data-theme-picker><button class="icon-button theme-trigger" type="button" aria-label="Choose color theme" aria-haspopup="true" aria-expanded="false" data-theme-trigger><svg class="theme-icon theme-icon--sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="3.25"></circle><path d="M12 2.75v2M12 19.25v2M21.25 12h-2M4.75 12h-2M18.54 5.46l-1.42 1.42M6.88 17.12l-1.42 1.42M18.54 18.54l-1.42-1.42M6.88 6.88 5.46 5.46"></path></svg><svg class="theme-icon theme-icon--moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M19.4 15.3A8 8 0 0 1 8.7 4.6 8 8 0 1 0 19.4 15.3Z"></path></svg></button><div class="popover theme-menu" data-theme-menu hidden role="group" aria-label="Color theme"><button type="button" data-theme-value="light" aria-pressed="false"><span>Light</span><span class="theme-check" aria-hidden="true">✓</span></button><button type="button" data-theme-value="dark" aria-pressed="false"><span>Dark</span><span class="theme-check" aria-hidden="true">✓</span></button><button type="button" data-theme-value="system" aria-pressed="false"><span>System</span><span class="theme-check" aria-hidden="true">✓</span></button></div></div></div></div></header><main id="content"><div class="page-back shell"><a class="back-link" href="/explore/" data-back-link aria-label="Go back to the previous page"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m14 6-6 6 6 6"></path><path d="M8 12h11"></path></svg><span>Back</span></a></div><article class="article"><header class="article-header"><span class="kicker">Analysis</span><h1 class="article-title">Gemini 4 Argon’s Launch Discount Expires in November. Enterprise Buyers Need a Different Scorecard.</h1><p class="article-deck">Google has put an expiration date on the introductory price of its most capable AI model. For a buyer planning an agent deployment, that date belongs in the spreadsheet before any benchmark score does. The Gemini 4 Argon API costs \$2…</p><p class="article-byline"><span>By Vizo AI</span><time datetime="2026-10-14">October 14, 2026</time><span>8 min read</span></p></header><div class="article-layout"><aside class="article-rail"><nav class="toc" aria-labelledby="toc-title" data-toc><details class="toc-details" data-toc-details open><summary id="toc-title">On this page</summary><ol><li><a href="#the-introductory-rate-is-a-pilot-price" data-toc-link="the-introductory-rate-is-a-pilot-price">The introductory rate is a pilot price</a></li><li><a href="#the-same-model-does-not-win-every-job" data-toc-link="the-same-model-does-not-win-every-job">The same model does not win every job</a></li><li><a href="#long-context-long-workflows-and-their-hidden-costs" data-toc-link="long-context-long-workflows-and-their-hidden-costs">Long context, long workflows and their hidden costs</a></li><li><a href="#the-guarded-model-and-the-defender-model" data-toc-link="the-guarded-model-and-the-defender-model">The guarded model and the defender model</a></li><li><a href="#build-the-evaluation-around-december-not-october" data-toc-link="build-the-evaluation-around-december-not-october">Build the evaluation around December, not October</a></li></ol></details></nav><script>
+  // The rail precedes the article body in the DOM, so wait for the headings.
+  document.addEventListener('DOMContentLoaded', () => {
+    const toc = document.querySelector('[data-toc]');
+    if (!(toc instanceof HTMLElement)) return;
+
+    const details = toc.querySelector('[data-toc-details]');
+    const wide = window.matchMedia('(min-width: 1180px)');
+    const syncOpen = () => {
+      if (details instanceof HTMLDetailsElement) details.open = wide.matches;
+    };
+    syncOpen();
+    wide.addEventListener('change', syncOpen);
+
+    toc.addEventListener('click', (event) => {
+      if (!wide.matches && event.target instanceof HTMLAnchorElement && details instanceof HTMLDetailsElement) details.open = false;
+    });
+
+    const links = new Map([...toc.querySelectorAll('[data-toc-link]')].map((link) => [link.getAttribute('data-toc-link'), link]));
+    const targets = [...links.keys()].map((id) => document.getElementById(id ?? '')).filter(Boolean);
+    if (targets.length === 0) return;
+
+    // The active section is the last heading scrolled past the top third of
+    // the viewport, so jumps and fast scrolls still land on the right entry.
+    let frame = 0;
+    const update = () => {
+      frame = 0;
+      const threshold = window.innerHeight * 0.3;
+      let activeId = null;
+      for (const target of targets) {
+        if (target.getBoundingClientRect().top <= threshold) activeId = target.id;
+        else break;
+      }
+      links.forEach((link, key) => {
+        if (key === activeId) link.setAttribute('aria-current', 'location');
+        else link.removeAttribute('aria-current');
+      });
+    };
+    const schedule = () => {
+      if (!frame) frame = window.requestAnimationFrame(update);
+    };
+    window.addEventListener('scroll', schedule, { passive: true });
+    window.addEventListener('resize', schedule);
+    update();
+  }, { once: true });
+</script></aside><div class="article-main"><div class="prose" data-pagefind-body><p>Google has put an expiration date on the introductory price of its most capable AI model. For a buyer planning an agent deployment, that date belongs in the spreadsheet before any benchmark score does. The Gemini 4 Argon API costs $2 per million input tokens and $10 per million output tokens through November 30. Both prices double on December 1. [1][2]</p>
+<p>That schedule creates a clean test of the model’s business value. Can the extra reasoning capability reduce failed attempts, review time and operational friction enough to justify the lasting price?</p>
+<p>The October 13 launch makes Argon broadly available to paying developers and enterprises after a restricted September 30 introduction to cybersecurity partners. Its technical claims are substantial: strong performance on professional-task benchmarks, a unified million-token context budget, and new machinery for lengthy reasoning and agent workflows. Yet the useful enterprise question is whether those capabilities reduce the cost of completing a verified task after the promotional window closes. A model’s token price, leaderboard position and actual economic value can move in different directions. [1][3]</p>
+<h2 id="the-introductory-rate-is-a-pilot-price">The introductory rate is a pilot price</h2>
+<p>Google lists Argon at $2 per million input tokens and $10 per million output tokens during the introductory period. Beginning December 1, those figures become $4 and $20. Cached input receives a 95% discount; the developer documentation describes implicit caching rather than an explicit cache-management feature for this model. Output charges include internal thinking tokens, so a visible answer’s length does not necessarily equal its billable output consumption. [1][4]</p>
+<p>Consider a hypothetical document-analysis job that bills 250,000 input tokens and 50,000 output tokens, with no cache savings. Its token charge is $1 today: 50 cents for input and 50 cents for output. At the published December rates, the same usage costs $2. A thousand identical jobs would move from $1,000 to $2,000 before retrieval, orchestration, review, infrastructure and other charges. This is arithmetic on Google’s list prices, not a forecast of a typical customer bill.</p>
+<p>The example also shows why procurement teams should resist a single “price per million tokens” comparison. A more capable model might need fewer attempts, shorter prompts or less human repair. A slower or less predictable model might incur more retries and supervision. Batch, flex and priority processing options can change the unit economics again. The price that belongs in a business case is the cost per accepted outcome, measured at the rates that will apply when the system is actually deployed.</p>
+<p>There is a plausible counterargument to concern about the price increase: even at double the introductory rate, Argon could remain economical if it completes a larger share of difficult work. A system that solves a case on the first attempt can beat a cheaper model that requires repeated calls and expert correction. Google has given buyers a reason to run that experiment promptly, but its introductory price should not be the baseline for a long-lived contract.</p>
+<h2 id="the-same-model-does-not-win-every-job">The same model does not win every job</h2>
+<p>Independent evaluator Vals AI ranks Argon first on its Vals Index, at 68.90%, ahead of Claude Sonnet 5.5 at 67.04% and Claude Opus 5.5 at 66.97% in its October 12 snapshot. The index combines agentic tasks across finance, coding, legal and tax work, weighted to reflect their share of US economic activity. That is meaningful outside evidence, although the weighting is a methodological choice rather than a universal definition of enterprise usefulness. Vals reports a margin of uncertainty around Argon’s score, and the top results are relatively close. [5]</p>
+<p>The underlying tests make a more interesting purchasing guide than the aggregate ranking. Vals lists Argon first on Finance Agent v2 but second on Code Migration and Vibe Code Bench, and sixth on Terminal-Bench 4.0. Google’s own model card reports Argon at 57.4% on Terminal-bench 4.0 versus 66.4% for Claude Opus 5.5. On FrontierSWE v2, Google reports 55.0% for Argon against 65.5% for GPT-6 Astra. Other published tests favor Argon. Benchmark configurations and evaluation harnesses can differ, so these figures are signals for task selection, not a single settled cross-model championship. [3][5]</p>
+<p>A finance team processing lengthy filings may reasonably prioritize a different model from a software group operating command-line agents. Legal work introduces another wrinkle: a benchmark score can capture correct answers on a test set without measuring confidentiality controls, defensible citations or the cost of attorney review. A procurement trial should begin with the actual error modes of the job, then use public evaluations to choose candidates.</p>
+<p>Google’s own examples are vivid but must remain attributed. The company says its Antigravity users increased agentic code submissions by more than 35% and reduced rollbacks by nearly a third. It also describes a Chrome refactoring effort and optimizations contributed to open-source repositories. Those accounts demonstrate where Google believes the model is useful; they do not establish that another organization will obtain the same productivity gain, or that the model alone caused it. [1]</p>
+<h2 id="long-context-long-workflows-and-their-hidden-costs">Long context, long workflows and their hidden costs</h2>
+<p>Argon’s context specification is unusually ambitious: up to 1,048,576 tokens in a unified budget shared by input, thinking and output. Google describes a long-decode path that can continue generation across requests. The ordinary request limits are much smaller: its developer guide specifies up to 32,768 tokens for a non-streaming call and 65,536 for a streaming call, with continuation needed for longer work. [3][4]</p>
+<p>This distinction changes implementation plans. A team cannot assume that enabling a million-token window makes a million-token response appear in one synchronous API call. It must manage continuation, checkpoints, partial failures and the possibility that a long-running task produces a polished but unusable artifact. Google’s migration guidance also calls for preserving thought signatures in multi-turn tool workflows and allowing longer client timeouts. A large context budget expands what can fit inside the system; it does not eliminate operational engineering. [4]</p>
+<p>Long context also changes the denominator in the cost calculation. Feeding an entire repository or extensive legal archive to a model may save retrieval engineering in some cases, but it increases token exposure and can create a larger surface for irrelevant or malicious instructions. Caching may reduce repeated-input charges, provided the actual workload produces cache hits. Teams should measure cache-hit rates rather than assume the headline 95% discount applies to every prompt.</p>
+<p>For lengthy agents, success needs a stricter definition than “the model completed the run.” An evaluation should track how often the output passes tests, whether it changes authorized files only, how many tool calls it makes, how long the workflow takes, and whether a human can inspect its decisions. Those measurements are not supplied by a model card. They belong to the application owner.</p>
+<h2 id="the-guarded-model-and-the-defender-model">The guarded model and the defender model</h2>
+<p>Argon was first announced on September 30 with access limited to trusted cybersecurity defenders. Google’s October 13 announcement opened a public, guarded version through the API and paid products while expanding its Fairwind program for vetted defenders who may receive access without certain cyber guardrails. The distinction matters to anyone comparing a security demonstration with the version their employees or customers can actually call. [1][6]</p>
+<p>The company has published a model card and a separate safety and security report. The model card acknowledges hallucinations, occasional slowness and timeouts, and a March 2026 knowledge cutoff. Google describes red teaming, prompt-injection defenses and monitoring intended to catch agents taking unauthorized shortcuts. These are relevant controls, but they are vendor-described safeguards rather than a warranty that a deployed agent will respect every permission boundary. [3][7]</p>
+<p>A buyer should identify the exact endpoint, model version, terms and safeguard configuration being evaluated. Access differs across products: the API is paid; Google says the Gemini app and AI Mode offer Argon to Pro and Ultra subscribers, while Antigravity access is limited to Ultra. A consumer subscription is not a substitute for enterprise API terms, data-handling review or a production service-level agreement. [1][8]</p>
+<p>Google’s distribution gives the release commercial weight beyond a benchmark launch. Argon appears in the developer API, enterprise offerings and consumer surfaces, with a coding environment designed around agentic workflows. A model that is readily available inside existing tools can win adoption even when it does not lead every evaluation. Conversely, tight integration can increase the cost of moving away later if prompts, tools, observability and staff practices become provider-specific.</p>
+<h2 id="build-the-evaluation-around-december-not-october">Build the evaluation around December, not October</h2>
+<p>The sensible trial has two phases. During the introductory period, use representative work from a production queue, including easy cases, edge cases and tasks likely to fail. Compare Argon with the current system and at least one credible alternative. Record billable input, output and thinking tokens; cache behavior; elapsed time; retries; human review minutes; security exceptions; and the share of tasks accepted without repair.</p>
+<p>Then rerun the economics at the published December prices, even if the experiment was conducted in October. A successful pilot should survive that adjustment. It should also survive a test of model substitution: can the organization change providers without rebuilding the entire workflow? The answer may justify paying a premium for one difficult class of tasks while routing simpler work to less expensive systems.</p>
+<p>The strongest objection to this cautious approach is speed. Teams that wait for perfect measurement may miss productivity gains while competitors learn. That is a reason to run controlled pilots quickly, with narrow permissions and measurable outcomes. It is not a reason to convert a temporary discount into an enduring cost assumption.</p>
+<p>Argon’s public release arrives with unusually rich material for such a test: a published price change, detailed developer limits, a model card and independent task evaluations. The company has supplied evidence that its new model deserves serious consideration. Buyers now have to supply the missing evidence about their own work.</p>
+<p>By December, the most informative number will be neither Argon’s ranking nor its launch token rate. It will be the cost of an accepted, auditable result under the price and controls the organization can actually sustain.</p>
+<p>Medium topics: Large Language Models; Enterprise AI; AI Pricing; AI Evaluation; Google Gemini</p>
+</div><footer class="article-record"><dl class="record-list"><div><dt>Published</dt><dd><time datetime="2026-10-14">October 14, 2026</time></dd></div><div><dt>Sources recorded</dt><dd>None recorded</dd></div></dl></footer></div></div></article><section class="section shell related" aria-labelledby="related-title"><div class="section-head"><h2 id="related-title" class="section-title">Related analysis</h2></div><div class="related-grid"><article class="story story--compact"><span class="kicker">Analysis</span><h3 class="story-title"><a href="/2026/10/12/857-ai-releases-nine-timely-safety-reports-the-evidence-gap-facing-model-buyers/">857 AI Releases, Nine Timely Safety Reports: The Evidence Gap Facing Model Buyers</a></h3><p class="story-meta"><time datetime="2026-10-12">Oct 12, 2026</time><span aria-hidden="true">·</span><span>8 min read</span></p></article><article class="story story--compact"><span class="kicker">Analysis</span><h3 class="story-title"><a href="/2026/10/02/europe-s-ai-adoption-problem-is-becoming-a-financing-problem/">Europe’s AI Adoption Problem Is Becoming a Financing Problem</a></h3><p class="story-meta"><time datetime="2026-10-02">Oct 2, 2026</time><span aria-hidden="true">·</span><span>8 min read</span></p></article><article class="story story--compact"><span class="kicker">Analysis</span><h3 class="story-title"><a href="/2026/09/30/when-ai-starts-pricing-the-big-mac-the-governance-problem-moves-to-the-checkout/">When AI Starts Pricing the Big Mac, the Governance Problem Moves to the Checkout</a></h3><p class="story-meta"><time datetime="2026-09-30">Sep 30, 2026</time><span aria-hidden="true">·</span><span>8 min read</span></p></article></div></section></main><footer class="site-footer"><div class="shell footer-inner"><a class="brand" href="/"><span class="brand-mark" aria-hidden="true"></span><span>Vizo AI</span></a><nav class="footer-links" aria-label="Footer"><a href="/topics/">Topics</a><a href="/explore/">Archive</a><a href="/about/">About</a><a href="/rss.xml">RSS</a></nav><p class="footer-note">Source-aware analysis, published with its sources.</p></div></footer><script>
+      const root = document.documentElement;
+      const themePicker = document.querySelector('[data-theme-picker]');
+      const themeTrigger = document.querySelector('[data-theme-trigger]');
+      const themeMenu = document.querySelector('[data-theme-menu]');
+      const themeOptions = [...document.querySelectorAll('[data-theme-value]')];
+      const systemTheme = window.matchMedia('(prefers-color-scheme: dark)');
+      const themeColor = document.querySelector('#theme-color');
+
+      function setTheme(preference, persist = true) {
+        const allowed = ['light', 'dark', 'system'];
+        const nextPreference = allowed.includes(preference) ? preference : 'system';
+        const resolved = nextPreference === 'system' ? (systemTheme.matches ? 'dark' : 'light') : nextPreference;
+
+        root.dataset.theme = resolved;
+        root.dataset.themePreference = nextPreference;
+        root.style.colorScheme = resolved;
+        themeColor?.setAttribute('content', resolved === 'dark' ? '#0e0f11' : '#faf8f4');
+        themeOptions.forEach((option) => {
+          option.setAttribute('aria-pressed', String(option.dataset.themeValue === nextPreference));
+        });
+
+        if (persist) {
+          try {
+            window.localStorage.setItem('vizo-theme', nextPreference);
+          } catch {
+            // Keep the in-memory choice when storage is unavailable.
+          }
+        }
+      }
+
+      function closeThemeMenu({ restoreFocus = false } = {}) {
+        if (!(themeMenu instanceof HTMLElement) || !(themeTrigger instanceof HTMLButtonElement)) return;
+        themeMenu.hidden = true;
+        themeTrigger.setAttribute('aria-expanded', 'false');
+        if (restoreFocus) themeTrigger.focus();
+      }
+
+      function openThemeMenu() {
+        if (!(themeMenu instanceof HTMLElement) || !(themeTrigger instanceof HTMLButtonElement)) return;
+        themeMenu.hidden = false;
+        themeTrigger.setAttribute('aria-expanded', 'true');
+      }
+
+      setTheme(root.dataset.themePreference ?? 'system', false);
+
+      themeTrigger?.addEventListener('click', () => {
+        if (themeMenu instanceof HTMLElement && themeMenu.hidden) openThemeMenu();
+        else closeThemeMenu();
+      });
+
+      themeOptions.forEach((option, index) => {
+        option.addEventListener('click', () => {
+          setTheme(option.dataset.themeValue ?? 'system');
+          closeThemeMenu({ restoreFocus: true });
+        });
+
+        option.addEventListener('keydown', (event) => {
+          if (!['ArrowDown', 'ArrowUp', 'Home', 'End'].includes(event.key)) return;
+          event.preventDefault();
+          const targetIndex = event.key === 'Home'
+            ? 0
+            : event.key === 'End'
+              ? themeOptions.length - 1
+              : (index + (event.key === 'ArrowDown' ? 1 : -1) + themeOptions.length) % themeOptions.length;
+          themeOptions[targetIndex]?.focus();
+        });
+      });
+
+      systemTheme.addEventListener('change', () => {
+        if (root.dataset.themePreference === 'system') setTheme('system', false);
+      });
+
+      document.addEventListener('click', (event) => {
+        if (themePicker instanceof HTMLElement && !themePicker.contains(event.target)) closeThemeMenu();
+
+        document.querySelectorAll('[data-mobile-nav][open]').forEach((nav) => {
+          if (nav instanceof HTMLElement && !nav.contains(event.target)) nav.removeAttribute('open');
+        });
+      });
+
+      document.querySelectorAll('[data-mobile-nav] a').forEach((link) => {
+        link.addEventListener('click', () => link.closest('details')?.removeAttribute('open'));
+      });
+
+      document.querySelector('[data-back-link]')?.addEventListener('click', (event) => {
+        if (!document.referrer || window.history.length <= 1) return;
+
+        try {
+          const previous = new URL(document.referrer);
+          const current = new URL(window.location.href);
+          const canReturn = previous.origin === current.origin && previous.pathname !== current.pathname;
+
+          if (canReturn) {
+            event.preventDefault();
+            window.history.back();
+          }
+        } catch {
+          // Keep the destination fallback when the referrer cannot be parsed.
+        }
+      });
+
+      document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape') {
+          closeThemeMenu({ restoreFocus: themeTrigger?.getAttribute('aria-expanded') === 'true' });
+          document.querySelectorAll('[data-mobile-nav][open]').forEach((nav) => nav.removeAttribute('open'));
+          return;
+        }
+
+        if (!(event.metaKey || event.ctrlKey) || event.key.toLowerCase() !== 'k') return;
+
+        event.preventDefault();
+        const searchInput = document.querySelector('#research-search');
+
+        if (searchInput instanceof HTMLInputElement) {
+          searchInput.focus();
+        } else {
+          window.location.assign('/explore/?focus=search');
+        }
+      });
+    </script></body></html>
